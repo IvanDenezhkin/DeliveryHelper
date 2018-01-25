@@ -8,10 +8,10 @@
 
 import UIKit
 
-class NewClientAddViewController : UIViewController {
+class NewClientAddViewController : UIViewController, NewClientAddViewProtocol {
     @IBOutlet weak var nameTextField: UITextField!
     @IBOutlet weak var phoneTextField: UITextField!
-    var presenter: NewClientAddViewOutProtocol?
+    var presenter: NewClientAddPresenterProtocol?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -23,6 +23,7 @@ class NewClientAddViewController : UIViewController {
         guard let phoneNumber = phoneTextField.text else { return }
         let newClient = ClientModel(withName: name, phoneNumber: phoneNumber)
         presenter?.saveNewClient(client: newClient)
+        presenter?.dismissVC()
     }
     
 }

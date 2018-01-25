@@ -8,7 +8,7 @@
 
 import Foundation
 
-protocol NewClientAddInteractorProtocol {
+protocol NewClientAddInteractorProtocol: class {
     var dataManager: CoreDataManager? { get set }
     func saveNewClient(client: ClientModel)
 }

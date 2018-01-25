@@ -8,11 +8,17 @@
 
 import Foundation
 
-class NewClientAddPresenter: NewClientAddViewOutProtocol {
-    var interactor: NewClientAddInteractor?
+class NewClientAddPresenter: NewClientAddPresenterProtocol {
+    weak var view: NewClientAddViewProtocol?
+    var wireFrame: NewClientAddWireframeProtocol?
+    var interactor: NewClientAddInteractorProtocol?
+    
     
     func saveNewClient(client: ClientModel) {
         interactor?.saveNewClient(client: client)
     }
-        
+    
+    func dismissVC() {
+       wireFrame?.dismissVC(vc: view)
+    }
 }

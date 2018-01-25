@@ -10,4 +10,5 @@ import UIKit
 
 protocol NewClientAddWireframeProtocol {
     static func createNewClientAddModule() -> UIViewController
+    func dismissVC(vc: NewClientAddViewProtocol?)
 }

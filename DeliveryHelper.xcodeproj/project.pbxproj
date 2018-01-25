@@ -14,7 +14,7 @@
 		7295414D20187D4F00D41626 /* ClientsDB.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 7295414B20187D4F00D41626 /* ClientsDB.xcdatamodeld */; };
 		7295414F20187F8500D41626 /* NewClientAddViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7295414E20187F8500D41626 /* NewClientAddViewController.swift */; };
 		729541522018802D00D41626 /* NewClientAdd.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 729541512018802D00D41626 /* NewClientAdd.storyboard */; };
-		729541552018839400D41626 /* NewClientAddViewOutProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 729541542018839400D41626 /* NewClientAddViewOutProtocol.swift */; };
+		729541552018839400D41626 /* NewClientAddPresenterProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 729541542018839400D41626 /* NewClientAddPresenterProtocol.swift */; };
 		7295415720189DCB00D41626 /* ClientModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7295415620189DCB00D41626 /* ClientModel.swift */; };
 		7295415A2018A25C00D41626 /* NewClientAddPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 729541592018A25C00D41626 /* NewClientAddPresenter.swift */; };
 		7295415C2018A2FA00D41626 /* NewClientAddInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7295415B2018A2FA00D41626 /* NewClientAddInteractor.swift */; };
@@ -28,7 +28,19 @@
 		72F2A56E2017564F004DA13B /* RootInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72F2A56D2017564F004DA13B /* RootInteractor.swift */; };
 		72F2A57120176C39004DA13B /* DataStoragesListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72F2A57020176C39004DA13B /* DataStoragesListTableViewController.swift */; };
 		72F2A57320176C73004DA13B /* DataStoragesListWireframe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72F2A57220176C73004DA13B /* DataStoragesListWireframe.swift */; };
-		72F2A57520176C94004DA13B /* DataStoragesListIterator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72F2A57420176C94004DA13B /* DataStoragesListIterator.swift */; };
+		72F2A57520176C94004DA13B /* DataStoragesListInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72F2A57420176C94004DA13B /* DataStoragesListInteractor.swift */; };
+		72FC5F0D2019BE7E003831D8 /* DataStoragesListPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72FC5F0C2019BE7E003831D8 /* DataStoragesListPresenter.swift */; };
+		72FC5F102019BECF003831D8 /* DataStoragesListView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 72FC5F0F2019BECF003831D8 /* DataStoragesListView.storyboard */; };
+		72FC5F122019BF36003831D8 /* ClientCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72FC5F112019BF36003831D8 /* ClientCell.swift */; };
+		72FC5F152019BF5A003831D8 /* ItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72FC5F142019BF5A003831D8 /* ItemCell.swift */; };
+		72FC5F172019BF7C003831D8 /* PlaceCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72FC5F162019BF7C003831D8 /* PlaceCell.swift */; };
+		72FC5F192019C575003831D8 /* ItemModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72FC5F182019C575003831D8 /* ItemModel.swift */; };
+		72FC5F1B2019C57D003831D8 /* PlaceModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72FC5F1A2019C57D003831D8 /* PlaceModel.swift */; };
+		72FC5F1D2019CB80003831D8 /* DataStoragesListPresenterProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72FC5F1C2019CB80003831D8 /* DataStoragesListPresenterProtocol.swift */; };
+		72FC5F1F2019CB94003831D8 /* DataStoragesListViewProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72FC5F1E2019CB94003831D8 /* DataStoragesListViewProtocol.swift */; };
+		72FC5F232019D3E7003831D8 /* DataStoragesListInteractorProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72FC5F222019D3E7003831D8 /* DataStoragesListInteractorProtocol.swift */; };
+		72FC5F252019DB7C003831D8 /* DataStoragesListWireframeProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72FC5F242019DB7C003831D8 /* DataStoragesListWireframeProtocol.swift */; };
+		72FC5F272019ECBC003831D8 /* NewClientAddViewProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72FC5F262019ECBC003831D8 /* NewClientAddViewProtocol.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -41,7 +53,7 @@
 		7295414C20187D4F00D41626 /* ClientsDB.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = ClientsDB.xcdatamodel; sourceTree = "<group>"; };
 		7295414E20187F8500D41626 /* NewClientAddViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewClientAddViewController.swift; sourceTree = "<group>"; };
 		729541512018802D00D41626 /* NewClientAdd.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = NewClientAdd.storyboard; sourceTree = "<group>"; };
-		729541542018839400D41626 /* NewClientAddViewOutProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewClientAddViewOutProtocol.swift; sourceTree = "<group>"; };
+		729541542018839400D41626 /* NewClientAddPresenterProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewClientAddPresenterProtocol.swift; sourceTree = "<group>"; };
 		7295415620189DCB00D41626 /* ClientModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClientModel.swift; sourceTree = "<group>"; };
 		729541592018A25C00D41626 /* NewClientAddPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewClientAddPresenter.swift; sourceTree = "<group>"; };
 		7295415B2018A2FA00D41626 /* NewClientAddInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewClientAddInteractor.swift; sourceTree = "<group>"; };
@@ -55,7 +67,19 @@
 		72F2A56D2017564F004DA13B /* RootInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootInteractor.swift; sourceTree = "<group>"; };
 		72F2A57020176C39004DA13B /* DataStoragesListTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataStoragesListTableViewController.swift; sourceTree = "<group>"; };
 		72F2A57220176C73004DA13B /* DataStoragesListWireframe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataStoragesListWireframe.swift; sourceTree = "<group>"; };
-		72F2A57420176C94004DA13B /* DataStoragesListIterator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataStoragesListIterator.swift; sourceTree = "<group>"; };
+		72F2A57420176C94004DA13B /* DataStoragesListInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataStoragesListInteractor.swift; sourceTree = "<group>"; };
+		72FC5F0C2019BE7E003831D8 /* DataStoragesListPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataStoragesListPresenter.swift; sourceTree = "<group>"; };
+		72FC5F0F2019BECF003831D8 /* DataStoragesListView.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = DataStoragesListView.storyboard; sourceTree = "<group>"; };
+		72FC5F112019BF36003831D8 /* ClientCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClientCell.swift; sourceTree = "<group>"; };
+		72FC5F142019BF5A003831D8 /* ItemCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemCell.swift; sourceTree = "<group>"; };
+		72FC5F162019BF7C003831D8 /* PlaceCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceCell.swift; sourceTree = "<group>"; };
+		72FC5F182019C575003831D8 /* ItemModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemModel.swift; sourceTree = "<group>"; };
+		72FC5F1A2019C57D003831D8 /* PlaceModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceModel.swift; sourceTree = "<group>"; };
+		72FC5F1C2019CB80003831D8 /* DataStoragesListPresenterProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataStoragesListPresenterProtocol.swift; sourceTree = "<group>"; };
+		72FC5F1E2019CB94003831D8 /* DataStoragesListViewProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataStoragesListViewProtocol.swift; sourceTree = "<group>"; };
+		72FC5F222019D3E7003831D8 /* DataStoragesListInteractorProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataStoragesListInteractorProtocol.swift; sourceTree = "<group>"; };
+		72FC5F242019DB7C003831D8 /* DataStoragesListWireframeProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataStoragesListWireframeProtocol.swift; sourceTree = "<group>"; };
+		72FC5F262019ECBC003831D8 /* NewClientAddViewProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewClientAddViewProtocol.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -113,6 +137,8 @@
 			children = (
 				7295414720187CF600D41626 /* CoreDataManager.swift */,
 				7295415620189DCB00D41626 /* ClientModel.swift */,
+				72FC5F182019C575003831D8 /* ItemModel.swift */,
+				72FC5F1A2019C57D003831D8 /* PlaceModel.swift */,
 				7295414B20187D4F00D41626 /* ClientsDB.xcdatamodeld */,
 			);
 			path = CoreData;
@@ -133,6 +159,7 @@
 			isa = PBXGroup;
 			children = (
 				7295414E20187F8500D41626 /* NewClientAddViewController.swift */,
+				72FC5F262019ECBC003831D8 /* NewClientAddViewProtocol.swift */,
 				729541512018802D00D41626 /* NewClientAdd.storyboard */,
 			);
 			path = View;
@@ -141,7 +168,7 @@
 		7295415820189EB400D41626 /* Presenter */ = {
 			isa = PBXGroup;
 			children = (
-				729541542018839400D41626 /* NewClientAddViewOutProtocol.swift */,
+				729541542018839400D41626 /* NewClientAddPresenterProtocol.swift */,
 				729541592018A25C00D41626 /* NewClientAddPresenter.swift */,
 			);
 			path = Presenter;
@@ -212,11 +239,60 @@
 		72F2A57620176CBB004DA13B /* DataStoragesListModule */ = {
 			isa = PBXGroup;
 			children = (
-				72F2A57020176C39004DA13B /* DataStoragesListTableViewController.swift */,
-				72F2A57220176C73004DA13B /* DataStoragesListWireframe.swift */,
-				72F2A57420176C94004DA13B /* DataStoragesListIterator.swift */,
+				72FC5F092019BE36003831D8 /* View */,
+				72FC5F0E2019BE83003831D8 /* Presenter */,
+				72FC5F0B2019BE45003831D8 /* Interactor */,
+				72FC5F0A2019BE3C003831D8 /* Wireframe */,
 			);
 			path = DataStoragesListModule;
+			sourceTree = "<group>";
+		};
+		72FC5F092019BE36003831D8 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				72FC5F132019BF3E003831D8 /* Cells */,
+				72F2A57020176C39004DA13B /* DataStoragesListTableViewController.swift */,
+				72FC5F1E2019CB94003831D8 /* DataStoragesListViewProtocol.swift */,
+				72FC5F0F2019BECF003831D8 /* DataStoragesListView.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		72FC5F0A2019BE3C003831D8 /* Wireframe */ = {
+			isa = PBXGroup;
+			children = (
+				72F2A57220176C73004DA13B /* DataStoragesListWireframe.swift */,
+				72FC5F242019DB7C003831D8 /* DataStoragesListWireframeProtocol.swift */,
+			);
+			path = Wireframe;
+			sourceTree = "<group>";
+		};
+		72FC5F0B2019BE45003831D8 /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				72F2A57420176C94004DA13B /* DataStoragesListInteractor.swift */,
+				72FC5F222019D3E7003831D8 /* DataStoragesListInteractorProtocol.swift */,
+			);
+			path = Interactor;
+			sourceTree = "<group>";
+		};
+		72FC5F0E2019BE83003831D8 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				72FC5F0C2019BE7E003831D8 /* DataStoragesListPresenter.swift */,
+				72FC5F1C2019CB80003831D8 /* DataStoragesListPresenterProtocol.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		72FC5F132019BF3E003831D8 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				72FC5F142019BF5A003831D8 /* ItemCell.swift */,
+				72FC5F112019BF36003831D8 /* ClientCell.swift */,
+				72FC5F162019BF7C003831D8 /* PlaceCell.swift */,
+			);
+			path = Cells;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -281,6 +357,7 @@
 				722C8BC8201727DE002E474F /* LaunchScreen.storyboard in Resources */,
 				729541522018802D00D41626 /* NewClientAdd.storyboard in Resources */,
 				722C8BC5201727DE002E474F /* Assets.xcassets in Resources */,
+				72FC5F102019BECF003831D8 /* DataStoragesListView.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -295,21 +372,32 @@
 				72F2A57120176C39004DA13B /* DataStoragesListTableViewController.swift in Sources */,
 				722C8BBE201727DE002E474F /* AppDelegate.swift in Sources */,
 				72F2A56C2017561E004DA13B /* RootTabBarController.swift in Sources */,
+				72FC5F272019ECBC003831D8 /* NewClientAddViewProtocol.swift in Sources */,
 				72F2A56A201755FB004DA13B /* RootWireframeProtocol.swift in Sources */,
-				72F2A57520176C94004DA13B /* DataStoragesListIterator.swift in Sources */,
+				72F2A57520176C94004DA13B /* DataStoragesListInteractor.swift in Sources */,
+				72FC5F232019D3E7003831D8 /* DataStoragesListInteractorProtocol.swift in Sources */,
 				7295415A2018A25C00D41626 /* NewClientAddPresenter.swift in Sources */,
 				729541622018A39A00D41626 /* NewClientAddInteractorProtocol.swift in Sources */,
 				7295414D20187D4F00D41626 /* ClientsDB.xcdatamodeld in Sources */,
+				72FC5F172019BF7C003831D8 /* PlaceCell.swift in Sources */,
 				7295414820187CF700D41626 /* CoreDataManager.swift in Sources */,
+				72FC5F1F2019CB94003831D8 /* DataStoragesListViewProtocol.swift in Sources */,
 				729541642018A45500D41626 /* NewClientAddWireframeProtocol.swift in Sources */,
 				72F2A5672017552D004DA13B /* RootWireframe.swift in Sources */,
 				7295415F2018A33C00D41626 /* NewClientAddWireframe.swift in Sources */,
-				729541552018839400D41626 /* NewClientAddViewOutProtocol.swift in Sources */,
+				729541552018839400D41626 /* NewClientAddPresenterProtocol.swift in Sources */,
+				72FC5F152019BF5A003831D8 /* ItemCell.swift in Sources */,
+				72FC5F122019BF36003831D8 /* ClientCell.swift in Sources */,
+				72FC5F1B2019C57D003831D8 /* PlaceModel.swift in Sources */,
 				7295415C2018A2FA00D41626 /* NewClientAddInteractor.swift in Sources */,
+				72FC5F192019C575003831D8 /* ItemModel.swift in Sources */,
 				7295414F20187F8500D41626 /* NewClientAddViewController.swift in Sources */,
+				72FC5F0D2019BE7E003831D8 /* DataStoragesListPresenter.swift in Sources */,
 				7295415720189DCB00D41626 /* ClientModel.swift in Sources */,
 				72F2A57320176C73004DA13B /* DataStoragesListWireframe.swift in Sources */,
+				72FC5F252019DB7C003831D8 /* DataStoragesListWireframeProtocol.swift in Sources */,
 				729541682018AE2E00D41626 /* RootPresenter.swift in Sources */,
+				72FC5F1D2019CB80003831D8 /* DataStoragesListPresenterProtocol.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
