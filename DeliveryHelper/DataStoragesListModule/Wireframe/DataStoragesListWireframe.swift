@@ -30,7 +30,7 @@ class DataStoragesListWireframe: DataStoragesListWireframeProtocol {
         if let sourceVC = on as? UIViewController {
             switch forMode {
             case .displayModeItem:
-                sourceVC.navigationController?.pushViewController(NewClientAddWireframe.createNewClientAddModule(), animated: true)
+                sourceVC.navigationController?.pushViewController(NewItemAddWireframe.createNewItemAddModule(), animated: true)
             case .displayModeClient:
                 sourceVC.navigationController?.pushViewController(NewClientAddWireframe.createNewClientAddModule(), animated: true)
             case .displayModePlace:

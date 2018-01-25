@@ -41,6 +41,15 @@
 		72FC5F232019D3E7003831D8 /* DataStoragesListInteractorProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72FC5F222019D3E7003831D8 /* DataStoragesListInteractorProtocol.swift */; };
 		72FC5F252019DB7C003831D8 /* DataStoragesListWireframeProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72FC5F242019DB7C003831D8 /* DataStoragesListWireframeProtocol.swift */; };
 		72FC5F272019ECBC003831D8 /* NewClientAddViewProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72FC5F262019ECBC003831D8 /* NewClientAddViewProtocol.swift */; };
+		72FC5F2A201A0BC8003831D8 /* NewItemAddWireframe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72FC5F29201A0BC8003831D8 /* NewItemAddWireframe.swift */; };
+		72FC5F2C201A0BDB003831D8 /* NewItemAddWireframeProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72FC5F2B201A0BDB003831D8 /* NewItemAddWireframeProtocol.swift */; };
+		72FC5F2F201A0BF4003831D8 /* NewItemAddPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72FC5F2E201A0BF4003831D8 /* NewItemAddPresenter.swift */; };
+		72FC5F31201A0BFF003831D8 /* NewItemAddPresenterProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72FC5F30201A0BFF003831D8 /* NewItemAddPresenterProtocol.swift */; };
+		72FC5F34201A0C18003831D8 /* NewItemAddInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72FC5F33201A0C18003831D8 /* NewItemAddInteractor.swift */; };
+		72FC5F36201A0C23003831D8 /* NewItemAddInteractorProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72FC5F35201A0C23003831D8 /* NewItemAddInteractorProtocol.swift */; };
+		72FC5F39201A0C48003831D8 /* NewItemAddViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72FC5F38201A0C48003831D8 /* NewItemAddViewController.swift */; };
+		72FC5F3B201A0C52003831D8 /* NewItemAddViewProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72FC5F3A201A0C52003831D8 /* NewItemAddViewProtocol.swift */; };
+		72FC5F3D201A0C5C003831D8 /* NewItemAdd.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 72FC5F3C201A0C5C003831D8 /* NewItemAdd.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -80,6 +89,15 @@
 		72FC5F222019D3E7003831D8 /* DataStoragesListInteractorProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataStoragesListInteractorProtocol.swift; sourceTree = "<group>"; };
 		72FC5F242019DB7C003831D8 /* DataStoragesListWireframeProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataStoragesListWireframeProtocol.swift; sourceTree = "<group>"; };
 		72FC5F262019ECBC003831D8 /* NewClientAddViewProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewClientAddViewProtocol.swift; sourceTree = "<group>"; };
+		72FC5F29201A0BC8003831D8 /* NewItemAddWireframe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewItemAddWireframe.swift; sourceTree = "<group>"; };
+		72FC5F2B201A0BDB003831D8 /* NewItemAddWireframeProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewItemAddWireframeProtocol.swift; sourceTree = "<group>"; };
+		72FC5F2E201A0BF4003831D8 /* NewItemAddPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewItemAddPresenter.swift; sourceTree = "<group>"; };
+		72FC5F30201A0BFF003831D8 /* NewItemAddPresenterProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewItemAddPresenterProtocol.swift; sourceTree = "<group>"; };
+		72FC5F33201A0C18003831D8 /* NewItemAddInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewItemAddInteractor.swift; sourceTree = "<group>"; };
+		72FC5F35201A0C23003831D8 /* NewItemAddInteractorProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewItemAddInteractorProtocol.swift; sourceTree = "<group>"; };
+		72FC5F38201A0C48003831D8 /* NewItemAddViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewItemAddViewController.swift; sourceTree = "<group>"; };
+		72FC5F3A201A0C52003831D8 /* NewItemAddViewProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewItemAddViewProtocol.swift; sourceTree = "<group>"; };
+		72FC5F3C201A0C5C003831D8 /* NewItemAdd.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = NewItemAdd.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -114,6 +132,7 @@
 			children = (
 				722C8BBD201727DE002E474F /* AppDelegate.swift */,
 				7295414920187D1200D41626 /* Common */,
+				72FC5F3F201A0C79003831D8 /* NewItemAddModule */,
 				7295415020187FD100D41626 /* NewClientModule */,
 				72F2A57620176CBB004DA13B /* DataStoragesListModule */,
 				72F2A56820175539004DA13B /* RootModule */,
@@ -135,10 +154,8 @@
 		7295414A20187D1C00D41626 /* CoreData */ = {
 			isa = PBXGroup;
 			children = (
+				72FC5F28201A0AB1003831D8 /* Models */,
 				7295414720187CF600D41626 /* CoreDataManager.swift */,
-				7295415620189DCB00D41626 /* ClientModel.swift */,
-				72FC5F182019C575003831D8 /* ItemModel.swift */,
-				72FC5F1A2019C57D003831D8 /* PlaceModel.swift */,
 				7295414B20187D4F00D41626 /* ClientsDB.xcdatamodeld */,
 			);
 			path = CoreData;
@@ -295,6 +312,64 @@
 			path = Cells;
 			sourceTree = "<group>";
 		};
+		72FC5F28201A0AB1003831D8 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				7295415620189DCB00D41626 /* ClientModel.swift */,
+				72FC5F182019C575003831D8 /* ItemModel.swift */,
+				72FC5F1A2019C57D003831D8 /* PlaceModel.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		72FC5F2D201A0BDF003831D8 /* Wireframe */ = {
+			isa = PBXGroup;
+			children = (
+				72FC5F29201A0BC8003831D8 /* NewItemAddWireframe.swift */,
+				72FC5F2B201A0BDB003831D8 /* NewItemAddWireframeProtocol.swift */,
+			);
+			path = Wireframe;
+			sourceTree = "<group>";
+		};
+		72FC5F32201A0C04003831D8 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				72FC5F2E201A0BF4003831D8 /* NewItemAddPresenter.swift */,
+				72FC5F30201A0BFF003831D8 /* NewItemAddPresenterProtocol.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		72FC5F37201A0C2B003831D8 /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				72FC5F33201A0C18003831D8 /* NewItemAddInteractor.swift */,
+				72FC5F35201A0C23003831D8 /* NewItemAddInteractorProtocol.swift */,
+			);
+			path = Interactor;
+			sourceTree = "<group>";
+		};
+		72FC5F3E201A0C61003831D8 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				72FC5F3A201A0C52003831D8 /* NewItemAddViewProtocol.swift */,
+				72FC5F3C201A0C5C003831D8 /* NewItemAdd.storyboard */,
+				72FC5F38201A0C48003831D8 /* NewItemAddViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		72FC5F3F201A0C79003831D8 /* NewItemAddModule */ = {
+			isa = PBXGroup;
+			children = (
+				72FC5F3E201A0C61003831D8 /* View */,
+				72FC5F32201A0C04003831D8 /* Presenter */,
+				72FC5F37201A0C2B003831D8 /* Interactor */,
+				72FC5F2D201A0BDF003831D8 /* Wireframe */,
+			);
+			path = NewItemAddModule;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -354,6 +429,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				72FC5F3D201A0C5C003831D8 /* NewItemAdd.storyboard in Resources */,
 				722C8BC8201727DE002E474F /* LaunchScreen.storyboard in Resources */,
 				729541522018802D00D41626 /* NewClientAdd.storyboard in Resources */,
 				722C8BC5201727DE002E474F /* Assets.xcassets in Resources */,
@@ -376,19 +452,27 @@
 				72F2A56A201755FB004DA13B /* RootWireframeProtocol.swift in Sources */,
 				72F2A57520176C94004DA13B /* DataStoragesListInteractor.swift in Sources */,
 				72FC5F232019D3E7003831D8 /* DataStoragesListInteractorProtocol.swift in Sources */,
+				72FC5F36201A0C23003831D8 /* NewItemAddInteractorProtocol.swift in Sources */,
 				7295415A2018A25C00D41626 /* NewClientAddPresenter.swift in Sources */,
 				729541622018A39A00D41626 /* NewClientAddInteractorProtocol.swift in Sources */,
 				7295414D20187D4F00D41626 /* ClientsDB.xcdatamodeld in Sources */,
 				72FC5F172019BF7C003831D8 /* PlaceCell.swift in Sources */,
+				72FC5F2F201A0BF4003831D8 /* NewItemAddPresenter.swift in Sources */,
 				7295414820187CF700D41626 /* CoreDataManager.swift in Sources */,
 				72FC5F1F2019CB94003831D8 /* DataStoragesListViewProtocol.swift in Sources */,
 				729541642018A45500D41626 /* NewClientAddWireframeProtocol.swift in Sources */,
 				72F2A5672017552D004DA13B /* RootWireframe.swift in Sources */,
 				7295415F2018A33C00D41626 /* NewClientAddWireframe.swift in Sources */,
 				729541552018839400D41626 /* NewClientAddPresenterProtocol.swift in Sources */,
+				72FC5F3B201A0C52003831D8 /* NewItemAddViewProtocol.swift in Sources */,
+				72FC5F39201A0C48003831D8 /* NewItemAddViewController.swift in Sources */,
 				72FC5F152019BF5A003831D8 /* ItemCell.swift in Sources */,
 				72FC5F122019BF36003831D8 /* ClientCell.swift in Sources */,
 				72FC5F1B2019C57D003831D8 /* PlaceModel.swift in Sources */,
+				72FC5F31201A0BFF003831D8 /* NewItemAddPresenterProtocol.swift in Sources */,
+				72FC5F34201A0C18003831D8 /* NewItemAddInteractor.swift in Sources */,
+				72FC5F2A201A0BC8003831D8 /* NewItemAddWireframe.swift in Sources */,
+				72FC5F2C201A0BDB003831D8 /* NewItemAddWireframeProtocol.swift in Sources */,
 				7295415C2018A2FA00D41626 /* NewClientAddInteractor.swift in Sources */,
 				72FC5F192019C575003831D8 /* ItemModel.swift in Sources */,
 				7295414F20187F8500D41626 /* NewClientAddViewController.swift in Sources */,
