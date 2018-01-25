@@ -13,5 +13,4 @@ protocol NewItemAddPresenterProtocol: class {
     var interactor: NewItemAddInteractorProtocol? { get set }
     var wireFrame: NewItemAddWireframeProtocol? { get set }
     func saveNewItem(item: ItemModel)
-    func dismissVC()
 }

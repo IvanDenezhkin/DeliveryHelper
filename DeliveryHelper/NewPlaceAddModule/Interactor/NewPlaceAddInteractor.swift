@@ -1,5 +1,5 @@
 //
-//  NewItemAddInteractor.swift
+//  NewPlaceAddInteractor.swift
 //  DeliveryHelper
 //
 //  Created by Ivan Denezhkin on 25.01.2018.
@@ -8,10 +8,12 @@
 
 import Foundation
 
-class NewItemAddInteractor: NewItemAddInteractorProtocol {
+class NewPlaceAddInteractor: NewPlaceAddInteractorProtocol {
     var dataManager: CoreDataManager?
     
-    func saveNewItem(item: ItemModel) {
-        //TODO: Add Item to base
+    func saveNewPlace(place: PlaceModel) {
+        //TODO: save new place
     }
+    
+
 }

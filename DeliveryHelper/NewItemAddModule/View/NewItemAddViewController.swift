@@ -21,7 +21,6 @@ class NewItemAddViewController: UIViewController, NewItemAddViewProtocol {
         guard let newName = itemNameTextField.text else { return }
         let item = ItemModel(withName: newName)
         presenter?.saveNewItem(item: item)
-        presenter?.dismissVC()
     }
     
 }

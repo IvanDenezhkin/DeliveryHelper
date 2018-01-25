@@ -23,7 +23,6 @@ class NewClientAddViewController : UIViewController, NewClientAddViewProtocol {
         guard let phoneNumber = phoneTextField.text else { return }
         let newClient = ClientModel(withName: name, phoneNumber: phoneNumber)
         presenter?.saveNewClient(client: newClient)
-        presenter?.dismissVC()
     }
     
 }

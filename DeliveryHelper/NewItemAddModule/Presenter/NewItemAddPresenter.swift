@@ -14,12 +14,8 @@ class NewItemAddPresenter: NewItemAddPresenterProtocol {
     var wireFrame: NewItemAddWireframeProtocol?
     
     func saveNewItem(item: ItemModel) {
-        
-    }
-    
-    func dismissVC() {
+        interactor?.saveNewItem(item: item)
         wireFrame?.dismissVC(vc: view)
     }
-    
-    
+  
 }

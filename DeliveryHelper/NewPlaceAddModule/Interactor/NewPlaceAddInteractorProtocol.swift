@@ -1,14 +1,14 @@
 //
-//  NewItemAddInteractorProtocol.swift
+//  NewPlaceAddInteractorProtocol.swift
 //  DeliveryHelper
 //
 //  Created by Ivan Denezhkin on 25.01.2018.
 //  Copyright © 2018 Ivan Denezhkin. All rights reserved.
 //
 
-import Foundation
+import UIKit
 
-protocol NewItemAddInteractorProtocol {
+protocol NewPlaceAddInteractorProtocol: class {
     var dataManager: CoreDataManager? { get set }
-    func saveNewItem(item: ItemModel)
+    func saveNewPlace(place: PlaceModel)
 }

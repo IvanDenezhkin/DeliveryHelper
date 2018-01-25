@@ -50,6 +50,15 @@
 		72FC5F39201A0C48003831D8 /* NewItemAddViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72FC5F38201A0C48003831D8 /* NewItemAddViewController.swift */; };
 		72FC5F3B201A0C52003831D8 /* NewItemAddViewProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72FC5F3A201A0C52003831D8 /* NewItemAddViewProtocol.swift */; };
 		72FC5F3D201A0C5C003831D8 /* NewItemAdd.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 72FC5F3C201A0C5C003831D8 /* NewItemAdd.storyboard */; };
+		72FC5F41201A1710003831D8 /* NewPlaceAddViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72FC5F40201A1710003831D8 /* NewPlaceAddViewController.swift */; };
+		72FC5F43201A172A003831D8 /* NewPlaceAddViewProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72FC5F42201A172A003831D8 /* NewPlaceAddViewProtocol.swift */; };
+		72FC5F45201A1738003831D8 /* NewPlaceAdd.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 72FC5F44201A1738003831D8 /* NewPlaceAdd.storyboard */; };
+		72FC5F48201A174E003831D8 /* NewPlaceAddPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72FC5F47201A174E003831D8 /* NewPlaceAddPresenter.swift */; };
+		72FC5F4A201A1759003831D8 /* NewPlaceAddPresenterProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72FC5F49201A1759003831D8 /* NewPlaceAddPresenterProtocol.swift */; };
+		72FC5F4C201A1764003831D8 /* NewPlaceAddInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72FC5F4B201A1764003831D8 /* NewPlaceAddInteractor.swift */; };
+		72FC5F4E201A1772003831D8 /* NewPlaceAddInteractorProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72FC5F4D201A1772003831D8 /* NewPlaceAddInteractorProtocol.swift */; };
+		72FC5F52201A1791003831D8 /* NewPlaceAddWireframe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72FC5F51201A1791003831D8 /* NewPlaceAddWireframe.swift */; };
+		72FC5F54201A179C003831D8 /* NewPlaceAddWireframeProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72FC5F53201A179C003831D8 /* NewPlaceAddWireframeProtocol.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -98,6 +107,15 @@
 		72FC5F38201A0C48003831D8 /* NewItemAddViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewItemAddViewController.swift; sourceTree = "<group>"; };
 		72FC5F3A201A0C52003831D8 /* NewItemAddViewProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewItemAddViewProtocol.swift; sourceTree = "<group>"; };
 		72FC5F3C201A0C5C003831D8 /* NewItemAdd.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = NewItemAdd.storyboard; sourceTree = "<group>"; };
+		72FC5F40201A1710003831D8 /* NewPlaceAddViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewPlaceAddViewController.swift; sourceTree = "<group>"; };
+		72FC5F42201A172A003831D8 /* NewPlaceAddViewProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewPlaceAddViewProtocol.swift; sourceTree = "<group>"; };
+		72FC5F44201A1738003831D8 /* NewPlaceAdd.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = NewPlaceAdd.storyboard; sourceTree = "<group>"; };
+		72FC5F47201A174E003831D8 /* NewPlaceAddPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewPlaceAddPresenter.swift; sourceTree = "<group>"; };
+		72FC5F49201A1759003831D8 /* NewPlaceAddPresenterProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewPlaceAddPresenterProtocol.swift; sourceTree = "<group>"; };
+		72FC5F4B201A1764003831D8 /* NewPlaceAddInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewPlaceAddInteractor.swift; sourceTree = "<group>"; };
+		72FC5F4D201A1772003831D8 /* NewPlaceAddInteractorProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewPlaceAddInteractorProtocol.swift; sourceTree = "<group>"; };
+		72FC5F51201A1791003831D8 /* NewPlaceAddWireframe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewPlaceAddWireframe.swift; sourceTree = "<group>"; };
+		72FC5F53201A179C003831D8 /* NewPlaceAddWireframeProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewPlaceAddWireframeProtocol.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -132,6 +150,7 @@
 			children = (
 				722C8BBD201727DE002E474F /* AppDelegate.swift */,
 				7295414920187D1200D41626 /* Common */,
+				72FC5F56201A17AA003831D8 /* NewPlaceAddModule */,
 				72FC5F3F201A0C79003831D8 /* NewItemAddModule */,
 				7295415020187FD100D41626 /* NewClientModule */,
 				72F2A57620176CBB004DA13B /* DataStoragesListModule */,
@@ -325,8 +344,8 @@
 		72FC5F2D201A0BDF003831D8 /* Wireframe */ = {
 			isa = PBXGroup;
 			children = (
-				72FC5F29201A0BC8003831D8 /* NewItemAddWireframe.swift */,
 				72FC5F2B201A0BDB003831D8 /* NewItemAddWireframeProtocol.swift */,
+				72FC5F29201A0BC8003831D8 /* NewItemAddWireframe.swift */,
 			);
 			path = Wireframe;
 			sourceTree = "<group>";
@@ -334,8 +353,8 @@
 		72FC5F32201A0C04003831D8 /* Presenter */ = {
 			isa = PBXGroup;
 			children = (
-				72FC5F2E201A0BF4003831D8 /* NewItemAddPresenter.swift */,
 				72FC5F30201A0BFF003831D8 /* NewItemAddPresenterProtocol.swift */,
+				72FC5F2E201A0BF4003831D8 /* NewItemAddPresenter.swift */,
 			);
 			path = Presenter;
 			sourceTree = "<group>";
@@ -343,8 +362,8 @@
 		72FC5F37201A0C2B003831D8 /* Interactor */ = {
 			isa = PBXGroup;
 			children = (
-				72FC5F33201A0C18003831D8 /* NewItemAddInteractor.swift */,
 				72FC5F35201A0C23003831D8 /* NewItemAddInteractorProtocol.swift */,
+				72FC5F33201A0C18003831D8 /* NewItemAddInteractor.swift */,
 			);
 			path = Interactor;
 			sourceTree = "<group>";
@@ -368,6 +387,54 @@
 				72FC5F2D201A0BDF003831D8 /* Wireframe */,
 			);
 			path = NewItemAddModule;
+			sourceTree = "<group>";
+		};
+		72FC5F46201A173E003831D8 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				72FC5F42201A172A003831D8 /* NewPlaceAddViewProtocol.swift */,
+				72FC5F40201A1710003831D8 /* NewPlaceAddViewController.swift */,
+				72FC5F44201A1738003831D8 /* NewPlaceAdd.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		72FC5F4F201A1778003831D8 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				72FC5F49201A1759003831D8 /* NewPlaceAddPresenterProtocol.swift */,
+				72FC5F47201A174E003831D8 /* NewPlaceAddPresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		72FC5F50201A1780003831D8 /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				72FC5F4D201A1772003831D8 /* NewPlaceAddInteractorProtocol.swift */,
+				72FC5F4B201A1764003831D8 /* NewPlaceAddInteractor.swift */,
+			);
+			path = Interactor;
+			sourceTree = "<group>";
+		};
+		72FC5F55201A17A3003831D8 /* Wireframe */ = {
+			isa = PBXGroup;
+			children = (
+				72FC5F53201A179C003831D8 /* NewPlaceAddWireframeProtocol.swift */,
+				72FC5F51201A1791003831D8 /* NewPlaceAddWireframe.swift */,
+			);
+			path = Wireframe;
+			sourceTree = "<group>";
+		};
+		72FC5F56201A17AA003831D8 /* NewPlaceAddModule */ = {
+			isa = PBXGroup;
+			children = (
+				72FC5F46201A173E003831D8 /* View */,
+				72FC5F4F201A1778003831D8 /* Presenter */,
+				72FC5F50201A1780003831D8 /* Interactor */,
+				72FC5F55201A17A3003831D8 /* Wireframe */,
+			);
+			path = NewPlaceAddModule;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -430,6 +497,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				72FC5F3D201A0C5C003831D8 /* NewItemAdd.storyboard in Resources */,
+				72FC5F45201A1738003831D8 /* NewPlaceAdd.storyboard in Resources */,
 				722C8BC8201727DE002E474F /* LaunchScreen.storyboard in Resources */,
 				729541522018802D00D41626 /* NewClientAdd.storyboard in Resources */,
 				722C8BC5201727DE002E474F /* Assets.xcassets in Resources */,
@@ -450,6 +518,7 @@
 				72F2A56C2017561E004DA13B /* RootTabBarController.swift in Sources */,
 				72FC5F272019ECBC003831D8 /* NewClientAddViewProtocol.swift in Sources */,
 				72F2A56A201755FB004DA13B /* RootWireframeProtocol.swift in Sources */,
+				72FC5F41201A1710003831D8 /* NewPlaceAddViewController.swift in Sources */,
 				72F2A57520176C94004DA13B /* DataStoragesListInteractor.swift in Sources */,
 				72FC5F232019D3E7003831D8 /* DataStoragesListInteractorProtocol.swift in Sources */,
 				72FC5F36201A0C23003831D8 /* NewItemAddInteractorProtocol.swift in Sources */,
@@ -459,11 +528,14 @@
 				72FC5F172019BF7C003831D8 /* PlaceCell.swift in Sources */,
 				72FC5F2F201A0BF4003831D8 /* NewItemAddPresenter.swift in Sources */,
 				7295414820187CF700D41626 /* CoreDataManager.swift in Sources */,
+				72FC5F48201A174E003831D8 /* NewPlaceAddPresenter.swift in Sources */,
 				72FC5F1F2019CB94003831D8 /* DataStoragesListViewProtocol.swift in Sources */,
 				729541642018A45500D41626 /* NewClientAddWireframeProtocol.swift in Sources */,
 				72F2A5672017552D004DA13B /* RootWireframe.swift in Sources */,
 				7295415F2018A33C00D41626 /* NewClientAddWireframe.swift in Sources */,
 				729541552018839400D41626 /* NewClientAddPresenterProtocol.swift in Sources */,
+				72FC5F43201A172A003831D8 /* NewPlaceAddViewProtocol.swift in Sources */,
+				72FC5F54201A179C003831D8 /* NewPlaceAddWireframeProtocol.swift in Sources */,
 				72FC5F3B201A0C52003831D8 /* NewItemAddViewProtocol.swift in Sources */,
 				72FC5F39201A0C48003831D8 /* NewItemAddViewController.swift in Sources */,
 				72FC5F152019BF5A003831D8 /* ItemCell.swift in Sources */,
@@ -472,8 +544,11 @@
 				72FC5F31201A0BFF003831D8 /* NewItemAddPresenterProtocol.swift in Sources */,
 				72FC5F34201A0C18003831D8 /* NewItemAddInteractor.swift in Sources */,
 				72FC5F2A201A0BC8003831D8 /* NewItemAddWireframe.swift in Sources */,
+				72FC5F4C201A1764003831D8 /* NewPlaceAddInteractor.swift in Sources */,
+				72FC5F4A201A1759003831D8 /* NewPlaceAddPresenterProtocol.swift in Sources */,
 				72FC5F2C201A0BDB003831D8 /* NewItemAddWireframeProtocol.swift in Sources */,
 				7295415C2018A2FA00D41626 /* NewClientAddInteractor.swift in Sources */,
+				72FC5F4E201A1772003831D8 /* NewPlaceAddInteractorProtocol.swift in Sources */,
 				72FC5F192019C575003831D8 /* ItemModel.swift in Sources */,
 				7295414F20187F8500D41626 /* NewClientAddViewController.swift in Sources */,
 				72FC5F0D2019BE7E003831D8 /* DataStoragesListPresenter.swift in Sources */,
@@ -481,6 +556,7 @@
 				72F2A57320176C73004DA13B /* DataStoragesListWireframe.swift in Sources */,
 				72FC5F252019DB7C003831D8 /* DataStoragesListWireframeProtocol.swift in Sources */,
 				729541682018AE2E00D41626 /* RootPresenter.swift in Sources */,
+				72FC5F52201A1791003831D8 /* NewPlaceAddWireframe.swift in Sources */,
 				72FC5F1D2019CB80003831D8 /* DataStoragesListPresenterProtocol.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -16,9 +16,6 @@ class NewClientAddPresenter: NewClientAddPresenterProtocol {
     
     func saveNewClient(client: ClientModel) {
         interactor?.saveNewClient(client: client)
-    }
-    
-    func dismissVC() {
-       wireFrame?.dismissVC(vc: view)
+        wireFrame?.dismissVC(vc: view)
     }
 }
