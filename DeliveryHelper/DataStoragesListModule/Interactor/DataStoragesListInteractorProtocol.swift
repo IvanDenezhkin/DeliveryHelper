@@ -9,7 +9,7 @@
 import Foundation
 
 protocol DataStoragesListInteractorProtocol: class {
-    var dataBase: CoreDataManager? { get set }
+    var dataBase: CoreDataManager<Client>? { get set }
     
     func fetchEntityes(forMode: DataStoragesListTableViewDisplayMode)
 }

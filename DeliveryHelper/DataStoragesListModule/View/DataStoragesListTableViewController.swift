@@ -8,7 +8,7 @@
 
 import UIKit
 
-enum DataStoragesListTableViewDisplayMode {
+enum DataStoragesListTableViewDisplayMode: Int {
     case displayModeItem
     case displayModeClient
     case displayModePlace

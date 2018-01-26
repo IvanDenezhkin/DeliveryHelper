@@ -13,7 +13,7 @@ class DataStoragesListWireframe: DataStoragesListWireframeProtocol {
     static func createDataStoragesListModule(withDisplayMode: DataStoragesListTableViewDisplayMode) -> UIViewController {
         let dataStoragesListVC = UIStoryboard(name: "DataStoragesListView", bundle: nil).instantiateViewController(withIdentifier: "DataStoragesListTableViewController") as! DataStoragesListTableViewController
         let presenter = DataStoragesListPresenter()
-        let interactor = DataStoragesListInteractor(withStorage: CoreDataManager.shared)
+        let interactor = DataStoragesListInteractor(withStorage: CoreDataManager<Client>())
         let wireFrame = DataStoragesListWireframe()
         dataStoragesListVC.presenter = presenter
         dataStoragesListVC.state = withDisplayMode
@@ -22,8 +22,7 @@ class DataStoragesListWireframe: DataStoragesListWireframeProtocol {
         presenter.wireFrame = wireFrame
         interactor.presenter = presenter
         
-        let navigationController = UINavigationController(rootViewController: dataStoragesListVC)
-        return navigationController
+        return dataStoragesListVC
     }
     
     func presentAddNewEntityViewController(forMode: DataStoragesListTableViewDisplayMode, on: DataStoragesListViewProtocol?) {
@@ -34,7 +33,7 @@ class DataStoragesListWireframe: DataStoragesListWireframeProtocol {
             case .displayModeClient:
                 sourceVC.navigationController?.pushViewController(NewClientAddWireframe.createNewClientAddModule(), animated: true)
             case .displayModePlace:
-                sourceVC.navigationController?.pushViewController(NewClientAddWireframe.createNewClientAddModule(), animated: true)
+                sourceVC.navigationController?.pushViewController(NewPlaceAddWireframe.createNewPlaceAddModule(), animated: true)
             }
         }
     }

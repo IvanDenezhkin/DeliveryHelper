@@ -9,10 +9,7 @@
 import UIKit
 import CoreData
 
-class CoreDataManager {
-    static let shared = CoreDataManager()
-    
-    private init() { }
+class CoreDataManager<EntityType> {
     
     lazy var context = self.persistentContainer.viewContext
     
@@ -45,7 +42,7 @@ class CoreDataManager {
     
     // MARK: - Core Data Saving support
     
-    func saveContext () {
+    func saveContext() {
         if context.hasChanges {
             do {
                 try context.save()
@@ -66,12 +63,12 @@ class CoreDataManager {
         saveContext()
     }
     
-    func fetchAllEntityes() -> [Client]? {
-        let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: "Client")
+    func fetchAllEntityes() -> [EntityType]? {
+        let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: "\(EntityType.self)")
         do {
-            let results = try CoreDataManager.shared.context.fetch(fetchRequest)
+            let results = try self.context.fetch(fetchRequest)
             
-            return results as? [Client]
+            return results as? [EntityType]
         } catch {
             print(error)
             return nil
@@ -79,7 +76,7 @@ class CoreDataManager {
     }
     
     func removeAllData() {
-        let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: "Client")
+        let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: "\(EntityType.self)")
         let deleteRequest = NSBatchDeleteRequest(fetchRequest: fetchRequest)
         do {
             try context.execute(deleteRequest)

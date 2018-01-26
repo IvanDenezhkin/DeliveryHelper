@@ -9,9 +9,10 @@
 import Foundation
 
 class NewClientAddInteractor: NewClientAddInteractorProtocol {
-    var dataManager: CoreDataManager?
+    var dataManager: CoreDataManager<Client>?
     
     func saveNewClient(client: ClientModel) {
-        CoreDataManager.shared.addNewClient(client: client)
+        let DB = CoreDataManager<Client>()
+        DB.addNewClient(client: client)
     }
 }

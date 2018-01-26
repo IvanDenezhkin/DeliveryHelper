@@ -21,7 +21,7 @@ class NewPlaceAddWireframe: NewPlaceAddWireframeProtocol {
         presenter.interactor = interactor
         presenter.view = newItemVC
         
-        interactor.dataManager = CoreDataManager.shared
+        interactor.dataManager = CoreDataManager<PlaceModel>()
         
         return newItemVC
     }

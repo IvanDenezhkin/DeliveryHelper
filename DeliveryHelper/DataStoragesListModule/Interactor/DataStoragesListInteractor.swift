@@ -9,25 +9,25 @@
 import Foundation
 
 class DataStoragesListInteractor: DataStoragesListInteractorProtocol {
-    var dataBase: CoreDataManager?
+    var dataBase: CoreDataManager<Client>?
     weak var presenter: DataStoragesListPresenterProtocol?
     
-    init(withStorage: CoreDataManager) {
+    init(withStorage: CoreDataManager<Client>) {
         self.dataBase = withStorage
     }
     
     func fetchEntityes(forMode: DataStoragesListTableViewDisplayMode) {
         switch forMode {
         case .displayModeItem:
-            if let clients = CoreDataManager.shared.fetchAllEntityes() {
+            if let clients = dataBase?.fetchAllEntityes() {
                 presenter?.addClients(withClients: clients)
             }
         case .displayModeClient:
-            if let clients = CoreDataManager.shared.fetchAllEntityes() {
+            if let clients = dataBase?.fetchAllEntityes() {
                 presenter?.addClients(withClients: clients)
             }
         case .displayModePlace:
-            if let clients = CoreDataManager.shared.fetchAllEntityes() {
+            if let clients = dataBase?.fetchAllEntityes() {
                 presenter?.addClients(withClients: clients)
             }
         }

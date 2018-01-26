@@ -10,6 +10,13 @@
 		722C8BBE201727DE002E474F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 722C8BBD201727DE002E474F /* AppDelegate.swift */; };
 		722C8BC5201727DE002E474F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 722C8BC4201727DE002E474F /* Assets.xcassets */; };
 		722C8BC8201727DE002E474F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 722C8BC6201727DE002E474F /* LaunchScreen.storyboard */; };
+		722F6389201B59DE00B63D40 /* BasesListViewProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 722F6388201B59DE00B63D40 /* BasesListViewProtocol.swift */; };
+		722F638B201B59F100B63D40 /* BasesListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 722F638A201B59F100B63D40 /* BasesListViewController.swift */; };
+		722F638D201B5A0100B63D40 /* BasesList.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 722F638C201B5A0100B63D40 /* BasesList.storyboard */; };
+		722F6390201B5A3200B63D40 /* BasesListPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 722F638F201B5A3200B63D40 /* BasesListPresenter.swift */; };
+		722F6392201B5A4100B63D40 /* BasesListPresenterProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 722F6391201B5A4100B63D40 /* BasesListPresenterProtocol.swift */; };
+		722F6395201B5A6900B63D40 /* BasesListWireframe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 722F6394201B5A6900B63D40 /* BasesListWireframe.swift */; };
+		722F6397201B5A7A00B63D40 /* BasesListWireframeProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 722F6396201B5A7A00B63D40 /* BasesListWireframeProtocol.swift */; };
 		7295414820187CF700D41626 /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7295414720187CF600D41626 /* CoreDataManager.swift */; };
 		7295414D20187D4F00D41626 /* ClientsDB.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 7295414B20187D4F00D41626 /* ClientsDB.xcdatamodeld */; };
 		7295414F20187F8500D41626 /* NewClientAddViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7295414E20187F8500D41626 /* NewClientAddViewController.swift */; };
@@ -67,6 +74,13 @@
 		722C8BC4201727DE002E474F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		722C8BC7201727DE002E474F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		722C8BC9201727DE002E474F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		722F6388201B59DE00B63D40 /* BasesListViewProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasesListViewProtocol.swift; sourceTree = "<group>"; };
+		722F638A201B59F100B63D40 /* BasesListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasesListViewController.swift; sourceTree = "<group>"; };
+		722F638C201B5A0100B63D40 /* BasesList.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = BasesList.storyboard; sourceTree = "<group>"; };
+		722F638F201B5A3200B63D40 /* BasesListPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasesListPresenter.swift; sourceTree = "<group>"; };
+		722F6391201B5A4100B63D40 /* BasesListPresenterProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasesListPresenterProtocol.swift; sourceTree = "<group>"; };
+		722F6394201B5A6900B63D40 /* BasesListWireframe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasesListWireframe.swift; sourceTree = "<group>"; };
+		722F6396201B5A7A00B63D40 /* BasesListWireframeProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasesListWireframeProtocol.swift; sourceTree = "<group>"; };
 		7295414720187CF600D41626 /* CoreDataManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
 		7295414C20187D4F00D41626 /* ClientsDB.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = ClientsDB.xcdatamodel; sourceTree = "<group>"; };
 		7295414E20187F8500D41626 /* NewClientAddViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewClientAddViewController.swift; sourceTree = "<group>"; };
@@ -150,16 +164,55 @@
 			children = (
 				722C8BBD201727DE002E474F /* AppDelegate.swift */,
 				7295414920187D1200D41626 /* Common */,
+				722F6399201B5A8800B63D40 /* BasesListModule */,
+				72F2A57620176CBB004DA13B /* DataStoragesListModule */,
 				72FC5F56201A17AA003831D8 /* NewPlaceAddModule */,
 				72FC5F3F201A0C79003831D8 /* NewItemAddModule */,
 				7295415020187FD100D41626 /* NewClientModule */,
-				72F2A57620176CBB004DA13B /* DataStoragesListModule */,
 				72F2A56820175539004DA13B /* RootModule */,
 				722C8BC4201727DE002E474F /* Assets.xcassets */,
 				722C8BC6201727DE002E474F /* LaunchScreen.storyboard */,
 				722C8BC9201727DE002E474F /* Info.plist */,
 			);
 			path = DeliveryHelper;
+			sourceTree = "<group>";
+		};
+		722F638E201B5A0700B63D40 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				722F6388201B59DE00B63D40 /* BasesListViewProtocol.swift */,
+				722F638A201B59F100B63D40 /* BasesListViewController.swift */,
+				722F638C201B5A0100B63D40 /* BasesList.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		722F6393201B5A5300B63D40 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				722F638F201B5A3200B63D40 /* BasesListPresenter.swift */,
+				722F6391201B5A4100B63D40 /* BasesListPresenterProtocol.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		722F6398201B5A7E00B63D40 /* Wireframe */ = {
+			isa = PBXGroup;
+			children = (
+				722F6394201B5A6900B63D40 /* BasesListWireframe.swift */,
+				722F6396201B5A7A00B63D40 /* BasesListWireframeProtocol.swift */,
+			);
+			path = Wireframe;
+			sourceTree = "<group>";
+		};
+		722F6399201B5A8800B63D40 /* BasesListModule */ = {
+			isa = PBXGroup;
+			children = (
+				722F638E201B5A0700B63D40 /* View */,
+				722F6393201B5A5300B63D40 /* Presenter */,
+				722F6398201B5A7E00B63D40 /* Wireframe */,
+			);
+			path = BasesListModule;
 			sourceTree = "<group>";
 		};
 		7295414920187D1200D41626 /* Common */ = {
@@ -497,6 +550,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				72FC5F3D201A0C5C003831D8 /* NewItemAdd.storyboard in Resources */,
+				722F638D201B5A0100B63D40 /* BasesList.storyboard in Resources */,
 				72FC5F45201A1738003831D8 /* NewPlaceAdd.storyboard in Resources */,
 				722C8BC8201727DE002E474F /* LaunchScreen.storyboard in Resources */,
 				729541522018802D00D41626 /* NewClientAdd.storyboard in Resources */,
@@ -518,21 +572,26 @@
 				72F2A56C2017561E004DA13B /* RootTabBarController.swift in Sources */,
 				72FC5F272019ECBC003831D8 /* NewClientAddViewProtocol.swift in Sources */,
 				72F2A56A201755FB004DA13B /* RootWireframeProtocol.swift in Sources */,
+				722F6397201B5A7A00B63D40 /* BasesListWireframeProtocol.swift in Sources */,
 				72FC5F41201A1710003831D8 /* NewPlaceAddViewController.swift in Sources */,
 				72F2A57520176C94004DA13B /* DataStoragesListInteractor.swift in Sources */,
 				72FC5F232019D3E7003831D8 /* DataStoragesListInteractorProtocol.swift in Sources */,
+				722F6390201B5A3200B63D40 /* BasesListPresenter.swift in Sources */,
 				72FC5F36201A0C23003831D8 /* NewItemAddInteractorProtocol.swift in Sources */,
+				722F6389201B59DE00B63D40 /* BasesListViewProtocol.swift in Sources */,
 				7295415A2018A25C00D41626 /* NewClientAddPresenter.swift in Sources */,
 				729541622018A39A00D41626 /* NewClientAddInteractorProtocol.swift in Sources */,
 				7295414D20187D4F00D41626 /* ClientsDB.xcdatamodeld in Sources */,
 				72FC5F172019BF7C003831D8 /* PlaceCell.swift in Sources */,
 				72FC5F2F201A0BF4003831D8 /* NewItemAddPresenter.swift in Sources */,
+				722F638B201B59F100B63D40 /* BasesListViewController.swift in Sources */,
 				7295414820187CF700D41626 /* CoreDataManager.swift in Sources */,
 				72FC5F48201A174E003831D8 /* NewPlaceAddPresenter.swift in Sources */,
 				72FC5F1F2019CB94003831D8 /* DataStoragesListViewProtocol.swift in Sources */,
 				729541642018A45500D41626 /* NewClientAddWireframeProtocol.swift in Sources */,
 				72F2A5672017552D004DA13B /* RootWireframe.swift in Sources */,
 				7295415F2018A33C00D41626 /* NewClientAddWireframe.swift in Sources */,
+				722F6395201B5A6900B63D40 /* BasesListWireframe.swift in Sources */,
 				729541552018839400D41626 /* NewClientAddPresenterProtocol.swift in Sources */,
 				72FC5F43201A172A003831D8 /* NewPlaceAddViewProtocol.swift in Sources */,
 				72FC5F54201A179C003831D8 /* NewPlaceAddWireframeProtocol.swift in Sources */,
@@ -553,6 +612,7 @@
 				7295414F20187F8500D41626 /* NewClientAddViewController.swift in Sources */,
 				72FC5F0D2019BE7E003831D8 /* DataStoragesListPresenter.swift in Sources */,
 				7295415720189DCB00D41626 /* ClientModel.swift in Sources */,
+				722F6392201B5A4100B63D40 /* BasesListPresenterProtocol.swift in Sources */,
 				72F2A57320176C73004DA13B /* DataStoragesListWireframe.swift in Sources */,
 				72FC5F252019DB7C003831D8 /* DataStoragesListWireframeProtocol.swift in Sources */,
 				729541682018AE2E00D41626 /* RootPresenter.swift in Sources */,

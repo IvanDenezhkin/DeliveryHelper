@@ -9,7 +9,7 @@
 import Foundation
 
 class NewItemAddInteractor: NewItemAddInteractorProtocol {
-    var dataManager: CoreDataManager?
+    var dataManager: CoreDataManager<ItemModel>?
     
     func saveNewItem(item: ItemModel) {
         //TODO: Add Item to base
