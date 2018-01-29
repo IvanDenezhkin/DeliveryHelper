@@ -9,9 +9,9 @@
 import Foundation
 
 class NewItemAddInteractor: NewItemAddInteractorProtocol {
-    var dataManager: CoreDataManager<ItemModel>?
+    var dataManager: CoreDataManager?
     
     func saveNewItem(item: ItemModel) {
-        //TODO: Add Item to base
+        dataManager?.addNewItem(item: item)
     }
 }

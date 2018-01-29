@@ -21,7 +21,7 @@ class NewItemAddWireframe: NewItemAddWireframeProtocol {
         presenter.interactor = interactor
         presenter.view = newItemVC
         
-        interactor.dataManager = CoreDataManager<ItemModel>()
+        interactor.dataManager = CoreDataManager.shared
         
         return newItemVC
     }

@@ -22,7 +22,7 @@ class NewClientAddWireframe: NewClientAddWireframeProtocol {
         presenter.interactor = interactor
         presenter.view = newClientVC
         
-        interactor.dataManager = CoreDataManager<Client>()
+        interactor.dataManager = CoreDataManager.shared
         
         return newClientVC
     }

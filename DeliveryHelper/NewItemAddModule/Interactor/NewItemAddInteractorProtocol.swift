@@ -9,6 +9,6 @@
 import Foundation
 
 protocol NewItemAddInteractorProtocol {
-    var dataManager: CoreDataManager<ItemModel>? { get set }
+    var dataManager: CoreDataManager? { get set }
     func saveNewItem(item: ItemModel)
 }

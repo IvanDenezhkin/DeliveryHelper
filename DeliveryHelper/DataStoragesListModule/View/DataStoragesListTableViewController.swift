@@ -61,7 +61,14 @@ class DataStoragesListTableViewController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 60
+        switch state {
+        case .displayModeItem:
+            return 40
+        case .displayModeClient:
+            return 60
+        case .displayModePlace:
+            return 80
+        }
     }
     
     private func decorateItemCell(withItem item: ItemModel) -> UITableViewCell {

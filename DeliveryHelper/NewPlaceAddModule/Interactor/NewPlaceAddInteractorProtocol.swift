@@ -9,6 +9,6 @@
 import UIKit
 
 protocol NewPlaceAddInteractorProtocol: class {
-    var dataManager: CoreDataManager<PlaceModel>? { get set }
+    var dataManager: CoreDataManager? { get set }
     func saveNewPlace(place: PlaceModel)
 }

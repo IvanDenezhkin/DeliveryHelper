@@ -16,7 +16,7 @@ protocol DataStoragesListPresenterProtocol: class {
     func addNewEntity(forMode: DataStoragesListTableViewDisplayMode)
     func fetchEntityes(forMode: DataStoragesListTableViewDisplayMode)
     
-    func addItems(withItems: [ItemModel])
+    func addItems(withItems: [Item])
     func addClients(withClients: [Client])
-    func addPlaces(withPlaces: [PlaceModel])
+    func addPlaces(withPlaces: [Place])
 }

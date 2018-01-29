@@ -9,10 +9,10 @@
 import Foundation
 
 class NewPlaceAddInteractor: NewPlaceAddInteractorProtocol {
-    var dataManager: CoreDataManager<PlaceModel>?
+    var dataManager: CoreDataManager?
     
     func saveNewPlace(place: PlaceModel) {
-        //TODO: save new place
+        dataManager?.addNewPlace(place: place)
     }
     
 

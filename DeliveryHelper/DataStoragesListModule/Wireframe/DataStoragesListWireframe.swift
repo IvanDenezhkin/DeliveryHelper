@@ -13,13 +13,14 @@ class DataStoragesListWireframe: DataStoragesListWireframeProtocol {
     static func createDataStoragesListModule(withDisplayMode: DataStoragesListTableViewDisplayMode) -> UIViewController {
         let dataStoragesListVC = UIStoryboard(name: "DataStoragesListView", bundle: nil).instantiateViewController(withIdentifier: "DataStoragesListTableViewController") as! DataStoragesListTableViewController
         let presenter = DataStoragesListPresenter()
-        let interactor = DataStoragesListInteractor(withStorage: CoreDataManager<Client>())
+        let interactor = DataStoragesListInteractor()
         let wireFrame = DataStoragesListWireframe()
         dataStoragesListVC.presenter = presenter
         dataStoragesListVC.state = withDisplayMode
         presenter.view = dataStoragesListVC
         presenter.interactor = interactor
         presenter.wireFrame = wireFrame
+        interactor.dataBase = CoreDataManager.shared
         interactor.presenter = presenter
         
         return dataStoragesListVC
