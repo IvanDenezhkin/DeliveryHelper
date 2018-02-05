@@ -39,5 +39,9 @@ class DataStoragesListWireframe: DataStoragesListWireframeProtocol {
         }
     }
     
+    func dismissVC(vc: DataStoragesListViewProtocol?) {
+        guard let vievController = vc as? UIViewController else { return }
+        vievController.navigationController?.popViewController(animated: true)
+    }
     
 }

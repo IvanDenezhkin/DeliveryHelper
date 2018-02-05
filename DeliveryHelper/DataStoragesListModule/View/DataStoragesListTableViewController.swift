@@ -15,8 +15,7 @@ enum DataStoragesListTableViewDisplayMode: Int {
 }
 
 class DataStoragesListTableViewController: UITableViewController {
-    var presenter: DataStoragesListPresenterProtocol?
-    
+    var presenter: (DataStoragesListPresenterProtocol & DataStoragesListDelegateProtocol)?
     var state: DataStoragesListTableViewDisplayMode = .displayModeItem
     var clients: [ClientModel] = []
     var items: [ItemModel] = []
@@ -53,7 +52,14 @@ class DataStoragesListTableViewController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        print("Selected: \(indexPath.row)")
+        switch state {
+        case .displayModeItem:
+            presenter?.passItem(item: items[indexPath.row])
+        case .displayModeClient:
+            presenter?.passClient(client: clients[indexPath.row])
+        case .displayModePlace:
+            presenter?.passPlace(place: places[indexPath.row])
+        }
     }
     
     @IBAction func addButtonPressed(_ sender: UIBarButtonItem) {

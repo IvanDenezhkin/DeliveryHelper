@@ -11,4 +11,5 @@ import UIKit
 protocol DataStoragesListWireframeProtocol: class {
     static func createDataStoragesListModule(withDisplayMode: DataStoragesListTableViewDisplayMode) -> UIViewController
     func presentAddNewEntityViewController(forMode: DataStoragesListTableViewDisplayMode, on: DataStoragesListViewProtocol?)
+    func dismissVC(vc: DataStoragesListViewProtocol?)
 }

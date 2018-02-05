@@ -21,7 +21,7 @@
     <elements>
         <element name="Client" positionX="-63" positionY="-18" width="128" height="75"/>
         <element name="Item" positionX="-63" positionY="0" width="128" height="60"/>
-        <element name="Place" positionX="-54" positionY="9" width="128" height="90"/>
         <element name="Order" positionX="-36" positionY="36" width="128" height="105"/>
+        <element name="Place" positionX="-54" positionY="9" width="128" height="90"/>
     </elements>
 </model>

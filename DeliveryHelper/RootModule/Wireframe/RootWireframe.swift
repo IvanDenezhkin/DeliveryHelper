@@ -18,7 +18,8 @@ class RootWireframe: RootWireframeProtocol {
     func presentRootController() {
         let rootViewController = RootTableViewController()
         let vc = BasesListWireframe.createBasesListModule()
-        rootViewController.setViewControllers([vc], animated: true)
+        let newOrder = NewOrderWireframe.createNewOrderModule()
+        rootViewController.setViewControllers([vc, newOrder], animated: true)
         self.window.rootViewController = rootViewController
         self.window.makeKeyAndVisible()
     }

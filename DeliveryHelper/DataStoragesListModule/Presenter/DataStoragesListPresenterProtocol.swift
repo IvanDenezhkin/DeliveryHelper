@@ -12,6 +12,7 @@ protocol DataStoragesListPresenterProtocol: class {
     var view: DataStoragesListViewProtocol? { get set }
     var wireFrame: DataStoragesListWireframeProtocol? { get set }
     var interactor: DataStoragesListInteractorProtocol? { get set }
+    var delegate: DataStoragesListDelegateProtocol? { get set }
     
     func addNewEntity(forMode: DataStoragesListTableViewDisplayMode)
     func fetchEntityes(forMode: DataStoragesListTableViewDisplayMode)

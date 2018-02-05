@@ -9,7 +9,7 @@
 import Foundation
 
 protocol DataStoragesListViewProtocol: class {
-    var presenter: DataStoragesListPresenterProtocol? { get set }
+    var presenter: (DataStoragesListPresenterProtocol & DataStoragesListDelegateProtocol)? { get set }
     func startLoading()
     func stopLoading()
     func updateItems(withItems: [ItemModel])

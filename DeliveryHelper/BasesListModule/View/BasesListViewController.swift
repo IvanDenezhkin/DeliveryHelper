@@ -16,11 +16,7 @@ class BasesListViewController: UITableViewController, BasesListViewProtocol {
     }
     
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        let screenHeight = view.frame.height
-        let navigationBarHeight = navigationController?.navigationBar.frame.height ?? 0
-        let tabBarHeight = tabBarController?.tabBar.frame.height ?? 0
-        let avaliableSpace = screenHeight - navigationBarHeight - tabBarHeight
-        return avaliableSpace / 3
+        return self.avaliablePlace / 3
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {

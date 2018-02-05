@@ -13,6 +13,7 @@ class DataStoragesListPresenter: DataStoragesListPresenterProtocol {
     weak var view: DataStoragesListViewProtocol?
     var interactor: DataStoragesListInteractorProtocol?
     var wireFrame: DataStoragesListWireframeProtocol?
+    weak var delegate: DataStoragesListDelegateProtocol?
     
     // View -> Presenter
     func fetchEntityes(forMode: DataStoragesListTableViewDisplayMode) {
@@ -46,3 +47,21 @@ class DataStoragesListPresenter: DataStoragesListPresenterProtocol {
     }
 }
 
+extension DataStoragesListPresenter: DataStoragesListDelegateProtocol {
+    func passItem(item: ItemModel) {
+        delegate?.passItem(item: item)
+        if delegate != nil { wireFrame?.dismissVC(vc: view) }
+    }
+    
+    func passClient(client: ClientModel) {
+        delegate?.passClient(client: client)
+        if delegate != nil { wireFrame?.dismissVC(vc: view) }
+    }
+    
+    func passPlace(place: PlaceModel) {
+        delegate?.passPlace(place: place)
+        if delegate != nil { wireFrame?.dismissVC(vc: view) }
+    }
+    
+    
+}
