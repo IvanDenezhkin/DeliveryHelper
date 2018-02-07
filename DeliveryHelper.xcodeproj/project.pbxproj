@@ -31,6 +31,7 @@
 		725F19E42021D1F000D50200 /* NewOrderViewProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 725F19E32021D1F000D50200 /* NewOrderViewProtocol.swift */; };
 		725F19E62021D20000D50200 /* NewOrderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 725F19E52021D20000D50200 /* NewOrderViewController.swift */; };
 		725F19E82021D20900D50200 /* NewOrder.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 725F19E72021D20900D50200 /* NewOrder.storyboard */; };
+		726AB62C202B1553005C45CB /* DateExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 726AB62B202B1553005C45CB /* DateExtension.swift */; };
 		7295414820187CF700D41626 /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7295414720187CF600D41626 /* CoreDataManager.swift */; };
 		7295414D20187D4F00D41626 /* DataBase.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 7295414B20187D4F00D41626 /* DataBase.xcdatamodeld */; };
 		7295414F20187F8500D41626 /* NewClientAddViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7295414E20187F8500D41626 /* NewClientAddViewController.swift */; };
@@ -111,6 +112,7 @@
 		725F19E32021D1F000D50200 /* NewOrderViewProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewOrderViewProtocol.swift; sourceTree = "<group>"; };
 		725F19E52021D20000D50200 /* NewOrderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewOrderViewController.swift; sourceTree = "<group>"; };
 		725F19E72021D20900D50200 /* NewOrder.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = NewOrder.storyboard; sourceTree = "<group>"; };
+		726AB62B202B1553005C45CB /* DateExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateExtension.swift; sourceTree = "<group>"; };
 		7295414720187CF600D41626 /* CoreDataManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
 		7295414C20187D4F00D41626 /* ClientsDB.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = ClientsDB.xcdatamodel; sourceTree = "<group>"; };
 		7295414E20187F8500D41626 /* NewClientAddViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewClientAddViewController.swift; sourceTree = "<group>"; };
@@ -264,6 +266,7 @@
 			isa = PBXGroup;
 			children = (
 				725A512D20235BFD00EB0AEA /* UIViewControllerExtensions.swift */,
+				726AB62B202B1553005C45CB /* DateExtension.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -672,6 +675,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				72F2A56E2017564F004DA13B /* RootInteractor.swift in Sources */,
+				726AB62C202B1553005C45CB /* DateExtension.swift in Sources */,
 				72F2A57120176C39004DA13B /* DataStoragesListTableViewController.swift in Sources */,
 				722C8BBE201727DE002E474F /* AppDelegate.swift in Sources */,
 				725F19DA2021D1A600D50200 /* NewOrderPresenterProtocol.swift in Sources */,

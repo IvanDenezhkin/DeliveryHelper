@@ -62,6 +62,8 @@ class NewOrderViewController: UITableViewController, NewOrderViewProtocol {
                 case .dateMode:
                     clientCell.titleLabel.text = "Date"
                     let picker = UIDatePicker()
+                    picker.datePickerMode = .date
+                    picker.locale = Locale.current
                     self.picker = picker
                     clientCell.selectedClientPlaceTextField.inputView = picker
                     clientCell.selectedClientPlaceTextField.inputAccessoryView = self.addToolBar(target: self, action: #selector(setDate))
@@ -108,6 +110,7 @@ class NewOrderViewController: UITableViewController, NewOrderViewProtocol {
             case .dateMode:
                 selectedCell.selectedClientPlaceTextField.isEnabled = true
                 selectedCell.selectedClientPlaceTextField.becomeFirstResponder()
+                tableView.allowsSelection = false
             }
         }
     }
@@ -115,18 +118,20 @@ class NewOrderViewController: UITableViewController, NewOrderViewProtocol {
     @objc func setDate() {
         self.date = picker!.date
         if let cell = tableView.cellForRow(at: lastIndexPath) as? ClientPlaceCell {
-            cell.selectedClientPlaceTextField.text = picker?.date.description
+            cell.selectedClientPlaceTextField.text = picker?.date.userPreferedDateString
             cell.selectedClientPlaceTextField.isEnabled = false
         }
         view.endEditing(true)
+        tableView.allowsSelection = true
     }
     
     @objc func setQuantity() {
-            if let cell = tableView.cellForRow(at: lastIndexPath) as? ItemsCell {
-                cell.addNewItemButton.isEnabled = true
-                items.last?.quantity = Int(cell.quantityTextField.text!)
-            }
+        if let cell = tableView.cellForRow(at: lastIndexPath) as? ItemsCell {
+            cell.addNewItemButton.isEnabled = true
+            items.last?.quantity = Int(cell.quantityTextField.text!)
+        }
         view.endEditing(true)
+        tableView.allowsSelection = true
     }
     
     @objc func addOrder() {
@@ -148,6 +153,8 @@ extension NewOrderViewController: DataStoragesListDelegateProtocol {
         items.append(item)
         if let cellItem = tableView.cellForRow(at: lastIndexPath) as? ItemsCell {
             cellItem.selectedItemTextField.text = item.name
+            cellItem.quantityTextField.becomeFirstResponder()
+            tableView.allowsSelection = false
         }
     }
     
