@@ -44,6 +44,7 @@
 		729541642018A45500D41626 /* NewClientAddWireframeProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 729541632018A45500D41626 /* NewClientAddWireframeProtocol.swift */; };
 		729541682018AE2E00D41626 /* RootPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 729541672018AE2E00D41626 /* RootPresenter.swift */; };
 		729A3CC920245C7500A71088 /* DataStoragesListDelegateProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 729A3CC820245C7500A71088 /* DataStoragesListDelegateProtocol.swift */; };
+		72E5FEA02028906E00CB5A9B /* OrderModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72E5FE9F2028906E00CB5A9B /* OrderModel.swift */; };
 		72F2A5672017552D004DA13B /* RootWireframe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72F2A5662017552D004DA13B /* RootWireframe.swift */; };
 		72F2A56A201755FB004DA13B /* RootWireframeProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72F2A569201755FB004DA13B /* RootWireframeProtocol.swift */; };
 		72F2A56C2017561E004DA13B /* RootTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72F2A56B2017561E004DA13B /* RootTabBarController.swift */; };
@@ -123,6 +124,7 @@
 		729541632018A45500D41626 /* NewClientAddWireframeProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewClientAddWireframeProtocol.swift; sourceTree = "<group>"; };
 		729541672018AE2E00D41626 /* RootPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootPresenter.swift; sourceTree = "<group>"; };
 		729A3CC820245C7500A71088 /* DataStoragesListDelegateProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataStoragesListDelegateProtocol.swift; sourceTree = "<group>"; };
+		72E5FE9F2028906E00CB5A9B /* OrderModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderModel.swift; sourceTree = "<group>"; };
 		72F2A5662017552D004DA13B /* RootWireframe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootWireframe.swift; sourceTree = "<group>"; };
 		72F2A569201755FB004DA13B /* RootWireframeProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootWireframeProtocol.swift; sourceTree = "<group>"; };
 		72F2A56B2017561E004DA13B /* RootTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootTabBarController.swift; sourceTree = "<group>"; };
@@ -491,6 +493,7 @@
 				7295415620189DCB00D41626 /* ClientModel.swift */,
 				72FC5F182019C575003831D8 /* ItemModel.swift */,
 				72FC5F1A2019C57D003831D8 /* PlaceModel.swift */,
+				72E5FE9F2028906E00CB5A9B /* OrderModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -690,6 +693,7 @@
 				72FC5F36201A0C23003831D8 /* NewItemAddInteractorProtocol.swift in Sources */,
 				722F6389201B59DE00B63D40 /* BasesListViewProtocol.swift in Sources */,
 				7295415A2018A25C00D41626 /* NewClientAddPresenter.swift in Sources */,
+				72E5FEA02028906E00CB5A9B /* OrderModel.swift in Sources */,
 				729541622018A39A00D41626 /* NewClientAddInteractorProtocol.swift in Sources */,
 				7295414D20187D4F00D41626 /* DataBase.xcdatamodeld in Sources */,
 				72FC5F172019BF7C003831D8 /* PlaceCell.swift in Sources */,

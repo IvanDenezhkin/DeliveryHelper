@@ -12,4 +12,5 @@ protocol NewOrderPresenterProtocol: class {
     func showItems()
     func showClients()
     func showPlaces()
+    func saveOrder(order: OrderModel)
 }

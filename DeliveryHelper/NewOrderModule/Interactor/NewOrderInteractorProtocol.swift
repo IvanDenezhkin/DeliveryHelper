@@ -9,5 +9,5 @@
 import Foundation
 
 protocol NewOrderInteractorProtocol: class {
-    
+    func saveOrder(order: OrderModel)
 }

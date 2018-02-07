@@ -7,11 +7,25 @@
 //
 
 import Foundation
+import CoreData
 
-class ItemModel {
-    let name: String
+class ItemModel: NSObject, NSCoding {
+
+    
+    let name: String?
+    var quantity: Int?
     
     init(withName name: String) {
         self.name = name
+    }
+    
+    func encode(with aCoder: NSCoder) {
+        aCoder.encode(self.name, forKey: "ItemModelNameKey")
+        aCoder.encode(self.quantity, forKey: "ItemModelQuantityKey")
+    }
+    
+    required init?(coder aDecoder: NSCoder) {
+        self.name = aDecoder.decodeObject(forKey: "ItemModelNameKey") as? String
+        self.quantity = aDecoder.decodeObject(forKey: "ItemModelQuantityKey") as? Int
     }
 }

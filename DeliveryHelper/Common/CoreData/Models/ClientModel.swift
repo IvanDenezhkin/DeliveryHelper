@@ -7,10 +7,12 @@
 //
 
 import Foundation
+import CoreData
 
 class ClientModel {
     let name: String
     let phoneNumber: String
+    var objectID: NSManagedObjectID?
     
     init(withName name: String, phoneNumber phone: String) {
         self.name = name

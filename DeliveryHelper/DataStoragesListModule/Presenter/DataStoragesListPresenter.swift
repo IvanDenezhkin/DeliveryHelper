@@ -27,21 +27,26 @@ class DataStoragesListPresenter: DataStoragesListPresenterProtocol {
     // Presenter -> View
     func addItems(withItems: [Item]) {
         let properItems = withItems.map { item -> ItemModel in
-            return ItemModel(withName: item.name!)
+            let newItem = ItemModel(withName: item.name!)
+            return newItem
         }
         view?.updateItems(withItems: properItems)
     }
     
     func addClients(withClients: [Client]) {
         let properClients = withClients.map { client -> ClientModel in
-            return ClientModel(withName: client.name!, phoneNumber: client.phoneNumber!)
+            let newClient = ClientModel(withName: client.name!, phoneNumber: client.phoneNumber!)
+            newClient.objectID = client.objectID
+            return newClient
         }
         view?.updateClients(withClients: properClients)
     }
     
     func addPlaces(withPlaces: [Place]) {
         let properPlaces = withPlaces.map { place -> PlaceModel in
-            return PlaceModel(withCity: place.city!, street: place.street!, homeNumber: place.number!)
+            let newPlace = PlaceModel(withCity: place.city!, street: place.street!, homeNumber: place.number!)
+            newPlace.objectID = place.objectID
+            return newPlace
         }
         view?.updatePlaces(withPlaces: properPlaces)
     }

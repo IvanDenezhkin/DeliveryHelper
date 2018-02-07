@@ -13,10 +13,13 @@ class NewOrderWireframe: NewOrderWireframeProtocol {
         let storyboard = UIStoryboard(name: "NewOrder", bundle: nil)
         let newOrderVC = storyboard.instantiateViewController(withIdentifier: "NewOrderViewController") as! NewOrderViewController
         let presenter = NewOrderPresenter()
+        let interactor = NewOrderInteractor()
         let wireframe = NewOrderWireframe()
         
         newOrderVC.presenter = presenter
+        
         presenter.wireframe = wireframe
+        presenter.interactor = interactor
         presenter.view = newOrderVC
         
         let navigationController = UINavigationController(rootViewController: newOrderVC)

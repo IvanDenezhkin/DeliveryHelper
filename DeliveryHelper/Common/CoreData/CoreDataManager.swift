@@ -63,6 +63,29 @@ class CoreDataManager {
         saveContext()
     }
     
+    func addNewOrder(withOrder order: OrderModel) {
+        let newEntity = Order(context: self.context)
+        newEntity.client = self.context.object(with: order.client) as? Client
+        newEntity.place = self.context.object(with: order.place) as? Place
+        newEntity.items = order.items as NSObject
+        newEntity.dateOfDelivery = order.date
+        saveContext()
+        test()
+    }
+    
+    private func client(withClientModel: ClientModel) -> Client? {
+        let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: "Client")
+        fetchRequest.predicate = NSPredicate(format: "name == %@", withClientModel.name)
+        do {
+            let results = try self.context.fetch(fetchRequest)
+            return results.first as? Client
+        } catch {
+            //TODO: add Crashlytics or Lumberjack here
+            print(error)
+            return nil
+        }
+    }
+    
     func fetchAllEntityes<EntityType>(forType: EntityType.Type) -> [EntityType]? {
         let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: "\(EntityType.self)")
         do {
@@ -72,6 +95,16 @@ class CoreDataManager {
             //TODO: add Crashlytics or Lumberjack here
             print(error)
             return nil
+        }
+    }
+    
+    private func test() {
+        let orders = self.fetchAllEntityes(forType: Order.self)
+        for order in orders! {
+            print(order.client?.name, order.client?.phoneNumber, order.dateOfDelivery, order.items)
+            for item in order.items as! [ItemModel] {
+                print("\(item.name) x \(item.quantity)")
+            }
         }
     }
 }

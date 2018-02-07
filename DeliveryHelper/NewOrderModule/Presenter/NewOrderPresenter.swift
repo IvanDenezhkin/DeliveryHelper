@@ -9,6 +9,7 @@
 import Foundation
 
 class NewOrderPresenter: NewOrderPresenterProtocol {
+
     weak var view: (NewOrderViewProtocol & DataStoragesListDelegateProtocol)?
     var interactor: NewOrderInteractorProtocol?
     var wireframe: NewOrderWireframeProtocol?
@@ -23,5 +24,9 @@ class NewOrderPresenter: NewOrderPresenterProtocol {
     
     func showPlaces() {
         wireframe?.showSelectedBase(base: .displayModePlace, on: view)
+    }
+    
+    func saveOrder(order: OrderModel) {
+        interactor?.saveOrder(order: order)
     }
 }

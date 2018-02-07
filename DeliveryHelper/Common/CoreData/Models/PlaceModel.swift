@@ -7,11 +7,13 @@
 //
 
 import Foundation
+import CoreData
 
 class PlaceModel {
     let city: String
     let street: String
     let homeNumber: String
+    var objectID: NSManagedObjectID?
     
     init(withCity city: String, street: String, homeNumber: String) {
         self.city = city

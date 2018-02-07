@@ -9,5 +9,9 @@
 import Foundation
 
 class NewOrderInteractor: NewOrderInteractorProtocol {
+    func saveOrder(order: OrderModel) {
+        CoreDataManager.shared.addNewOrder(withOrder: order)
+    }
+    
     
 }

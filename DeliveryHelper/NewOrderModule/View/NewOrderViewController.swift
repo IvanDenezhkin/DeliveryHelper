@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import CoreData
 
 class NewOrderViewController: UITableViewController, NewOrderViewProtocol {
     var presenter: NewOrderPresenterProtocol?
@@ -15,6 +16,11 @@ class NewOrderViewController: UITableViewController, NewOrderViewProtocol {
     private var addedClientCells = 0
     private var lastIndexPath = IndexPath()
     private var picker: UIDatePicker?
+    
+    private var client: NSManagedObjectID?
+    private var place: NSManagedObjectID?
+    private var items = [ItemModel]()
+    private var date = Date()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -40,7 +46,9 @@ class NewOrderViewController: UITableViewController, NewOrderViewProtocol {
         case "ItemsCell":
             if let itemsCell = cell as? ItemsCell {
                 itemsCell.titleLabel.text = "Item"
+                itemsCell.addNewItemButton.isEnabled = false
                 itemsCell.addNewItemButton.addTarget(self, action: #selector(addRow), for: .touchUpInside)
+                itemsCell.quantityTextField.inputAccessoryView = self.addToolBar(target: self, action: #selector(setQuantity))
                 return itemsCell
             }
         case "ClientPlaceCell":
@@ -54,13 +62,9 @@ class NewOrderViewController: UITableViewController, NewOrderViewProtocol {
                 case .dateMode:
                     clientCell.titleLabel.text = "Date"
                     let picker = UIDatePicker()
-                    let toolBar = UIToolbar(frame: CGRect(x: 0, y: 0, width: self.view.frame.width, height: 44))
-                    let button = UIBarButtonItem(title: "Done", style: .done, target: self, action: #selector(setDate))
-                    let space = UIBarButtonItem(barButtonSystemItem: .flexibleSpace, target: nil, action: nil)
                     self.picker = picker
-                    toolBar.setItems([space, button], animated: true)
                     clientCell.selectedClientPlaceTextField.inputView = picker
-                    clientCell.selectedClientPlaceTextField.inputAccessoryView = toolBar
+                    clientCell.selectedClientPlaceTextField.inputAccessoryView = self.addToolBar(target: self, action: #selector(setDate))
                 }
                 
                 addedClientCells += 1
@@ -109,6 +113,7 @@ class NewOrderViewController: UITableViewController, NewOrderViewProtocol {
     }
     
     @objc func setDate() {
+        self.date = picker!.date
         if let cell = tableView.cellForRow(at: lastIndexPath) as? ClientPlaceCell {
             cell.selectedClientPlaceTextField.text = picker?.date.description
             cell.selectedClientPlaceTextField.isEnabled = false
@@ -116,25 +121,45 @@ class NewOrderViewController: UITableViewController, NewOrderViewProtocol {
         view.endEditing(true)
     }
     
+    @objc func setQuantity() {
+            if let cell = tableView.cellForRow(at: lastIndexPath) as? ItemsCell {
+                cell.addNewItemButton.isEnabled = true
+                items.last?.quantity = Int(cell.quantityTextField.text!)
+            }
+        view.endEditing(true)
+    }
+    
     @objc func addOrder() {
-        print("PlacedOrder")
+        let order = OrderModel(date: date, client: client!, place: place!, items: items)
+        presenter?.saveOrder(order: order)
+    }
+    
+    private func addToolBar(target: Any?, action: Selector) -> UIToolbar {
+        let toolBar = UIToolbar(frame: CGRect(x: 0, y: 0, width: self.view.frame.width, height: 44))
+        let button = UIBarButtonItem(title: "Done", style: .done, target: target, action: action)
+        let space = UIBarButtonItem(barButtonSystemItem: .flexibleSpace, target: nil, action: nil)
+        toolBar.setItems([space, button], animated: true)
+        return toolBar
     }
 }
 
 extension NewOrderViewController: DataStoragesListDelegateProtocol {
     func passItem(item: ItemModel) {
+        items.append(item)
         if let cellItem = tableView.cellForRow(at: lastIndexPath) as? ItemsCell {
             cellItem.selectedItemTextField.text = item.name
         }
     }
     
     func passClient(client: ClientModel) {
+        self.client = client.objectID
         if let cellItem = tableView.cellForRow(at: lastIndexPath) as? ClientPlaceCell {
             cellItem.selectedClientPlaceTextField.text = "\(client.name)"
         }
     }
     
     func passPlace(place: PlaceModel) {
+        self.place = place.objectID
         if let cellItem = tableView.cellForRow(at: lastIndexPath) as? ClientPlaceCell {
             cellItem.selectedClientPlaceTextField.text = "\(place.city), \(place.street), \(place.homeNumber)"
         }
