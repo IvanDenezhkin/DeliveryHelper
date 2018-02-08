@@ -135,8 +135,10 @@ class NewOrderViewController: UITableViewController, NewOrderViewProtocol {
     }
     
     @objc func addOrder() {
+        //TODOL: Add nil checks
         let order = OrderModel(date: date, client: client!, place: place!, items: items)
         presenter?.saveOrder(order: order)
+        self.clearData()
     }
     
     private func addToolBar(target: Any?, action: Selector) -> UIToolbar {
@@ -145,6 +147,14 @@ class NewOrderViewController: UITableViewController, NewOrderViewProtocol {
         let space = UIBarButtonItem(barButtonSystemItem: .flexibleSpace, target: nil, action: nil)
         toolBar.setItems([space, button], animated: true)
         return toolBar
+    }
+    
+    func clearData() {
+        client = nil
+        place = nil
+        items.removeAll()
+        cellIDs = ["TitleCell", "ItemsCell", "ClientPlaceCell", "ClientPlaceCell", "ClientPlaceCell",  "ButtonCell"]
+        tableView.reloadData()
     }
 }
 

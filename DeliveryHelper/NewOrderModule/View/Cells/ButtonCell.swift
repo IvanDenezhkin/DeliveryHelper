@@ -10,8 +10,5 @@ import UIKit
 
 class ButtonCell: UITableViewCell {
     @IBOutlet weak var addOrderButton: UIButton!
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        // Initialization code
-    }
+
 }

@@ -11,8 +11,4 @@ import UIKit
 class TitleCell: UITableViewCell {
     @IBOutlet weak var nameLabel: UILabel!
     
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        
-    }
 }

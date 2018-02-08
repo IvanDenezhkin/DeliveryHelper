@@ -13,9 +13,12 @@ class ItemsCell: UITableViewCell {
     @IBOutlet weak var selectedItemTextField: UITextField!
     @IBOutlet weak var quantityTextField: UITextField!
     @IBOutlet weak var addNewItemButton: UIButton!
-    
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        // Initialization code
+        
+    override func prepareForReuse() {
+        super.prepareForReuse()
+        selectedItemTextField.text = nil
+        quantityTextField.text = nil
+        addNewItemButton.isHidden = false
+        addNewItemButton.isEnabled = false
     }
 }

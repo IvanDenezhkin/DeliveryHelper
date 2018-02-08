@@ -20,7 +20,8 @@ class ClientPlaceCell: UITableViewCell {
 
     var mode:CellDestination = .clientMode
     
-    override func awakeFromNib() {
-        super.awakeFromNib()
+    override func prepareForReuse() {
+        super.prepareForReuse()
+        selectedClientPlaceTextField.text = nil
     }
 }
