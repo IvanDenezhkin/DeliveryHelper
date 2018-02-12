@@ -86,8 +86,11 @@ class CoreDataManager {
         }
     }
     
-    func fetchAllEntityes<EntityType>(forType: EntityType.Type) -> [EntityType]? {
+    func fetchAllEntityes<EntityType>(forType: EntityType.Type, date: Date? = nil) -> [EntityType]? {
         let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: "\(EntityType.self)")
+        if date != nil {
+            fetchRequest.predicate = NSPredicate(format: "dateOfDelivery >= %@", date! as NSDate)
+        }
         do {
             let results = try self.context.fetch(fetchRequest)
             return results as? [EntityType]

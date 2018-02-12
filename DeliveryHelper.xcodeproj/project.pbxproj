@@ -7,6 +7,16 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		72148C34202DCB2D00D09BA4 /* OrdersListViewProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72148C33202DCB2D00D09BA4 /* OrdersListViewProtocol.swift */; };
+		72148C36202DCB3700D09BA4 /* OrdersListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72148C35202DCB3700D09BA4 /* OrdersListViewController.swift */; };
+		72148C38202DCB3D00D09BA4 /* OrdersList.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 72148C37202DCB3D00D09BA4 /* OrdersList.storyboard */; };
+		72148C3A202DCB5E00D09BA4 /* OrdersListPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72148C39202DCB5E00D09BA4 /* OrdersListPresenter.swift */; };
+		72148C3C202DCB6900D09BA4 /* OrdersListPresenterProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72148C3B202DCB6900D09BA4 /* OrdersListPresenterProtocol.swift */; };
+		72148C3E202DCB7800D09BA4 /* OrdersListInteractorProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72148C3D202DCB7800D09BA4 /* OrdersListInteractorProtocol.swift */; };
+		72148C40202DCB8600D09BA4 /* OrdersListInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72148C3F202DCB8600D09BA4 /* OrdersListInteractor.swift */; };
+		72148C42202DCB8F00D09BA4 /* OrdersListWireframe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72148C41202DCB8F00D09BA4 /* OrdersListWireframe.swift */; };
+		72148C44202DCB9E00D09BA4 /* OrdersListWireframeProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72148C43202DCB9E00D09BA4 /* OrdersListWireframeProtocol.swift */; };
+		72148C4B202DDB3F00D09BA4 /* OrderTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72148C4A202DDB3F00D09BA4 /* OrderTableViewCell.swift */; };
 		722C8BBE201727DE002E474F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 722C8BBD201727DE002E474F /* AppDelegate.swift */; };
 		722C8BC5201727DE002E474F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 722C8BC4201727DE002E474F /* Assets.xcassets */; };
 		722C8BC8201727DE002E474F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 722C8BC6201727DE002E474F /* LaunchScreen.storyboard */; };
@@ -86,6 +96,16 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		72148C33202DCB2D00D09BA4 /* OrdersListViewProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrdersListViewProtocol.swift; sourceTree = "<group>"; };
+		72148C35202DCB3700D09BA4 /* OrdersListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrdersListViewController.swift; sourceTree = "<group>"; };
+		72148C37202DCB3D00D09BA4 /* OrdersList.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = OrdersList.storyboard; sourceTree = "<group>"; };
+		72148C39202DCB5E00D09BA4 /* OrdersListPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrdersListPresenter.swift; sourceTree = "<group>"; };
+		72148C3B202DCB6900D09BA4 /* OrdersListPresenterProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrdersListPresenterProtocol.swift; sourceTree = "<group>"; };
+		72148C3D202DCB7800D09BA4 /* OrdersListInteractorProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrdersListInteractorProtocol.swift; sourceTree = "<group>"; };
+		72148C3F202DCB8600D09BA4 /* OrdersListInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrdersListInteractor.swift; sourceTree = "<group>"; };
+		72148C41202DCB8F00D09BA4 /* OrdersListWireframe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrdersListWireframe.swift; sourceTree = "<group>"; };
+		72148C43202DCB9E00D09BA4 /* OrdersListWireframeProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrdersListWireframeProtocol.swift; sourceTree = "<group>"; };
+		72148C4A202DDB3F00D09BA4 /* OrderTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderTableViewCell.swift; sourceTree = "<group>"; };
 		722C8BBA201727DE002E474F /* DeliveryHelper.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DeliveryHelper.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		722C8BBD201727DE002E474F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		722C8BC4201727DE002E474F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -177,6 +197,63 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		72148C45202DCBA400D09BA4 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				72148C4C202DDB4200D09BA4 /* Cells */,
+				72148C33202DCB2D00D09BA4 /* OrdersListViewProtocol.swift */,
+				72148C35202DCB3700D09BA4 /* OrdersListViewController.swift */,
+				72148C37202DCB3D00D09BA4 /* OrdersList.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		72148C46202DCBAD00D09BA4 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				72148C39202DCB5E00D09BA4 /* OrdersListPresenter.swift */,
+				72148C3B202DCB6900D09BA4 /* OrdersListPresenterProtocol.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		72148C47202DCBB500D09BA4 /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				72148C3D202DCB7800D09BA4 /* OrdersListInteractorProtocol.swift */,
+				72148C3F202DCB8600D09BA4 /* OrdersListInteractor.swift */,
+			);
+			path = Interactor;
+			sourceTree = "<group>";
+		};
+		72148C48202DCBBE00D09BA4 /* Wireframe */ = {
+			isa = PBXGroup;
+			children = (
+				72148C41202DCB8F00D09BA4 /* OrdersListWireframe.swift */,
+				72148C43202DCB9E00D09BA4 /* OrdersListWireframeProtocol.swift */,
+			);
+			path = Wireframe;
+			sourceTree = "<group>";
+		};
+		72148C49202DCBC700D09BA4 /* OrdersListModule */ = {
+			isa = PBXGroup;
+			children = (
+				72148C45202DCBA400D09BA4 /* View */,
+				72148C46202DCBAD00D09BA4 /* Presenter */,
+				72148C47202DCBB500D09BA4 /* Interactor */,
+				72148C48202DCBBE00D09BA4 /* Wireframe */,
+			);
+			path = OrdersListModule;
+			sourceTree = "<group>";
+		};
+		72148C4C202DDB4200D09BA4 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				72148C4A202DDB3F00D09BA4 /* OrderTableViewCell.swift */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
 		722C8BB1201727DE002E474F = {
 			isa = PBXGroup;
 			children = (
@@ -200,6 +277,7 @@
 				725A512F20235D5800EB0AEA /* Helpers */,
 				7295414920187D1200D41626 /* Common */,
 				72F2A56820175539004DA13B /* RootModule */,
+				72148C49202DCBC700D09BA4 /* OrdersListModule */,
 				725F19ED2021D2D200D50200 /* NewOrderModule */,
 				722F6399201B5A8800B63D40 /* BasesListModule */,
 				72F2A57620176CBB004DA13B /* DataStoragesListModule */,
@@ -658,6 +736,7 @@
 			files = (
 				725F19E82021D20900D50200 /* NewOrder.storyboard in Resources */,
 				72FC5F3D201A0C5C003831D8 /* NewItemAdd.storyboard in Resources */,
+				72148C38202DCB3D00D09BA4 /* OrdersList.storyboard in Resources */,
 				722F638D201B5A0100B63D40 /* BasesList.storyboard in Resources */,
 				72FC5F45201A1738003831D8 /* NewPlaceAdd.storyboard in Resources */,
 				722C8BC8201727DE002E474F /* LaunchScreen.storyboard in Resources */,
@@ -680,6 +759,7 @@
 				722C8BBE201727DE002E474F /* AppDelegate.swift in Sources */,
 				725F19DA2021D1A600D50200 /* NewOrderPresenterProtocol.swift in Sources */,
 				729A3CC920245C7500A71088 /* DataStoragesListDelegateProtocol.swift in Sources */,
+				72148C3A202DCB5E00D09BA4 /* OrdersListPresenter.swift in Sources */,
 				725F19D82021D1A000D50200 /* NewOrderPresenter.swift in Sources */,
 				72F2A56C2017561E004DA13B /* RootTabBarController.swift in Sources */,
 				72FC5F272019ECBC003831D8 /* NewClientAddViewProtocol.swift in Sources */,
@@ -689,15 +769,20 @@
 				722F6397201B5A7A00B63D40 /* BasesListWireframeProtocol.swift in Sources */,
 				72FC5F41201A1710003831D8 /* NewPlaceAddViewController.swift in Sources */,
 				725F19E02021D1CB00D50200 /* NewOrderWireframe.swift in Sources */,
+				72148C42202DCB8F00D09BA4 /* OrdersListWireframe.swift in Sources */,
 				72F2A57520176C94004DA13B /* DataStoragesListInteractor.swift in Sources */,
 				72FC5F232019D3E7003831D8 /* DataStoragesListInteractorProtocol.swift in Sources */,
 				725F19DE2021D1C200D50200 /* NewOrderInteractorProtocol.swift in Sources */,
+				72148C40202DCB8600D09BA4 /* OrdersListInteractor.swift in Sources */,
 				722F6390201B5A3200B63D40 /* BasesListPresenter.swift in Sources */,
 				725F19DC2021D1B600D50200 /* NewOrderInteractor.swift in Sources */,
 				72FC5F36201A0C23003831D8 /* NewItemAddInteractorProtocol.swift in Sources */,
 				722F6389201B59DE00B63D40 /* BasesListViewProtocol.swift in Sources */,
 				7295415A2018A25C00D41626 /* NewClientAddPresenter.swift in Sources */,
+				72148C36202DCB3700D09BA4 /* OrdersListViewController.swift in Sources */,
+				72148C3E202DCB7800D09BA4 /* OrdersListInteractorProtocol.swift in Sources */,
 				72E5FEA02028906E00CB5A9B /* OrderModel.swift in Sources */,
+				72148C44202DCB9E00D09BA4 /* OrdersListWireframeProtocol.swift in Sources */,
 				729541622018A39A00D41626 /* NewClientAddInteractorProtocol.swift in Sources */,
 				7295414D20187D4F00D41626 /* DataBase.xcdatamodeld in Sources */,
 				72FC5F172019BF7C003831D8 /* PlaceCell.swift in Sources */,
@@ -706,6 +791,7 @@
 				722F638B201B59F100B63D40 /* BasesListViewController.swift in Sources */,
 				725F19E62021D20000D50200 /* NewOrderViewController.swift in Sources */,
 				7295414820187CF700D41626 /* CoreDataManager.swift in Sources */,
+				72148C4B202DDB3F00D09BA4 /* OrderTableViewCell.swift in Sources */,
 				72FC5F48201A174E003831D8 /* NewPlaceAddPresenter.swift in Sources */,
 				725F19E22021D1D900D50200 /* NewOrderWireframeProtocol.swift in Sources */,
 				72FC5F1F2019CB94003831D8 /* DataStoragesListViewProtocol.swift in Sources */,
@@ -715,6 +801,8 @@
 				722F6395201B5A6900B63D40 /* BasesListWireframe.swift in Sources */,
 				729541552018839400D41626 /* NewClientAddPresenterProtocol.swift in Sources */,
 				72FC5F43201A172A003831D8 /* NewPlaceAddViewProtocol.swift in Sources */,
+				72148C3C202DCB6900D09BA4 /* OrdersListPresenterProtocol.swift in Sources */,
+				72148C34202DCB2D00D09BA4 /* OrdersListViewProtocol.swift in Sources */,
 				72FC5F54201A179C003831D8 /* NewPlaceAddWireframeProtocol.swift in Sources */,
 				725A512B2023474D00EB0AEA /* ButtonCell.swift in Sources */,
 				72FC5F3B201A0C52003831D8 /* NewItemAddViewProtocol.swift in Sources */,

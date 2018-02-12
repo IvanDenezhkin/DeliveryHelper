@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Orders List View Controller-->
+        <scene sceneID="2W9-Q6-pds">
+            <objects>
+                <tableViewController storyboardIdentifier="OrdersListViewController" id="8id-kQ-N0y" customClass="OrdersListViewController" customModule="DeliveryHelper" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="Zp7-32-b0r">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <view key="tableHeaderView" contentMode="scaleToFill" id="yVO-Re-1Kn">
+                            <rect key="frame" x="0.0" y="0.0" width="375" height="46"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <subviews>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Select delivery date" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="STi-bj-BQn">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="20.5"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                    <nil key="textColor"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="date :)" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ExQ-1k-VEO">
+                                    <rect key="frame" x="0.0" y="25.5" width="375" height="20.5"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                    <nil key="textColor"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                            </subviews>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <constraints>
+                                <constraint firstItem="STi-bj-BQn" firstAttribute="leading" secondItem="yVO-Re-1Kn" secondAttribute="leading" id="9tt-sb-moY"/>
+                                <constraint firstAttribute="trailing" secondItem="ExQ-1k-VEO" secondAttribute="trailing" id="AeF-Lg-pHz"/>
+                                <constraint firstItem="ExQ-1k-VEO" firstAttribute="top" secondItem="STi-bj-BQn" secondAttribute="bottom" constant="5" id="Fhk-EJ-uep"/>
+                                <constraint firstAttribute="trailing" secondItem="STi-bj-BQn" secondAttribute="trailing" id="Nk8-uJ-hxp"/>
+                                <constraint firstItem="ExQ-1k-VEO" firstAttribute="leading" secondItem="yVO-Re-1Kn" secondAttribute="leading" id="cRn-I5-nyT"/>
+                                <constraint firstItem="STi-bj-BQn" firstAttribute="top" secondItem="yVO-Re-1Kn" secondAttribute="top" id="cfK-76-wUj"/>
+                            </constraints>
+                        </view>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="OrderCell" rowHeight="47" id="D6I-ga-rd9" customClass="OrderTableViewCell" customModule="DeliveryHelper" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="74" width="375" height="47"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="D6I-ga-rd9" id="dVo-uS-tmI">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="46.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XG3-fQ-NiX">
+                                            <rect key="frame" x="16" y="11" width="343" height="25"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstAttribute="bottomMargin" secondItem="XG3-fQ-NiX" secondAttribute="bottom" id="Dhd-hx-aFG"/>
+                                        <constraint firstAttribute="trailingMargin" secondItem="XG3-fQ-NiX" secondAttribute="trailing" id="P2u-zF-g1K"/>
+                                        <constraint firstItem="XG3-fQ-NiX" firstAttribute="leading" secondItem="dVo-uS-tmI" secondAttribute="leadingMargin" id="eQ5-hm-0mB"/>
+                                        <constraint firstItem="XG3-fQ-NiX" firstAttribute="top" secondItem="dVo-uS-tmI" secondAttribute="topMargin" id="sGP-Qc-ONj"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="detailsLabel" destination="XG3-fQ-NiX" id="RjP-yQ-wIB"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="8id-kQ-N0y" id="GWQ-ES-i9U"/>
+                            <outlet property="delegate" destination="8id-kQ-N0y" id="rfC-D4-lLI"/>
+                        </connections>
+                    </tableView>
+                    <connections>
+                        <outlet property="dateLabel" destination="ExQ-1k-VEO" id="6ve-3Y-eDg"/>
+                        <outlet property="headerView" destination="yVO-Re-1Kn" id="hGZ-dW-wBq"/>
+                        <outlet property="titleLabel" destination="STi-bj-BQn" id="buZ-8R-YQX"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="kyv-1z-m2L" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="296.80000000000001" y="178.56071964017991"/>
+        </scene>
+    </scenes>
+</document>
