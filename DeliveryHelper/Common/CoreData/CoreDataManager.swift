@@ -68,7 +68,7 @@ class CoreDataManager {
         newEntity.client = self.context.object(with: order.client) as? Client
         newEntity.place = self.context.object(with: order.place) as? Place
         newEntity.items = order.items as NSObject
-        newEntity.dateOfDelivery = order.date
+        newEntity.dateOfDelivery = order.date.startOfDay
         saveContext()
         test()
     }
@@ -89,7 +89,7 @@ class CoreDataManager {
     func fetchAllEntityes<EntityType>(forType: EntityType.Type, date: Date? = nil) -> [EntityType]? {
         let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: "\(EntityType.self)")
         if date != nil {
-            fetchRequest.predicate = NSPredicate(format: "dateOfDelivery >= %@", date! as NSDate)
+            fetchRequest.predicate = NSPredicate(format: "dateOfDelivery == %@", date! as NSDate)
         }
         do {
             let results = try self.context.fetch(fetchRequest)

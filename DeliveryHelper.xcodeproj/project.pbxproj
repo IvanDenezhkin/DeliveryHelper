@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5DA53F7180ACB56BB8C293E6 /* Pods_DeliveryHelper.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6BBA46B0FDB698D5F2CD0244 /* Pods_DeliveryHelper.framework */; };
 		72148C34202DCB2D00D09BA4 /* OrdersListViewProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72148C33202DCB2D00D09BA4 /* OrdersListViewProtocol.swift */; };
 		72148C36202DCB3700D09BA4 /* OrdersListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72148C35202DCB3700D09BA4 /* OrdersListViewController.swift */; };
 		72148C38202DCB3D00D09BA4 /* OrdersList.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 72148C37202DCB3D00D09BA4 /* OrdersList.storyboard */; };
@@ -55,6 +56,8 @@
 		729541642018A45500D41626 /* NewClientAddWireframeProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 729541632018A45500D41626 /* NewClientAddWireframeProtocol.swift */; };
 		729541682018AE2E00D41626 /* RootPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 729541672018AE2E00D41626 /* RootPresenter.swift */; };
 		729A3CC920245C7500A71088 /* DataStoragesListDelegateProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 729A3CC820245C7500A71088 /* DataStoragesListDelegateProtocol.swift */; };
+		72B7BAC420319D9C0086AEA0 /* CalendarCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72B7BAC320319D9C0086AEA0 /* CalendarCell.swift */; };
+		72B7BAC82031CA5F0086AEA0 /* CalendarHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72B7BAC72031CA5F0086AEA0 /* CalendarHeaderView.swift */; };
 		72E5FEA02028906E00CB5A9B /* OrderModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72E5FE9F2028906E00CB5A9B /* OrderModel.swift */; };
 		72F2A5672017552D004DA13B /* RootWireframe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72F2A5662017552D004DA13B /* RootWireframe.swift */; };
 		72F2A56A201755FB004DA13B /* RootWireframeProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72F2A569201755FB004DA13B /* RootWireframeProtocol.swift */; };
@@ -96,6 +99,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2133FAF1B165E152CA2C9E65 /* Pods-DeliveryHelper.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DeliveryHelper.debug.xcconfig"; path = "Pods/Target Support Files/Pods-DeliveryHelper/Pods-DeliveryHelper.debug.xcconfig"; sourceTree = "<group>"; };
+		6BBA46B0FDB698D5F2CD0244 /* Pods_DeliveryHelper.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DeliveryHelper.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		72148C33202DCB2D00D09BA4 /* OrdersListViewProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrdersListViewProtocol.swift; sourceTree = "<group>"; };
 		72148C35202DCB3700D09BA4 /* OrdersListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrdersListViewController.swift; sourceTree = "<group>"; };
 		72148C37202DCB3D00D09BA4 /* OrdersList.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = OrdersList.storyboard; sourceTree = "<group>"; };
@@ -146,6 +151,8 @@
 		729541632018A45500D41626 /* NewClientAddWireframeProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewClientAddWireframeProtocol.swift; sourceTree = "<group>"; };
 		729541672018AE2E00D41626 /* RootPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootPresenter.swift; sourceTree = "<group>"; };
 		729A3CC820245C7500A71088 /* DataStoragesListDelegateProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataStoragesListDelegateProtocol.swift; sourceTree = "<group>"; };
+		72B7BAC320319D9C0086AEA0 /* CalendarCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarCell.swift; sourceTree = "<group>"; };
+		72B7BAC72031CA5F0086AEA0 /* CalendarHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarHeaderView.swift; sourceTree = "<group>"; };
 		72E5FE9F2028906E00CB5A9B /* OrderModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderModel.swift; sourceTree = "<group>"; };
 		72F2A5662017552D004DA13B /* RootWireframe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootWireframe.swift; sourceTree = "<group>"; };
 		72F2A569201755FB004DA13B /* RootWireframeProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootWireframeProtocol.swift; sourceTree = "<group>"; };
@@ -184,6 +191,7 @@
 		72FC5F4D201A1772003831D8 /* NewPlaceAddInteractorProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewPlaceAddInteractorProtocol.swift; sourceTree = "<group>"; };
 		72FC5F51201A1791003831D8 /* NewPlaceAddWireframe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewPlaceAddWireframe.swift; sourceTree = "<group>"; };
 		72FC5F53201A179C003831D8 /* NewPlaceAddWireframeProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewPlaceAddWireframeProtocol.swift; sourceTree = "<group>"; };
+		8DF4970DE367AB547F8669B6 /* Pods-DeliveryHelper.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DeliveryHelper.release.xcconfig"; path = "Pods/Target Support Files/Pods-DeliveryHelper/Pods-DeliveryHelper.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -191,12 +199,22 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5DA53F7180ACB56BB8C293E6 /* Pods_DeliveryHelper.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5DC1E09A46A4E7A75B85ECA0 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				2133FAF1B165E152CA2C9E65 /* Pods-DeliveryHelper.debug.xcconfig */,
+				8DF4970DE367AB547F8669B6 /* Pods-DeliveryHelper.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		72148C45202DCBA400D09BA4 /* View */ = {
 			isa = PBXGroup;
 			children = (
@@ -250,6 +268,8 @@
 			isa = PBXGroup;
 			children = (
 				72148C4A202DDB3F00D09BA4 /* OrderTableViewCell.swift */,
+				72B7BAC72031CA5F0086AEA0 /* CalendarHeaderView.swift */,
+				72B7BAC320319D9C0086AEA0 /* CalendarCell.swift */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -259,6 +279,8 @@
 			children = (
 				722C8BBC201727DE002E474F /* DeliveryHelper */,
 				722C8BBB201727DE002E474F /* Products */,
+				5DC1E09A46A4E7A75B85ECA0 /* Pods */,
+				7DC760BA6D6D994BD794AB09 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -675,6 +697,14 @@
 			path = NewPlaceAddModule;
 			sourceTree = "<group>";
 		};
+		7DC760BA6D6D994BD794AB09 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				6BBA46B0FDB698D5F2CD0244 /* Pods_DeliveryHelper.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -682,9 +712,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 722C8BCC201727DE002E474F /* Build configuration list for PBXNativeTarget "DeliveryHelper" */;
 			buildPhases = (
+				1ACFA011CE0F948FF85C0A45 /* [CP] Check Pods Manifest.lock */,
 				722C8BB6201727DE002E474F /* Sources */,
 				722C8BB7201727DE002E474F /* Frameworks */,
 				722C8BB8201727DE002E474F /* Resources */,
+				85A424152806F9FCF31B7C71 /* [CP] Embed Pods Frameworks */,
+				1A3CD87D8F0554FD5F923344 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -748,6 +781,60 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		1A3CD87D8F0554FD5F923344 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-DeliveryHelper/Pods-DeliveryHelper-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		1ACFA011CE0F948FF85C0A45 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-DeliveryHelper-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		85A424152806F9FCF31B7C71 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-DeliveryHelper/Pods-DeliveryHelper-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/JTAppleCalendar/JTAppleCalendar.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/JTAppleCalendar.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-DeliveryHelper/Pods-DeliveryHelper-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		722C8BB6201727DE002E474F /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -790,6 +877,7 @@
 				725A5127202346C700EB0AEA /* ItemsCell.swift in Sources */,
 				722F638B201B59F100B63D40 /* BasesListViewController.swift in Sources */,
 				725F19E62021D20000D50200 /* NewOrderViewController.swift in Sources */,
+				72B7BAC420319D9C0086AEA0 /* CalendarCell.swift in Sources */,
 				7295414820187CF700D41626 /* CoreDataManager.swift in Sources */,
 				72148C4B202DDB3F00D09BA4 /* OrderTableViewCell.swift in Sources */,
 				72FC5F48201A174E003831D8 /* NewPlaceAddPresenter.swift in Sources */,
@@ -811,6 +899,7 @@
 				725F19E42021D1F000D50200 /* NewOrderViewProtocol.swift in Sources */,
 				72FC5F152019BF5A003831D8 /* ItemCell.swift in Sources */,
 				72FC5F122019BF36003831D8 /* ClientCell.swift in Sources */,
+				72B7BAC82031CA5F0086AEA0 /* CalendarHeaderView.swift in Sources */,
 				72FC5F1B2019C57D003831D8 /* PlaceModel.swift in Sources */,
 				72FC5F31201A0BFF003831D8 /* NewItemAddPresenterProtocol.swift in Sources */,
 				72FC5F34201A0C18003831D8 /* NewItemAddInteractor.swift in Sources */,
@@ -956,6 +1045,7 @@
 		};
 		722C8BCD201727DE002E474F /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2133FAF1B165E152CA2C9E65 /* Pods-DeliveryHelper.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -972,6 +1062,7 @@
 		};
 		722C8BCE201727DE002E474F /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8DF4970DE367AB547F8669B6 /* Pods-DeliveryHelper.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
