@@ -178,7 +178,7 @@ extension NewOrderViewController: DataStoragesListDelegateProtocol {
     func passPlace(place: PlaceModel) {
         self.place = place.objectID
         if let cellItem = tableView.cellForRow(at: lastIndexPath) as? ClientPlaceCell {
-            cellItem.selectedClientPlaceTextField.text = "\(place.city), \(place.street), \(place.homeNumber)"
+            cellItem.selectedClientPlaceTextField.text = "\(place.adress)"
         }
     }
 }

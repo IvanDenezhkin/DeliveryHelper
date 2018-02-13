@@ -10,14 +10,14 @@ import Foundation
 import CoreData
 
 class PlaceModel {
-    let city: String
-    let street: String
-    let homeNumber: String
+    let adress: String
+    let latitude: Double
+    let longitude: Double
     var objectID: NSManagedObjectID?
     
-    init(withCity city: String, street: String, homeNumber: String) {
-        self.city = city
-        self.street = street
-        self.homeNumber = homeNumber
+    init(adress: String, latitude: Double, longitude: Double) {
+        self.adress = adress
+        self.latitude = latitude
+        self.longitude = longitude
     }
 }

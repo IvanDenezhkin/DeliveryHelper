@@ -7,11 +7,12 @@
 //
 
 import UIKit
+import GooglePlacePicker
 
 class NewPlaceAddWireframe: NewPlaceAddWireframeProtocol {
     static func createNewPlaceAddModule() -> UIViewController {
-        let storyboard = UIStoryboard(name: "NewPlaceAdd", bundle: nil)
-        let newItemVC = storyboard.instantiateViewController(withIdentifier: "NewPlaceAddViewController") as! NewPlaceAddViewController
+        let config = GMSPlacePickerConfig(viewport: nil)
+        let newItemVC = NewPlaceAddViewController(config: config)
         let presenter = NewPlaceAddPresenter()
         let interactor = NewPlaceAddInteractor()
         let wireframe = NewPlaceAddWireframe()

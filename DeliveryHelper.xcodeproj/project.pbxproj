@@ -89,7 +89,6 @@
 		72FC5F3D201A0C5C003831D8 /* NewItemAdd.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 72FC5F3C201A0C5C003831D8 /* NewItemAdd.storyboard */; };
 		72FC5F41201A1710003831D8 /* NewPlaceAddViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72FC5F40201A1710003831D8 /* NewPlaceAddViewController.swift */; };
 		72FC5F43201A172A003831D8 /* NewPlaceAddViewProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72FC5F42201A172A003831D8 /* NewPlaceAddViewProtocol.swift */; };
-		72FC5F45201A1738003831D8 /* NewPlaceAdd.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 72FC5F44201A1738003831D8 /* NewPlaceAdd.storyboard */; };
 		72FC5F48201A174E003831D8 /* NewPlaceAddPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72FC5F47201A174E003831D8 /* NewPlaceAddPresenter.swift */; };
 		72FC5F4A201A1759003831D8 /* NewPlaceAddPresenterProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72FC5F49201A1759003831D8 /* NewPlaceAddPresenterProtocol.swift */; };
 		72FC5F4C201A1764003831D8 /* NewPlaceAddInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72FC5F4B201A1764003831D8 /* NewPlaceAddInteractor.swift */; };
@@ -184,7 +183,6 @@
 		72FC5F3C201A0C5C003831D8 /* NewItemAdd.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = NewItemAdd.storyboard; sourceTree = "<group>"; };
 		72FC5F40201A1710003831D8 /* NewPlaceAddViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewPlaceAddViewController.swift; sourceTree = "<group>"; };
 		72FC5F42201A172A003831D8 /* NewPlaceAddViewProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewPlaceAddViewProtocol.swift; sourceTree = "<group>"; };
-		72FC5F44201A1738003831D8 /* NewPlaceAdd.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = NewPlaceAdd.storyboard; sourceTree = "<group>"; };
 		72FC5F47201A174E003831D8 /* NewPlaceAddPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewPlaceAddPresenter.swift; sourceTree = "<group>"; };
 		72FC5F49201A1759003831D8 /* NewPlaceAddPresenterProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewPlaceAddPresenterProtocol.swift; sourceTree = "<group>"; };
 		72FC5F4B201A1764003831D8 /* NewPlaceAddInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewPlaceAddInteractor.swift; sourceTree = "<group>"; };
@@ -654,7 +652,6 @@
 			children = (
 				72FC5F42201A172A003831D8 /* NewPlaceAddViewProtocol.swift */,
 				72FC5F40201A1710003831D8 /* NewPlaceAddViewController.swift */,
-				72FC5F44201A1738003831D8 /* NewPlaceAdd.storyboard */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -771,7 +768,6 @@
 				72FC5F3D201A0C5C003831D8 /* NewItemAdd.storyboard in Resources */,
 				72148C38202DCB3D00D09BA4 /* OrdersList.storyboard in Resources */,
 				722F638D201B5A0100B63D40 /* BasesList.storyboard in Resources */,
-				72FC5F45201A1738003831D8 /* NewPlaceAdd.storyboard in Resources */,
 				722C8BC8201727DE002E474F /* LaunchScreen.storyboard in Resources */,
 				729541522018802D00D41626 /* NewClientAdd.storyboard in Resources */,
 				722C8BC5201727DE002E474F /* Assets.xcassets in Resources */,
@@ -788,9 +784,14 @@
 			files = (
 			);
 			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-DeliveryHelper/Pods-DeliveryHelper-resources.sh",
+				"${PODS_ROOT}/GoogleMaps/Maps/Frameworks/GoogleMaps.framework/Resources/GoogleMaps.bundle",
+				"${PODS_ROOT}/GooglePlacePicker/Frameworks/GooglePlacePicker.framework/Resources/GooglePlacePicker.bundle",
+				"${PODS_ROOT}/GooglePlaces/Frameworks/GooglePlaces.framework/Resources/GooglePlaces.bundle",
 			);
 			name = "[CP] Copy Pods Resources";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;

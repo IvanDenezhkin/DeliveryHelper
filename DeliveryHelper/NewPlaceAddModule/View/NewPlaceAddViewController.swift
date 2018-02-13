@@ -7,24 +7,31 @@
 //
 
 import UIKit
+import GoogleMaps
+import GooglePlaces
+import GooglePlacePicker
 
-class NewPlaceAddViewController: UIViewController, NewPlaceAddViewProtocol {
-    @IBOutlet weak var cityTextField: UITextField!
-    @IBOutlet weak var streetTextField: UITextField!
-    @IBOutlet weak var numberTextField: UITextField!
-    
+class NewPlaceAddViewController: GMSPlacePickerViewController, NewPlaceAddViewProtocol, GMSPlacePickerViewControllerDelegate {
     var presenter: NewPlaceAddPresenterProtocol?
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.delegate = self
     }
     
-    @IBAction func saveButtonPressed(_ sender: UIButton) {
-        guard let cityName = cityTextField.text else { return }
-        guard let street = streetTextField.text else { return }
-        guard let number = numberTextField.text else { return }
-        let newPlace = PlaceModel(withCity: cityName, street: street, homeNumber: number)
-        presenter?.saveNewPlace(place: newPlace)
+    override init(config: GMSPlacePickerConfig) {
+        super.init(config: config)
     }
     
+    required init?(coder aDecoder: NSCoder) {
+        super.init(coder: aDecoder)
+    }
+    
+    override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?) {
+        super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
+    }
+    
+    func placePicker(_ viewController: GMSPlacePickerViewController, didPick place: GMSPlace) {
+        presenter?.saveNewPlace(place: PlaceModel(adress: place.formattedAddress ?? place.name, latitude: place.coordinate.latitude, longitude: place.coordinate.longitude))
+    }
 }

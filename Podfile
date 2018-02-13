@@ -4,5 +4,8 @@ target 'DeliveryHelper' do
   use_frameworks!
 
   pod 'JTAppleCalendar', '~> 7.0'
+  pod 'GooglePlaces'
+  pod 'GooglePlacePicker'
+  pod 'GoogleMaps'
 
 end

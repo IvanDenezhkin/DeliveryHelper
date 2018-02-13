@@ -85,9 +85,7 @@ class DataStoragesListTableViewController: UITableViewController {
     
     private func decoratePlaceCell(withPlace place: PlaceModel) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "PlaceCell") as! PlaceCell
-        cell.cityLabel.text = place.city
-        cell.streetLabel.text = place.street
-        cell.homeNumberLabel.text = place.homeNumber
+        cell.adressLabel.text = place.adress
         return cell
     }
     

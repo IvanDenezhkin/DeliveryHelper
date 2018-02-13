@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import CoreLocation
 
 class DataStoragesListPresenter: DataStoragesListPresenterProtocol {
     
@@ -44,7 +45,7 @@ class DataStoragesListPresenter: DataStoragesListPresenterProtocol {
     
     func addPlaces(withPlaces: [Place]) {
         let properPlaces = withPlaces.map { place -> PlaceModel in
-            let newPlace = PlaceModel(withCity: place.city!, street: place.street!, homeNumber: place.number!)
+            let newPlace = PlaceModel(adress: place.address!, latitude: place.latitude, longitude: place.longitude)
             newPlace.objectID = place.objectID
             return newPlace
         }

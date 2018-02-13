@@ -56,10 +56,10 @@ class CoreDataManager {
     
     func addNewPlace(place: PlaceModel) {
         let newEntity = Place(context: self.context)
-        newEntity.city = place.city
-        newEntity.street = place.street
-        newEntity.number = place.homeNumber
-        print("saved new place: \(place.city)")
+        newEntity.address = place.adress
+        newEntity.latitude = place.latitude
+        newEntity.longitude = place.longitude
+        print("saved new place: \(place.adress)")
         saveContext()
     }
     
