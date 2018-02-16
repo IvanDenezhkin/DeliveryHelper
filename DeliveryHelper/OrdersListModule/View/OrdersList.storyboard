@@ -189,5 +189,35 @@
             </objects>
             <point key="canvasLocation" x="296.80000000000001" y="178.56071964017991"/>
         </scene>
+        <!--Map View Controller-->
+        <scene sceneID="ecx-E7-hZD">
+            <objects>
+                <viewController storyboardIdentifier="MapViewController" id="O7H-6O-uA9" customClass="MapViewController" customModule="DeliveryHelper" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="xBr-rd-8R3">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3GS-JC-Qoj" customClass="GMSMapView">
+                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="OgR-hr-c5g" firstAttribute="bottom" secondItem="3GS-JC-Qoj" secondAttribute="bottom" id="Fxb-oI-Vu8"/>
+                            <constraint firstItem="OgR-hr-c5g" firstAttribute="trailing" secondItem="3GS-JC-Qoj" secondAttribute="trailing" id="LUi-BY-Tns"/>
+                            <constraint firstItem="3GS-JC-Qoj" firstAttribute="leading" secondItem="OgR-hr-c5g" secondAttribute="leading" id="hRk-70-2yo"/>
+                            <constraint firstItem="3GS-JC-Qoj" firstAttribute="top" secondItem="OgR-hr-c5g" secondAttribute="top" id="mCA-Rj-pKs"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="OgR-hr-c5g"/>
+                    </view>
+                    <connections>
+                        <outlet property="mapView" destination="3GS-JC-Qoj" id="w6E-kL-8CW"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="GnR-KQ-KKu" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1316" y="187"/>
+        </scene>
     </scenes>
 </document>

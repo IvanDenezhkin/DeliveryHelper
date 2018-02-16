@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import GoogleMaps
 
 class OrdersListWireframe: OrdersListWireframeProtocol {
     static func createOrdersListModule() -> UIViewController {
@@ -14,15 +15,27 @@ class OrdersListWireframe: OrdersListWireframeProtocol {
         let orederListVC = storyboard.instantiateViewController(withIdentifier: "OrdersListViewController") as! OrdersListViewController
         let presenter = OrdersListPresenter()
         let interactor = OrdersListInteractor()
-
+        let wireframe = OrdersListWireframe()
+        
         orederListVC.presenter = presenter
         presenter.interactor = interactor
+        presenter.wireframe = wireframe
         interactor.presenter = presenter
         interactor.dataBase = CoreDataManager.shared
         presenter.view = orederListVC
         
         let navigationController = UINavigationController(rootViewController: orederListVC)
         return navigationController
+    }
+    
+    func showMap(bounds: GMSCoordinateBounds?, path: GMSPath?, markers: [GMSMarker]?, on view: OrdersListViewProtocol?) {
+            guard let controller = view as? UIViewController else { return }
+            let storyboard = UIStoryboard(name: "OrdersList", bundle: nil)
+            let mapVC = storyboard.instantiateViewController(withIdentifier: "MapViewController") as! MapViewController
+            mapVC.bounds = bounds
+            mapVC.path = path
+            mapVC.markers = markers
+            controller.navigationController?.pushViewController(mapVC, animated: true)
     }
     
     

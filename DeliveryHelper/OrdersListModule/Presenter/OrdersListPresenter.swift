@@ -7,13 +7,21 @@
 //
 
 import Foundation
+import GoogleMaps
 
 class OrdersListPresenter: OrdersListPresenterProtocol {
+
+    
     weak var view: OrdersListViewProtocol?
     var interactor: OrdersListInteractorProtocol?
+    var wireframe: OrdersListWireframeProtocol?
     
     func fetchData(forDate: Date) {
         interactor?.fetchData(forDate: forDate)
+    }
+    
+    func getPlaces(for orders: [OrderModel]) {
+        interactor?.getPlaces(for: orders)
     }
     
     func addOrders(orders: [Order]) {
@@ -21,5 +29,9 @@ class OrdersListPresenter: OrdersListPresenterProtocol {
             return OrderModel(date: order.dateOfDelivery!, client: (order.client?.objectID)!, place: (order.place?.objectID)!, items: order.items as! [ItemModel])
         }
         view?.addNewOrders(orders: fetchedOrders)
+    }
+    
+    func showMap(bounds: GMSCoordinateBounds?, path: GMSPath?, markers: [GMSMarker]?) {
+        wireframe?.showMap(bounds: bounds, path: path, markers: markers, on: view)
     }
 }

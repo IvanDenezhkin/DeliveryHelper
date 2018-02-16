@@ -76,7 +76,11 @@ class OrdersListViewController: UITableViewController, OrdersListViewProtocol {
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return orders.count
+        if orders.count > 0 {
+            return orders.count + 1
+        } else {
+            return orders.count
+        }
     }
     
     func addNewOrders(orders: [OrderModel]) {
@@ -84,10 +88,27 @@ class OrdersListViewController: UITableViewController, OrdersListViewProtocol {
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let order = orders[indexPath.row]
-        let cell = tableView.dequeueReusableCell(withIdentifier: "OrderCell") as! OrderTableViewCell
-        cell.detailsLabel.text = "\(order.date.userPreferedDateString) + \(String(describing: order.items.first))"
-        return cell
+        if indexPath.row == orders.count {
+            let cell = UITableViewCell(style: .default, reuseIdentifier: "ButtonCell")
+            let button = UIButton()
+            button.addTarget(self, action: #selector(showMap), for: .touchUpInside)
+            button.setTitle("Show Route", for: .normal)
+            button.setTitleColor(.blue, for: .normal)
+            cell.addSubview(button)
+            button.translatesAutoresizingMaskIntoConstraints = false
+            button.centerXAnchor.constraint(equalTo: cell.centerXAnchor).isActive = true
+            button.centerYAnchor.constraint(equalTo: cell.centerYAnchor).isActive = true
+            return cell
+        } else {
+            let order = orders[indexPath.row]
+            let cell = tableView.dequeueReusableCell(withIdentifier: "OrderCell") as! OrderTableViewCell
+            cell.detailsLabel.text = "\(order.date.userPreferedDateString) + \(String(describing: order.items.first))"
+            return cell
+        }
+    }
+    
+    @objc func showMap() {
+        presenter?.getPlaces(for: orders)
     }
 }
 
@@ -99,7 +120,6 @@ extension OrdersListViewController: JTAppleCalendarViewDataSource {
 
 extension OrdersListViewController: JTAppleCalendarViewDelegate {
     func calendar(_ calendar: JTAppleCalendarView, willDisplay cell: JTAppleCell, forItemAt date: Date, cellState: CellState, indexPath: IndexPath) {
-        
     }
     
     func calendar(_ calendar: JTAppleCalendarView, headerViewForDateRange range: (start: Date, end: Date), at indexPath: IndexPath) -> JTAppleCollectionReusableView {

@@ -11,4 +11,5 @@ import Foundation
 protocol OrdersListInteractorProtocol {
     var presenter: OrdersListPresenterProtocol? { get set }
     func fetchData(forDate: Date)
+    func getPlaces(for orders: [OrderModel])
 }

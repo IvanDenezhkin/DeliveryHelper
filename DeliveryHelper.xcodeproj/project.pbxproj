@@ -43,6 +43,7 @@
 		725F19E62021D20000D50200 /* NewOrderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 725F19E52021D20000D50200 /* NewOrderViewController.swift */; };
 		725F19E82021D20900D50200 /* NewOrder.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 725F19E72021D20900D50200 /* NewOrder.storyboard */; };
 		726AB62C202B1553005C45CB /* DateExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 726AB62B202B1553005C45CB /* DateExtension.swift */; };
+		7275CF022035E45300D5EFE3 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7275CF012035E45300D5EFE3 /* NetworkManager.swift */; };
 		7295414820187CF700D41626 /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7295414720187CF600D41626 /* CoreDataManager.swift */; };
 		7295414D20187D4F00D41626 /* DataBase.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 7295414B20187D4F00D41626 /* DataBase.xcdatamodeld */; };
 		7295414F20187F8500D41626 /* NewClientAddViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7295414E20187F8500D41626 /* NewClientAddViewController.swift */; };
@@ -56,6 +57,7 @@
 		729541642018A45500D41626 /* NewClientAddWireframeProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 729541632018A45500D41626 /* NewClientAddWireframeProtocol.swift */; };
 		729541682018AE2E00D41626 /* RootPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 729541672018AE2E00D41626 /* RootPresenter.swift */; };
 		729A3CC920245C7500A71088 /* DataStoragesListDelegateProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 729A3CC820245C7500A71088 /* DataStoragesListDelegateProtocol.swift */; };
+		72B418E920371D0B00E9ED11 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72B418E820371D0B00E9ED11 /* MapViewController.swift */; };
 		72B7BAC420319D9C0086AEA0 /* CalendarCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72B7BAC320319D9C0086AEA0 /* CalendarCell.swift */; };
 		72B7BAC82031CA5F0086AEA0 /* CalendarHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72B7BAC72031CA5F0086AEA0 /* CalendarHeaderView.swift */; };
 		72E5FEA02028906E00CB5A9B /* OrderModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72E5FE9F2028906E00CB5A9B /* OrderModel.swift */; };
@@ -137,6 +139,7 @@
 		725F19E52021D20000D50200 /* NewOrderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewOrderViewController.swift; sourceTree = "<group>"; };
 		725F19E72021D20900D50200 /* NewOrder.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = NewOrder.storyboard; sourceTree = "<group>"; };
 		726AB62B202B1553005C45CB /* DateExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateExtension.swift; sourceTree = "<group>"; };
+		7275CF012035E45300D5EFE3 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		7295414720187CF600D41626 /* CoreDataManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
 		7295414C20187D4F00D41626 /* ClientsDB.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = ClientsDB.xcdatamodel; sourceTree = "<group>"; };
 		7295414E20187F8500D41626 /* NewClientAddViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewClientAddViewController.swift; sourceTree = "<group>"; };
@@ -150,6 +153,7 @@
 		729541632018A45500D41626 /* NewClientAddWireframeProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewClientAddWireframeProtocol.swift; sourceTree = "<group>"; };
 		729541672018AE2E00D41626 /* RootPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootPresenter.swift; sourceTree = "<group>"; };
 		729A3CC820245C7500A71088 /* DataStoragesListDelegateProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataStoragesListDelegateProtocol.swift; sourceTree = "<group>"; };
+		72B418E820371D0B00E9ED11 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		72B7BAC320319D9C0086AEA0 /* CalendarCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarCell.swift; sourceTree = "<group>"; };
 		72B7BAC72031CA5F0086AEA0 /* CalendarHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarHeaderView.swift; sourceTree = "<group>"; };
 		72E5FE9F2028906E00CB5A9B /* OrderModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderModel.swift; sourceTree = "<group>"; };
@@ -219,6 +223,7 @@
 				72148C4C202DDB4200D09BA4 /* Cells */,
 				72148C33202DCB2D00D09BA4 /* OrdersListViewProtocol.swift */,
 				72148C35202DCB3700D09BA4 /* OrdersListViewController.swift */,
+				72B418E820371D0B00E9ED11 /* MapViewController.swift */,
 				72148C37202DCB3D00D09BA4 /* OrdersList.storyboard */,
 			);
 			path = View;
@@ -422,6 +427,7 @@
 			isa = PBXGroup;
 			children = (
 				7295414A20187D1C00D41626 /* CoreData */,
+				7275CF012035E45300D5EFE3 /* NetworkManager.swift */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -890,9 +896,11 @@
 				722F6395201B5A6900B63D40 /* BasesListWireframe.swift in Sources */,
 				729541552018839400D41626 /* NewClientAddPresenterProtocol.swift in Sources */,
 				72FC5F43201A172A003831D8 /* NewPlaceAddViewProtocol.swift in Sources */,
+				72B418E920371D0B00E9ED11 /* MapViewController.swift in Sources */,
 				72148C3C202DCB6900D09BA4 /* OrdersListPresenterProtocol.swift in Sources */,
 				72148C34202DCB2D00D09BA4 /* OrdersListViewProtocol.swift in Sources */,
 				72FC5F54201A179C003831D8 /* NewPlaceAddWireframeProtocol.swift in Sources */,
+				7275CF022035E45300D5EFE3 /* NetworkManager.swift in Sources */,
 				725A512B2023474D00EB0AEA /* ButtonCell.swift in Sources */,
 				72FC5F3B201A0C52003831D8 /* NewItemAddViewProtocol.swift in Sources */,
 				72FC5F39201A0C48003831D8 /* NewItemAddViewController.swift in Sources */,
