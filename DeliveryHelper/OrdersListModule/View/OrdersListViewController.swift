@@ -17,11 +17,7 @@ class OrdersListViewController: UITableViewController, OrdersListViewProtocol {
     var presenter: OrdersListPresenterProtocol?
     var selectedDate = Date().startOfDay
     let collectiveView = UIView()
-    var orders: [OrderModel] = [] {
-        didSet {
-            self.tableView.reloadData()
-        }
-    }
+    var orders: [OrderModel] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -85,6 +81,7 @@ class OrdersListViewController: UITableViewController, OrdersListViewProtocol {
     
     func addNewOrders(orders: [OrderModel]) {
         self.orders = orders
+        self.tableView.reloadData()
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -105,6 +102,23 @@ class OrdersListViewController: UITableViewController, OrdersListViewProtocol {
             cell.detailsLabel.text = "\(order.date.userPreferedDateString) + \(String(describing: order.items.first))"
             return cell
         }
+    }
+    
+    override func tableView(_ tableView: UITableView, editActionsForRowAt indexPath: IndexPath) -> [UITableViewRowAction]? {
+        let deleteAction = UITableViewRowAction(style: .destructive, title: "Delete") { _, indexPath in
+            self.orders.remove(at: indexPath.row)
+            if self.orders.count > 0 {
+                tableView.deleteRows(at: [indexPath], with: .automatic)
+            } else {
+                tableView.reloadData()
+            }
+        }
+        return [deleteAction]
+    }
+    
+    override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
+        if indexPath.row == orders.count { return false }
+        return true
     }
     
     @objc func showMap() {

@@ -11,9 +11,9 @@ import CoreData
 
 class ItemModel: NSObject, NSCoding {
 
-    
     let name: String?
     var quantity: Int?
+    var objectID: NSManagedObjectID?
     
     init(withName name: String) {
         self.name = name

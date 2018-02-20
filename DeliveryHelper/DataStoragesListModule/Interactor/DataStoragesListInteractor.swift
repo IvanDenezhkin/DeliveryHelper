@@ -7,27 +7,30 @@
 //
 
 import Foundation
+import CoreData
 
 class DataStoragesListInteractor: DataStoragesListInteractorProtocol {
     var dataBase: CoreDataManager?
     weak var presenter: DataStoragesListPresenterProtocol?
         
-    func fetchEntityes(forMode: DataStoragesListTableViewDisplayMode) {
+    func fetchEntities(forMode: DataStoragesListTableViewDisplayMode) {
         switch forMode {
         case .displayModeItem:
-            if let items = dataBase?.fetchAllEntityes(forType: Item.self) {
+            if let items = dataBase?.fetchAllEntities(forType: Item.self) {
                 presenter?.addItems(withItems: items)
             }
         case .displayModeClient:
-            if let clients = dataBase?.fetchAllEntityes(forType: Client.self) {
+            if let clients = dataBase?.fetchAllEntities(forType: Client.self) {
                 presenter?.addClients(withClients: clients)
             }
         case .displayModePlace:
-            if let places = dataBase?.fetchAllEntityes(forType: Place.self) {
+            if let places = dataBase?.fetchAllEntities(forType: Place.self) {
                 presenter?.addPlaces(withPlaces: places)
             }
         }
     }
     
-    
+    func removeEntities(entityID: NSManagedObjectID) {
+        dataBase?.removeEntity(withID: entityID)
+    }
 }

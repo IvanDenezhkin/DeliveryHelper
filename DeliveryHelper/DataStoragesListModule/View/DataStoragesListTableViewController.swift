@@ -23,7 +23,7 @@ class DataStoragesListTableViewController: UITableViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        presenter?.fetchEntityes(forMode: state)
+        presenter?.fetchEntities(forMode: state)
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -61,6 +61,25 @@ class DataStoragesListTableViewController: UITableViewController {
             presenter?.passPlace(place: places[indexPath.row])
         }
     }
+    
+    override func tableView(_ tableView: UITableView, editActionsForRowAt indexPath: IndexPath) -> [UITableViewRowAction]? {
+        let deleteAction = UITableViewRowAction(style: .destructive, title: "Delete") { _, indexPath in
+            switch self.state {
+            case .displayModeItem:
+                self.presenter?.removeEntity(entityID: self.items[indexPath.row].objectID!)
+                self.items.remove(at: indexPath.row)
+            case .displayModeClient:
+                self.presenter?.removeEntity(entityID: self.clients[indexPath.row].objectID!)
+                self.clients.remove(at: indexPath.row)
+            case .displayModePlace:
+                self.presenter?.removeEntity(entityID: self.places[indexPath.row].objectID!)
+                self.places.remove(at: indexPath.row)
+            }
+            tableView.deleteRows(at: [indexPath], with: .automatic)
+        }
+        return [deleteAction]
+    }
+    
     
     @IBAction func addButtonPressed(_ sender: UIBarButtonItem) {
         presenter?.addNewEntity(forMode: self.state)

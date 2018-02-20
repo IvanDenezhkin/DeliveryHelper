@@ -86,7 +86,7 @@ class CoreDataManager {
         }
     }
     
-    func fetchAllEntityes<EntityType>(forType: EntityType.Type, date: Date? = nil) -> [EntityType]? {
+    func fetchAllEntities<EntityType>(forType: EntityType.Type, date: Date? = nil) -> [EntityType]? {
         let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: "\(EntityType.self)")
         if date != nil {
             fetchRequest.predicate = NSPredicate(format: "dateOfDelivery == %@", date! as NSDate)
@@ -101,8 +101,14 @@ class CoreDataManager {
         }
     }
     
+    func removeEntity(withID id: NSManagedObjectID) {
+        let deletingObject = context.object(with: id)
+        context.delete(deletingObject)
+        saveContext()
+    }
+    
     private func test() {
-        let orders = self.fetchAllEntityes(forType: Order.self)
+        let orders = self.fetchAllEntities(forType: Order.self)
         for order in orders! {
             print(order.client?.name, order.client?.phoneNumber, order.dateOfDelivery, order.items)
             for item in order.items as! [ItemModel] {

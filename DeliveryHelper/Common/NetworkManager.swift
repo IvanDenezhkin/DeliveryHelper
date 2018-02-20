@@ -22,17 +22,14 @@ class NetworkManager {
         let endPoint = coordinates.last
         
         var waypoints = ""
-        
         var markers = [GMSMarker]()
         
         for item in 0..<coordinates.count {
             markers.append(GMSMarker(position: coordinates[item]))
-            if item == 0{
-                continue
-            } else {
-                waypoints += "|\(coordinates[item].latitude),\(coordinates[item].longitude)"
-            }
+            if item == 0 { continue }
+            waypoints += "|\(coordinates[item].latitude),\(coordinates[item].longitude)"
         }
+        
         urlComponents.queryItems = [
             URLQueryItem(name: "origin", value: "\(startPoint.latitude),\(startPoint.longitude)"),
             URLQueryItem(name: "destination", value: "\(endPoint!.latitude),\(endPoint!.longitude)"),

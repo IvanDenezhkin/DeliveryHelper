@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import CoreData
 
 protocol DataStoragesListPresenterProtocol: class {
     var view: DataStoragesListViewProtocol? { get set }
@@ -15,7 +16,8 @@ protocol DataStoragesListPresenterProtocol: class {
     var delegate: DataStoragesListDelegateProtocol? { get set }
     
     func addNewEntity(forMode: DataStoragesListTableViewDisplayMode)
-    func fetchEntityes(forMode: DataStoragesListTableViewDisplayMode)
+    func fetchEntities(forMode: DataStoragesListTableViewDisplayMode)
+    func removeEntity(entityID: NSManagedObjectID)
     
     func addItems(withItems: [Item])
     func addClients(withClients: [Client])

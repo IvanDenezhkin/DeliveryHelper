@@ -7,9 +7,11 @@
 //
 
 import Foundation
+import CoreData
 
 protocol DataStoragesListInteractorProtocol: class {
     var dataBase: CoreDataManager? { get set }
     
-    func fetchEntityes(forMode: DataStoragesListTableViewDisplayMode)
+    func fetchEntities(forMode: DataStoragesListTableViewDisplayMode)
+    func removeEntities(entityID: NSManagedObjectID)
 }

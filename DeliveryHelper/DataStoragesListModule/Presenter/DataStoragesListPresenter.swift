@@ -8,17 +8,17 @@
 
 import Foundation
 import CoreLocation
+import CoreData
 
 class DataStoragesListPresenter: DataStoragesListPresenterProtocol {
-    
     weak var view: DataStoragesListViewProtocol?
     var interactor: DataStoragesListInteractorProtocol?
     var wireFrame: DataStoragesListWireframeProtocol?
     weak var delegate: DataStoragesListDelegateProtocol?
     
     // View -> Presenter
-    func fetchEntityes(forMode: DataStoragesListTableViewDisplayMode) {
-        interactor?.fetchEntityes(forMode: forMode)
+    func fetchEntities(forMode: DataStoragesListTableViewDisplayMode) {
+        interactor?.fetchEntities(forMode: forMode)
     }
     
     func addNewEntity(forMode: DataStoragesListTableViewDisplayMode) {
@@ -29,6 +29,7 @@ class DataStoragesListPresenter: DataStoragesListPresenterProtocol {
     func addItems(withItems: [Item]) {
         let properItems = withItems.map { item -> ItemModel in
             let newItem = ItemModel(withName: item.name!)
+            newItem.objectID = item.objectID
             return newItem
         }
         view?.updateItems(withItems: properItems)
@@ -50,6 +51,10 @@ class DataStoragesListPresenter: DataStoragesListPresenterProtocol {
             return newPlace
         }
         view?.updatePlaces(withPlaces: properPlaces)
+    }
+    
+    func removeEntity(entityID: NSManagedObjectID) {
+        interactor?.removeEntities(entityID: entityID)
     }
 }
 
