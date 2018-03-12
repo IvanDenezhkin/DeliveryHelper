@@ -29,9 +29,12 @@ class OrdersListInteractor: OrdersListInteractorProtocol {
             places.insert(userLocation.coordinate, at: 0)
         }
         
-        NetworkManager.getRouse(withCoordinates: places) { bounds, path, markers in
-            self.presenter?.showMap(bounds: bounds, path: path, markers: markers)
+        NetworkManager.getRoute(withCoordinates: places) { mapData, error in
+            if error != nil {
+                print(error?.localizedDescription)
+            } else {
+                self.presenter?.showMap(bounds: mapData?.mapConfig, path: mapData?.path, markers: mapData?.markers)
+            }
         }
     }
-    
 }

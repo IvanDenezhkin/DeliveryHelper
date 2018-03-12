@@ -57,6 +57,7 @@
 		729541642018A45500D41626 /* NewClientAddWireframeProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 729541632018A45500D41626 /* NewClientAddWireframeProtocol.swift */; };
 		729541682018AE2E00D41626 /* RootPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 729541672018AE2E00D41626 /* RootPresenter.swift */; };
 		729A3CC920245C7500A71088 /* DataStoragesListDelegateProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 729A3CC820245C7500A71088 /* DataStoragesListDelegateProtocol.swift */; };
+		72A4893420568426008C129F /* NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72A4893320568426008C129F /* NetworkError.swift */; };
 		72B418E920371D0B00E9ED11 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72B418E820371D0B00E9ED11 /* MapViewController.swift */; };
 		72B7BAC420319D9C0086AEA0 /* CalendarCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72B7BAC320319D9C0086AEA0 /* CalendarCell.swift */; };
 		72B7BAC82031CA5F0086AEA0 /* CalendarHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72B7BAC72031CA5F0086AEA0 /* CalendarHeaderView.swift */; };
@@ -153,6 +154,7 @@
 		729541632018A45500D41626 /* NewClientAddWireframeProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewClientAddWireframeProtocol.swift; sourceTree = "<group>"; };
 		729541672018AE2E00D41626 /* RootPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootPresenter.swift; sourceTree = "<group>"; };
 		729A3CC820245C7500A71088 /* DataStoragesListDelegateProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataStoragesListDelegateProtocol.swift; sourceTree = "<group>"; };
+		72A4893320568426008C129F /* NetworkError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkError.swift; sourceTree = "<group>"; };
 		72B418E820371D0B00E9ED11 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		72B7BAC320319D9C0086AEA0 /* CalendarCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarCell.swift; sourceTree = "<group>"; };
 		72B7BAC72031CA5F0086AEA0 /* CalendarHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarHeaderView.swift; sourceTree = "<group>"; };
@@ -428,6 +430,7 @@
 			children = (
 				7295414A20187D1C00D41626 /* CoreData */,
 				7275CF012035E45300D5EFE3 /* NetworkManager.swift */,
+				72A4893320568426008C129F /* NetworkError.swift */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -830,10 +833,12 @@
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-DeliveryHelper/Pods-DeliveryHelper-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/JTAppleCalendar/JTAppleCalendar.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/JTAppleCalendar.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -874,6 +879,7 @@
 				722F6389201B59DE00B63D40 /* BasesListViewProtocol.swift in Sources */,
 				7295415A2018A25C00D41626 /* NewClientAddPresenter.swift in Sources */,
 				72148C36202DCB3700D09BA4 /* OrdersListViewController.swift in Sources */,
+				72A4893420568426008C129F /* NetworkError.swift in Sources */,
 				72148C3E202DCB7800D09BA4 /* OrdersListInteractorProtocol.swift in Sources */,
 				72E5FEA02028906E00CB5A9B /* OrderModel.swift in Sources */,
 				72148C44202DCB9E00D09BA4 /* OrdersListWireframeProtocol.swift in Sources */,

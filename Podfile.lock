@@ -10,19 +10,22 @@ PODS:
   - GooglePlaces (2.5.0):
     - GoogleMaps/Base (= 2.5.0)
   - JTAppleCalendar (7.1.5)
+  - SwiftyJSON (4.0.0)
 
 DEPENDENCIES:
   - GoogleMaps
   - GooglePlacePicker
   - GooglePlaces
   - JTAppleCalendar (~> 7.0)
+  - SwiftyJSON
 
 SPEC CHECKSUMS:
   GoogleMaps: c087b8e5dfe87ca6ebf59adb9b4894a4146bec4f
   GooglePlacePicker: 1573e644ab54564d95c2643edc0f29091609e966
   GooglePlaces: dd70d9d71ea1c7944846afe67de3712c99b30a77
   JTAppleCalendar: 2d4f974f9f3c8b4964d51ca1f6e004883c031fbe
+  SwiftyJSON: 070dabdcb1beb81b247c65ffa3a79dbbfb3b48aa
 
-PODFILE CHECKSUM: a8da28d7b8fa93ad49f68681cfb1cf29c150cd40
+PODFILE CHECKSUM: b7bb38cbfad922a9330ccef1335c53111d761b19
 
 COCOAPODS: 1.3.1

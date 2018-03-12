@@ -9,12 +9,13 @@
 import Foundation
 import CoreLocation
 import GoogleMaps
+import SwiftyJSON
 
 class NetworkManager {
     static let basicURL = "https://maps.googleapis.com/maps/api/directions/json?"
     static let apiKey = "AIzaSyDoPDBCZdha7bxBn5kFdX8rt3Hx90ZR-rc"
     
-    static func getRouse(withCoordinates coordinates: [CLLocationCoordinate2D], completion: @escaping(_ mapConfig: GMSCoordinateBounds?, _ path: GMSPath?, _ markers: [GMSMarker]?) -> ()) {
+    static func getRoute(withCoordinates coordinates: [CLLocationCoordinate2D], completion: @escaping((mapConfig: GMSCoordinateBounds, path: GMSPath?, markers: [GMSMarker])?, _ error: Error?) -> ()) {
         let urlComponents = NSURLComponents(string: basicURL)!
         // first coordinates should be a start point
         // logic is that starting point is a destination point
@@ -38,32 +39,34 @@ class NetworkManager {
         ]
         
         URLSession.shared.dataTask(with: urlComponents.url!) { data, responce, error in
-                //TODO: Find more glorious way
-            if let json = try? JSONSerialization.jsonObject(with: data!, options: .mutableContainers) as? [String: Any] {
-                guard let routes = json!["routes"] as? NSArray else { return completion(nil, nil, nil)}
-                guard let firstElement = routes.firstObject as? [String: Any] else { return completion(nil, nil, nil) }
-                guard let bounds = firstElement["bounds"] as? [String: Any] else { return completion(nil, nil, nil) }
-                guard let polyline = firstElement["overview_polyline"] as? [String: Any] else { return completion(nil, nil, nil) }
-                guard let northeast = bounds["northeast"] as? [String: Double] else { return completion(nil, nil, nil) }
-                guard let southwest = bounds["southwest"] as? [String: Double] else { return completion(nil, nil, nil) }
-                
-                guard let northeastLat = northeast["lat"] else { return completion(nil, nil, nil) }
-                guard let northeastLon = northeast["lng"] else { return completion(nil, nil, nil) }
-                
-                guard let southwestLat = southwest["lat"] else { return completion(nil, nil, nil) }
-                guard let southwestLon = southwest["lng"] else { return completion(nil, nil, nil) }
-                
-                guard let encodedPath = polyline["points"] as? String else { return completion(nil, nil, nil) }
-                
-                let northeastBound = CLLocationCoordinate2D(latitude: northeastLat, longitude: northeastLon)
-                let southwestBound = CLLocationCoordinate2D(latitude: southwestLat, longitude: southwestLon)
-                
-                let boundsForMap = GMSCoordinateBounds(coordinate: northeastBound, coordinate: southwestBound)
-                let path = GMSPath(fromEncodedPath: encodedPath)
-                DispatchQueue.main.async {
-                    completion(boundsForMap, path, markers)
-                }
+            guard let unwrapedData = data else { completion(nil, NetworkError.noData); return }
+            let json = JSON(unwrapedData)
+            
+            guard let northeastLat = json["routes"][0]["bounds"]["northeast"]["lat"].double else {
+                completion(nil, NetworkError.noCoordinates)
+                return
             }
-        }.resume()
+            let northeastLon = json["routes"][0]["bounds"]["northeast"]["lng"].doubleValue
+            
+            guard let southwestLat = json["routes"][0]["bounds"]["southwest"]["lat"].double else {
+                completion(nil, NetworkError.noCoordinates)
+                return
+            }
+            let southwestLon = json["routes"][0]["bounds"]["southwest"]["lng"].doubleValue
+            
+            guard let polyline = json["routes"][0]["overview_polyline"]["points"].string else {
+                completion(nil, NetworkError.noPolyline)
+                return
+            }
+            
+            let northeastBound = CLLocationCoordinate2D(latitude: northeastLat, longitude: northeastLon)
+            let southwestBound = CLLocationCoordinate2D(latitude: southwestLat, longitude: southwestLon)
+            
+            let boundsForMap = GMSCoordinateBounds(coordinate: northeastBound, coordinate: southwestBound)
+            let path = GMSPath(fromEncodedPath: polyline)
+            DispatchQueue.main.async {
+                completion((mapConfig: boundsForMap, path: path, markers: markers), nil)
+            }
+            }.resume()
     }
 }
