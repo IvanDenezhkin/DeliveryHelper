@@ -7,9 +7,9 @@
 //
 
 import Foundation
+import CoreData
 
 class NewOrderPresenter: NewOrderPresenterProtocol {
-
     weak var view: (NewOrderViewProtocol & DataStoragesListDelegateProtocol)?
     var interactor: NewOrderInteractorProtocol?
     var wireframe: NewOrderWireframeProtocol?
@@ -29,4 +29,24 @@ class NewOrderPresenter: NewOrderPresenterProtocol {
     func saveOrder(order: OrderModel) {
         interactor?.saveOrder(order: order)
     }
+    
+    func validateDate(date: Date, client: NSManagedObjectID?, place: NSManagedObjectID?, items: [ItemModel]) {
+        if items.count == 0 {
+            view?.showAlert(text: "Select item, please")
+            return
+        }
+        guard let unwrappedClient = client else {
+            view?.showAlert(text: "Select client, please")
+            return
+        }
+        
+        guard let unwrappedPlace = place else {
+            view?.showAlert(text: "Select place, please")
+            return
+        }
+        let order = OrderModel(date: date, client: unwrappedClient, place: unwrappedPlace, items: items)
+        saveOrder(order: order)
+        view?.clearData()
+    }
+    
 }

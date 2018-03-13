@@ -61,6 +61,7 @@ class NewOrderViewController: UITableViewController, NewOrderViewProtocol {
                     clientCell.titleLabel.text = "Place"
                 case .dateMode:
                     clientCell.titleLabel.text = "Date"
+                    clientCell.selectedClientPlaceTextField.text = self.date.userPreferedDateString
                     let picker = UIDatePicker()
                     picker.datePickerMode = .date
                     picker.locale = Locale.current
@@ -135,10 +136,11 @@ class NewOrderViewController: UITableViewController, NewOrderViewProtocol {
     }
     
     @objc func addOrder() {
-        //TODOL: Add nil checks
-        let order = OrderModel(date: date, client: client!, place: place!, items: items)
-        presenter?.saveOrder(order: order)
-        self.clearData()
+        presenter?.validateDate(date: date, client: client, place: place, items: items)
+    }
+    
+    func showAlert(text: String) {
+        showAlert(title: "Error", message: text)
     }
     
     private func addToolBar(target: Any?, action: Selector) -> UIToolbar {

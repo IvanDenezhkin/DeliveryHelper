@@ -10,4 +10,6 @@ import Foundation
 
 protocol NewOrderViewProtocol: class {
     var presenter: NewOrderPresenterProtocol? { get set }
+    func showAlert(text: String)
+    func clearData()
 }

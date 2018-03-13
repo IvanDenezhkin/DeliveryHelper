@@ -21,8 +21,11 @@ class NewClientAddViewController : UIViewController, NewClientAddViewProtocol {
     @IBAction func saveButtonPressed(_ sender: UIButton) {
         guard let name = nameTextField.text else { return }
         guard let phoneNumber = phoneTextField.text else { return }
-        let newClient = ClientModel(withName: name, phoneNumber: phoneNumber)
-        presenter?.saveNewClient(client: newClient)
+        presenter?.validateInfo(name: name, phoneNumber: phoneNumber)
+    }
+    
+    func showAlert(text: String) {
+        showAlert(title: "Error", message: text)
     }
     
 }

@@ -19,8 +19,10 @@ class NewItemAddViewController: UIViewController, NewItemAddViewProtocol {
     
     @IBAction func saveButtonPressed(_ sender: UIButton) {
         guard let newName = itemNameTextField.text else { return }
-        let item = ItemModel(withName: newName)
-        presenter?.saveNewItem(item: item)
+        presenter?.check(name: newName)
     }
     
+    func showAlert(text: String) {
+        showAlert(title: "Error", message: text)
+    }
 }

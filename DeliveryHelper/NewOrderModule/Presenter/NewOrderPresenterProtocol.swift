@@ -7,10 +7,12 @@
 //
 
 import Foundation
+import CoreData
 
 protocol NewOrderPresenterProtocol: class {
     func showItems()
     func showClients()
     func showPlaces()
     func saveOrder(order: OrderModel)
+    func validateDate(date: Date, client: NSManagedObjectID?, place: NSManagedObjectID?, items: [ItemModel])
 }

@@ -14,4 +14,5 @@ protocol NewClientAddPresenterProtocol {
     var wireFrame: NewClientAddWireframeProtocol? { get set }
     
     func saveNewClient(client:ClientModel)
+    func validateInfo(name: String, phoneNumber: String)
 }

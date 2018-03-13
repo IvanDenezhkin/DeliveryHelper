@@ -10,4 +10,5 @@ import Foundation
 
 protocol NewItemAddViewProtocol: class {
     var presenter: NewItemAddPresenterProtocol? { get set }
+    func showAlert(text: String)
 }
