@@ -24,8 +24,12 @@ class OrdersListWireframe: OrdersListWireframeProtocol {
         interactor.dataBase = CoreDataManager.shared
         presenter.view = orederListVC
         
-        let navigationController = UINavigationController(rootViewController: orederListVC)
-        return navigationController
+        return orederListVC
+    }
+    
+    func showAddNewOrderModule(on: UIViewController) {
+        let addVC = NewOrderWireframe.createNewOrderModule()
+        on.present(addVC, animated: true, completion: nil)
     }
     
     func showMap(bounds: GMSCoordinateBounds?, path: GMSPath?, markers: [GMSMarker]?, on view: OrdersListViewProtocol?) {

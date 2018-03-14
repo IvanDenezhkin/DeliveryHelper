@@ -7,34 +7,113 @@
 //
 
 import UIKit
-import JTAppleCalendar
+import FSCalendar
 
-class OrdersListViewController: UITableViewController, OrdersListViewProtocol {
-    @IBOutlet weak var headerView: UIView!
-    @IBOutlet weak var calendarView: JTAppleCalendarView!
-    @IBOutlet weak var titleLabel: UILabel!
+class OrdersListViewController: UIViewController, OrdersListViewProtocol {
+    @IBOutlet weak var topTriangleView: UIView!
+    @IBOutlet weak var bottomTriangleView: UIView!
+    @IBOutlet weak var calendarView: FSCalendar!
+    @IBOutlet weak var collectionView: UICollectionView!
+    @IBOutlet weak var ordersCountLabel: UILabel!
+    @IBOutlet weak var addNewOrderButton: UIButton!
+    
+    
     
     var presenter: OrdersListPresenterProtocol?
-    var selectedDate = Date().startOfDay
+    var selectedDate = Date().startOfDay {
+        didSet {
+            presenter?.fetchData(forDate: selectedDate)
+        }
+    }
     let collectiveView = UIView()
     var orders: [OrderModel] = []
+    let gradientColors = [UIColor.lowBlack.cgColor , UIColor.highBlack.cgColor]
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        collectiveView.frame = CGRect(x: 0, y: 0, width: view.frame.width, height: 50)
-        tableView.tableHeaderView = collectiveView
-        collectiveView.addSubview(calendarView)
-        collectiveView.addSubview(headerView)
+        addTopTriangleShape()
+        addBottomTriangleShape()
         
-        calendarView.translatesAutoresizingMaskIntoConstraints = false
-        calendarView.topAnchor.constraint(equalTo: collectiveView.topAnchor).isActive = true
-        calendarView.leadingAnchor.constraint(equalTo: collectiveView.leadingAnchor).isActive = true
-        calendarView.trailingAnchor.constraint(equalTo: collectiveView.trailingAnchor).isActive = true
-        calendarView.bottomAnchor.constraint(equalTo: collectiveView.bottomAnchor).isActive = true
-        calendarView.alpha = 0
+        calendarView.delegate = self
+        collectionView.dataSource = self
+        collectionView.delegate = self
+        calendarView.select(selectedDate, scrollToDate: true)
+        calendarView.clipsToBounds = true
+        ordersCountLabel.layer.cornerRadius = ordersCountLabel.layer.frame.height / 2
+        ordersCountLabel.layer.masksToBounds = true
+    }
+    
+    private func addTopTriangleShape() {
+        let gradientLayer = CAGradientLayer()
+        gradientLayer.startPoint = CGPoint(x: 0, y: 0)
+        gradientLayer.endPoint = CGPoint(x: 1, y: 1)
+        gradientLayer.colors = gradientColors
+        gradientLayer.frame = topTriangleView.bounds
         
-        let tapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(showCalendar))
-        self.headerView.addGestureRecognizer(tapGestureRecognizer)
+        let mask = CAShapeLayer()
+        mask.frame = topTriangleView.layer.bounds
+        
+        let width = topTriangleView.layer.frame.size.width
+        let height = topTriangleView.layer.frame.size.height
+        
+        let path = CGMutablePath()
+        path.move(to: CGPoint(x: 0, y: 0))
+        path.addLine(to: CGPoint(x: width, y: 0))
+        path.addLine(to: CGPoint(x: width, y: (height / 3) * 2))
+        path.addLine(to: CGPoint(x: 0, y: height))
+        path.addLine(to: CGPoint(x: 0, y: 0))
+        mask.path = path
+        
+        gradientLayer.mask = mask
+        topTriangleView.layer.mask = mask
+        topTriangleView.layer.addSublayer(gradientLayer)
+        topTriangleView.bringSubview(toFront: self.calendarView)
+        topTriangleView.bringSubview(toFront: self.addNewOrderButton)
+        // add a shadow below triangle layer
+        let shadowLayer = CALayer()
+        shadowLayer.frame = topTriangleView.bounds
+        shadowLayer.shadowRadius = 5
+        shadowLayer.shadowOpacity = 1
+        shadowLayer.shadowColor = UIColor.black.cgColor
+        shadowLayer.shadowOffset = CGSize(width: 5, height: 5)
+        shadowLayer.shadowPath = path
+        view.layer.insertSublayer(shadowLayer, below: topTriangleView.layer)
+    }
+    
+    private func addBottomTriangleShape() {
+        let gradientLayer = CAGradientLayer()
+        gradientLayer.startPoint = CGPoint(x: 0, y: 0)
+        gradientLayer.endPoint = CGPoint(x: 1, y: 1)
+        gradientLayer.colors = gradientColors
+        gradientLayer.frame = bottomTriangleView.bounds
+        
+        let mask = CAShapeLayer()
+        mask.frame = bottomTriangleView.layer.bounds
+        
+        let width = bottomTriangleView.layer.frame.size.width
+        let height = bottomTriangleView.layer.frame.size.height
+        
+        let path = CGMutablePath()
+        path.move(to: CGPoint(x: 0, y: height))
+        path.addLine(to: CGPoint(x: width, y: height))
+        path.addLine(to: CGPoint(x: width, y: 0))
+        path.addLine(to: CGPoint(x: 0, y: height / 1.5))
+        path.addLine(to: CGPoint(x: 0, y: height))
+        mask.path = path
+        
+        gradientLayer.mask = mask
+        bottomTriangleView.layer.mask = mask
+        bottomTriangleView.layer.addSublayer(gradientLayer)
+        
+        // add a shadow below triangle layer
+        let shadowLayer = CALayer()
+        shadowLayer.frame = CGRect(x: 0, y: view.frame.height - bottomTriangleView.frame.height, width: bottomTriangleView.frame.width, height: bottomTriangleView.frame.height)
+        shadowLayer.shadowRadius = 5
+        shadowLayer.shadowOpacity = 1
+        shadowLayer.shadowColor = UIColor.black.cgColor
+        shadowLayer.shadowOffset = CGSize(width: 5, height: -5)
+        shadowLayer.shadowPath = path
+        view.layer.insertSublayer(shadowLayer, below: bottomTriangleView.layer)
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -42,140 +121,47 @@ class OrdersListViewController: UITableViewController, OrdersListViewProtocol {
         presenter?.fetchData(forDate: self.selectedDate)
     }
     
-    @objc func showCalendar() {
-        UIView.animate(withDuration: 0.2, delay: 0, options: .curveLinear, animations: {
-            self.collectiveView.frame.size.height = 300
-            self.collectiveView.layoutIfNeeded()
-            self.headerView.alpha = 0.2
-            self.tableView.tableHeaderView = self.collectiveView
-        }) { _ in
-            UIView.animate(withDuration: 0.2, animations: {
-                self.headerView.alpha = 0
-                self.calendarView.backgroundColor = .orange
-                self.calendarView.alpha = 1
-                self.calendarView.scrollToDate(self.selectedDate)
-            })
-        }
-    }
-    
-    func removeCalendarView() {
-        UIView.animate(withDuration: 0.2, delay: 0, options: .curveLinear, animations: {
-            self.collectiveView.layoutIfNeeded()
-            self.calendarView.alpha = 0
-        }) { _ in
-            UIView.animate(withDuration: 0.2, animations: {
-                self.collectiveView.frame.size.height = 50
-                self.tableView.tableHeaderView = self.collectiveView
-                self.headerView.alpha = 1
-            })
-        }
-    }
-    
-    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        if orders.count > 0 {
-            return orders.count + 1
-        } else {
-            return orders.count
-        }
-    }
-    
     func addNewOrders(orders: [OrderModel]) {
         self.orders = orders
-        self.tableView.reloadData()
+        self.ordersCountLabel.text = "\(orders.count)"
+        collectionView.reloadData()
     }
     
-    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        if indexPath.row == orders.count {
-            let cell = UITableViewCell(style: .default, reuseIdentifier: "ButtonCell")
-            let button = UIButton()
-            button.addTarget(self, action: #selector(showMap), for: .touchUpInside)
-            button.setTitle("Show Route", for: .normal)
-            button.setTitleColor(.blue, for: .normal)
-            cell.addSubview(button)
-            button.translatesAutoresizingMaskIntoConstraints = false
-            button.centerXAnchor.constraint(equalTo: cell.centerXAnchor).isActive = true
-            button.centerYAnchor.constraint(equalTo: cell.centerYAnchor).isActive = true
-            return cell
-        } else {
-            let order = orders[indexPath.row]
-            let cell = tableView.dequeueReusableCell(withIdentifier: "OrderCell") as! OrderTableViewCell
-            cell.detailsLabel.text = "\(order.date.userPreferedDateString) + \(String(describing: order.items.first))"
-            return cell
-        }
+    @IBAction func AddNewOrderButtonPressed(_ sender: UIButton) {
+        presenter?.showAddNewOrderModule()
     }
     
-    override func tableView(_ tableView: UITableView, editActionsForRowAt indexPath: IndexPath) -> [UITableViewRowAction]? {
-        let deleteAction = UITableViewRowAction(style: .destructive, title: "Delete") { _, indexPath in
-            self.orders.remove(at: indexPath.row)
-            if self.orders.count > 0 {
-                tableView.deleteRows(at: [indexPath], with: .automatic)
-            } else {
-                tableView.reloadData()
-            }
-        }
-        return [deleteAction]
-    }
-    
-    override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
-        if indexPath.row == orders.count { return false }
-        return true
-    }
-    
-    @objc func showMap() {
-        presenter?.getPlaces(for: orders)
-    }
 }
 
-extension OrdersListViewController: JTAppleCalendarViewDataSource {
-    func configureCalendar(_ calendar: JTAppleCalendarView) -> ConfigurationParameters {
-        return ConfigurationParameters(startDate: Date.startOfCurrentYear, endDate: Date.endOfCurrentYear, firstDayOfWeek: .monday)
-    }
-}
-
-extension OrdersListViewController: JTAppleCalendarViewDelegate {
-    func calendar(_ calendar: JTAppleCalendarView, willDisplay cell: JTAppleCell, forItemAt date: Date, cellState: CellState, indexPath: IndexPath) {
+extension OrdersListViewController: UICollectionViewDataSource {
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return orders.count
     }
     
-    func calendar(_ calendar: JTAppleCalendarView, headerViewForDateRange range: (start: Date, end: Date), at indexPath: IndexPath) -> JTAppleCollectionReusableView {
-        let header = calendar.dequeueReusableJTAppleSupplementaryView(withReuseIdentifier: "CalendarHeaderView", for: indexPath) as! CalendarHeaderView
-        return  header
-    }
-    
-    func calendarSizeForMonths(_ calendar: JTAppleCalendarView?) -> MonthSize? {
-        return MonthSize(defaultSize: 50)
-    }
-    
-    func calendar(_ calendar: JTAppleCalendarView, cellForItemAt date: Date, cellState: CellState, indexPath: IndexPath) -> JTAppleCell {
-        let cell = calendar.dequeueReusableJTAppleCell(withReuseIdentifier: "CalendarCell", for: indexPath) as! CalendarCell
-        cell.dateLabel.text = cellState.text
-        if cellState.dateBelongsTo == .thisMonth {
-            cell.dateLabel.textColor = .white
-        } else {
-            cell.dateLabel.textColor = .gray
-        }
-        
-        if cellState.date == selectedDate {
-            cell.selectionView.isHidden = false
-        }
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "OrderCell", for: indexPath) as! OrderCell
+        cell.order = orders[indexPath.row]
+        cell.textLabel.transform = CGAffineTransform(rotationAngle: CGFloat(-16.5 * M_PI/180))
         return cell
     }
-    
-    func calendar(_ calendar: JTAppleCalendarView, didScrollToDateSegmentWith visibleDates: DateSegmentInfo) {
-        guard let firstDay = visibleDates.monthDates.first?.date else { return }
-        setHeader(forDate: firstDay)
+}
+
+extension OrdersListViewController: UICollectionViewDelegateFlowLayout {
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        return CGSize(width: collectionView.frame.width, height: collectionView.frame.height)
     }
     
-    func calendar(_ calendar: JTAppleCalendarView, didSelectDate date: Date, cell: JTAppleCell?, cellState: CellState) {
-        self.selectedDate = date
-        navigationItem.title = date.userPreferedDateString
-        presenter?.fetchData(forDate: date)
-        removeCalendarView()
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
+        return 0
     }
-    
-    func setHeader(forDate: Date) {
-        let formatter = DateFormatter()
-        formatter.dateFormat = "MMMM"
-        navigationItem.title = formatter.string(from: forDate)
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
+        return 0
+    }
+}
+
+extension OrdersListViewController: FSCalendarDelegate {
+    func calendar(_ calendar: FSCalendar, didSelect date: Date, at monthPosition: FSCalendarMonthPosition) {
+        self.selectedDate = date.startOfDay
     }
 }
 

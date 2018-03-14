@@ -12,4 +12,5 @@ import GoogleMaps
 protocol OrdersListWireframeProtocol: class {
     static func createOrdersListModule() -> UIViewController
     func showMap(bounds: GMSCoordinateBounds?, path: GMSPath?, markers: [GMSMarker]?, on: OrdersListViewProtocol?)
+    func showAddNewOrderModule(on: UIViewController)
 }

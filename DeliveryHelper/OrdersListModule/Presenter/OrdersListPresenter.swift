@@ -10,8 +10,6 @@ import Foundation
 import GoogleMaps
 
 class OrdersListPresenter: OrdersListPresenterProtocol {
-
-    
     weak var view: OrdersListViewProtocol?
     var interactor: OrdersListInteractorProtocol?
     var wireframe: OrdersListWireframeProtocol?
@@ -33,5 +31,9 @@ class OrdersListPresenter: OrdersListPresenterProtocol {
     
     func showMap(bounds: GMSCoordinateBounds?, path: GMSPath?, markers: [GMSMarker]?) {
         wireframe?.showMap(bounds: bounds, path: path, markers: markers, on: view)
+    }
+    
+    func showAddNewOrderModule() {
+        wireframe?.showAddNewOrderModule(on: view as! UIViewController)
     }
 }

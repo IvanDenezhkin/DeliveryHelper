@@ -157,6 +157,7 @@ class NewOrderViewController: UITableViewController, NewOrderViewProtocol {
         items.removeAll()
         cellIDs = ["TitleCell", "ItemsCell", "ClientPlaceCell", "ClientPlaceCell", "ClientPlaceCell",  "ButtonCell"]
         tableView.reloadData()
+        self.dismiss(animated: true, completion: nil)
     }
 }
 

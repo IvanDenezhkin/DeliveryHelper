@@ -17,7 +17,6 @@
 		72148C40202DCB8600D09BA4 /* OrdersListInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72148C3F202DCB8600D09BA4 /* OrdersListInteractor.swift */; };
 		72148C42202DCB8F00D09BA4 /* OrdersListWireframe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72148C41202DCB8F00D09BA4 /* OrdersListWireframe.swift */; };
 		72148C44202DCB9E00D09BA4 /* OrdersListWireframeProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72148C43202DCB9E00D09BA4 /* OrdersListWireframeProtocol.swift */; };
-		72148C4B202DDB3F00D09BA4 /* OrderTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72148C4A202DDB3F00D09BA4 /* OrderTableViewCell.swift */; };
 		722C8BBE201727DE002E474F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 722C8BBD201727DE002E474F /* AppDelegate.swift */; };
 		722C8BC5201727DE002E474F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 722C8BC4201727DE002E474F /* Assets.xcassets */; };
 		722C8BC8201727DE002E474F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 722C8BC6201727DE002E474F /* LaunchScreen.storyboard */; };
@@ -28,6 +27,7 @@
 		722F6392201B5A4100B63D40 /* BasesListPresenterProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 722F6391201B5A4100B63D40 /* BasesListPresenterProtocol.swift */; };
 		722F6395201B5A6900B63D40 /* BasesListWireframe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 722F6394201B5A6900B63D40 /* BasesListWireframe.swift */; };
 		722F6397201B5A7A00B63D40 /* BasesListWireframeProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 722F6396201B5A7A00B63D40 /* BasesListWireframeProtocol.swift */; };
+		7257D8882059400500B74D80 /* OrderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7257D8872059400500B74D80 /* OrderCell.swift */; };
 		725A5125202346B800EB0AEA /* TitleCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 725A5124202346B800EB0AEA /* TitleCell.swift */; };
 		725A5127202346C700EB0AEA /* ItemsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 725A5126202346C700EB0AEA /* ItemsCell.swift */; };
 		725A5129202346DD00EB0AEA /* ClientPlaceCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 725A5128202346DD00EB0AEA /* ClientPlaceCell.swift */; };
@@ -59,8 +59,7 @@
 		729A3CC920245C7500A71088 /* DataStoragesListDelegateProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 729A3CC820245C7500A71088 /* DataStoragesListDelegateProtocol.swift */; };
 		72A4893420568426008C129F /* NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72A4893320568426008C129F /* NetworkError.swift */; };
 		72B418E920371D0B00E9ED11 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72B418E820371D0B00E9ED11 /* MapViewController.swift */; };
-		72B7BAC420319D9C0086AEA0 /* CalendarCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72B7BAC320319D9C0086AEA0 /* CalendarCell.swift */; };
-		72B7BAC82031CA5F0086AEA0 /* CalendarHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72B7BAC72031CA5F0086AEA0 /* CalendarHeaderView.swift */; };
+		72C303B02059126F004F1E17 /* UIColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72C303AF2059126F004F1E17 /* UIColorExtension.swift */; };
 		72E5FEA02028906E00CB5A9B /* OrderModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72E5FE9F2028906E00CB5A9B /* OrderModel.swift */; };
 		72F2A5672017552D004DA13B /* RootWireframe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72F2A5662017552D004DA13B /* RootWireframe.swift */; };
 		72F2A56A201755FB004DA13B /* RootWireframeProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72F2A569201755FB004DA13B /* RootWireframeProtocol.swift */; };
@@ -112,7 +111,6 @@
 		72148C3F202DCB8600D09BA4 /* OrdersListInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrdersListInteractor.swift; sourceTree = "<group>"; };
 		72148C41202DCB8F00D09BA4 /* OrdersListWireframe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrdersListWireframe.swift; sourceTree = "<group>"; };
 		72148C43202DCB9E00D09BA4 /* OrdersListWireframeProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrdersListWireframeProtocol.swift; sourceTree = "<group>"; };
-		72148C4A202DDB3F00D09BA4 /* OrderTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderTableViewCell.swift; sourceTree = "<group>"; };
 		722C8BBA201727DE002E474F /* DeliveryHelper.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DeliveryHelper.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		722C8BBD201727DE002E474F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		722C8BC4201727DE002E474F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -125,6 +123,7 @@
 		722F6391201B5A4100B63D40 /* BasesListPresenterProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasesListPresenterProtocol.swift; sourceTree = "<group>"; };
 		722F6394201B5A6900B63D40 /* BasesListWireframe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasesListWireframe.swift; sourceTree = "<group>"; };
 		722F6396201B5A7A00B63D40 /* BasesListWireframeProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasesListWireframeProtocol.swift; sourceTree = "<group>"; };
+		7257D8872059400500B74D80 /* OrderCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderCell.swift; sourceTree = "<group>"; };
 		725A5124202346B800EB0AEA /* TitleCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleCell.swift; sourceTree = "<group>"; };
 		725A5126202346C700EB0AEA /* ItemsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemsCell.swift; sourceTree = "<group>"; };
 		725A5128202346DD00EB0AEA /* ClientPlaceCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClientPlaceCell.swift; sourceTree = "<group>"; };
@@ -156,8 +155,7 @@
 		729A3CC820245C7500A71088 /* DataStoragesListDelegateProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataStoragesListDelegateProtocol.swift; sourceTree = "<group>"; };
 		72A4893320568426008C129F /* NetworkError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkError.swift; sourceTree = "<group>"; };
 		72B418E820371D0B00E9ED11 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
-		72B7BAC320319D9C0086AEA0 /* CalendarCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarCell.swift; sourceTree = "<group>"; };
-		72B7BAC72031CA5F0086AEA0 /* CalendarHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarHeaderView.swift; sourceTree = "<group>"; };
+		72C303AF2059126F004F1E17 /* UIColorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColorExtension.swift; sourceTree = "<group>"; };
 		72E5FE9F2028906E00CB5A9B /* OrderModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderModel.swift; sourceTree = "<group>"; };
 		72F2A5662017552D004DA13B /* RootWireframe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootWireframe.swift; sourceTree = "<group>"; };
 		72F2A569201755FB004DA13B /* RootWireframeProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootWireframeProtocol.swift; sourceTree = "<group>"; };
@@ -222,7 +220,7 @@
 		72148C45202DCBA400D09BA4 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				72148C4C202DDB4200D09BA4 /* Cells */,
+				7257D8892059400D00B74D80 /* Cells */,
 				72148C33202DCB2D00D09BA4 /* OrdersListViewProtocol.swift */,
 				72148C35202DCB3700D09BA4 /* OrdersListViewController.swift */,
 				72B418E820371D0B00E9ED11 /* MapViewController.swift */,
@@ -267,16 +265,6 @@
 				72148C48202DCBBE00D09BA4 /* Wireframe */,
 			);
 			path = OrdersListModule;
-			sourceTree = "<group>";
-		};
-		72148C4C202DDB4200D09BA4 /* Cells */ = {
-			isa = PBXGroup;
-			children = (
-				72148C4A202DDB3F00D09BA4 /* OrderTableViewCell.swift */,
-				72B7BAC72031CA5F0086AEA0 /* CalendarHeaderView.swift */,
-				72B7BAC320319D9C0086AEA0 /* CalendarCell.swift */,
-			);
-			path = Cells;
 			sourceTree = "<group>";
 		};
 		722C8BB1201727DE002E474F = {
@@ -356,6 +344,15 @@
 			path = BasesListModule;
 			sourceTree = "<group>";
 		};
+		7257D8892059400D00B74D80 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				7257D8872059400500B74D80 /* OrderCell.swift */,
+			);
+			name = Cells;
+			path = "New Group";
+			sourceTree = "<group>";
+		};
 		725A512C2023475200EB0AEA /* Cells */ = {
 			isa = PBXGroup;
 			children = (
@@ -372,6 +369,7 @@
 			children = (
 				725A512D20235BFD00EB0AEA /* UIViewControllerExtensions.swift */,
 				726AB62B202B1553005C45CB /* DateExtension.swift */,
+				72C303AF2059126F004F1E17 /* UIColorExtension.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -832,12 +830,12 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-DeliveryHelper/Pods-DeliveryHelper-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/JTAppleCalendar/JTAppleCalendar.framework",
+				"${BUILT_PRODUCTS_DIR}/FSCalendar/FSCalendar.framework",
 				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/JTAppleCalendar.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FSCalendar.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -879,6 +877,7 @@
 				722F6389201B59DE00B63D40 /* BasesListViewProtocol.swift in Sources */,
 				7295415A2018A25C00D41626 /* NewClientAddPresenter.swift in Sources */,
 				72148C36202DCB3700D09BA4 /* OrdersListViewController.swift in Sources */,
+				72C303B02059126F004F1E17 /* UIColorExtension.swift in Sources */,
 				72A4893420568426008C129F /* NetworkError.swift in Sources */,
 				72148C3E202DCB7800D09BA4 /* OrdersListInteractorProtocol.swift in Sources */,
 				72E5FEA02028906E00CB5A9B /* OrderModel.swift in Sources */,
@@ -890,9 +889,8 @@
 				725A5127202346C700EB0AEA /* ItemsCell.swift in Sources */,
 				722F638B201B59F100B63D40 /* BasesListViewController.swift in Sources */,
 				725F19E62021D20000D50200 /* NewOrderViewController.swift in Sources */,
-				72B7BAC420319D9C0086AEA0 /* CalendarCell.swift in Sources */,
 				7295414820187CF700D41626 /* CoreDataManager.swift in Sources */,
-				72148C4B202DDB3F00D09BA4 /* OrderTableViewCell.swift in Sources */,
+				7257D8882059400500B74D80 /* OrderCell.swift in Sources */,
 				72FC5F48201A174E003831D8 /* NewPlaceAddPresenter.swift in Sources */,
 				725F19E22021D1D900D50200 /* NewOrderWireframeProtocol.swift in Sources */,
 				72FC5F1F2019CB94003831D8 /* DataStoragesListViewProtocol.swift in Sources */,
@@ -914,7 +912,6 @@
 				725F19E42021D1F000D50200 /* NewOrderViewProtocol.swift in Sources */,
 				72FC5F152019BF5A003831D8 /* ItemCell.swift in Sources */,
 				72FC5F122019BF36003831D8 /* ClientCell.swift in Sources */,
-				72B7BAC82031CA5F0086AEA0 /* CalendarHeaderView.swift in Sources */,
 				72FC5F1B2019C57D003831D8 /* PlaceModel.swift in Sources */,
 				72FC5F31201A0BFF003831D8 /* NewItemAddPresenterProtocol.swift in Sources */,
 				72FC5F34201A0C18003831D8 /* NewItemAddInteractor.swift in Sources */,

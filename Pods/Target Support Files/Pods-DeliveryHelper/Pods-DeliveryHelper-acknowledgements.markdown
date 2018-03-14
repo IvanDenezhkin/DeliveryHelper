@@ -1,21 +1,9 @@
 # Acknowledgements
 This application makes use of the following third party libraries:
 
-## GoogleMaps
+## FSCalendar
 
-Copyright 2017 Google
-
-## GooglePlacePicker
-
-Copyright 2017 Google
-
-## GooglePlaces
-
-Copyright 2017 Google
-
-## JTAppleCalendar
-
-Copyright (c) 2016 JayT <patchthecode@gmail.com>
+Copyright (c) 2013-2016 FSCalendar (https://github.com/WenchaoD/FSCalendar)
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
@@ -35,6 +23,18 @@ LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 THE SOFTWARE.
 
+
+## GoogleMaps
+
+Copyright 2017 Google
+
+## GooglePlacePicker
+
+Copyright 2017 Google
+
+## GooglePlaces
+
+Copyright 2017 Google
 
 ## SwiftyJSON
 
