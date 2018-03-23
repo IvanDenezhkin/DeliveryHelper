@@ -17,6 +17,7 @@
 		72148C40202DCB8600D09BA4 /* OrdersListInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72148C3F202DCB8600D09BA4 /* OrdersListInteractor.swift */; };
 		72148C42202DCB8F00D09BA4 /* OrdersListWireframe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72148C41202DCB8F00D09BA4 /* OrdersListWireframe.swift */; };
 		72148C44202DCB9E00D09BA4 /* OrdersListWireframeProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72148C43202DCB9E00D09BA4 /* OrdersListWireframeProtocol.swift */; };
+		72285E1420651CD700E45CFC /* style.json in Resources */ = {isa = PBXBuildFile; fileRef = 72285E1320651CD700E45CFC /* style.json */; };
 		722C8BBE201727DE002E474F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 722C8BBD201727DE002E474F /* AppDelegate.swift */; };
 		722C8BC5201727DE002E474F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 722C8BC4201727DE002E474F /* Assets.xcassets */; };
 		722C8BC8201727DE002E474F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 722C8BC6201727DE002E474F /* LaunchScreen.storyboard */; };
@@ -111,6 +112,7 @@
 		72148C3F202DCB8600D09BA4 /* OrdersListInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrdersListInteractor.swift; sourceTree = "<group>"; };
 		72148C41202DCB8F00D09BA4 /* OrdersListWireframe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrdersListWireframe.swift; sourceTree = "<group>"; };
 		72148C43202DCB9E00D09BA4 /* OrdersListWireframeProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrdersListWireframeProtocol.swift; sourceTree = "<group>"; };
+		72285E1320651CD700E45CFC /* style.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = style.json; sourceTree = "<group>"; };
 		722C8BBA201727DE002E474F /* DeliveryHelper.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DeliveryHelper.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		722C8BBD201727DE002E474F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		722C8BC4201727DE002E474F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -220,6 +222,7 @@
 		72148C45202DCBA400D09BA4 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				72285E152065269300E45CFC /* MapStyleFiles */,
 				7257D8892059400D00B74D80 /* Cells */,
 				72148C33202DCB2D00D09BA4 /* OrdersListViewProtocol.swift */,
 				72148C35202DCB3700D09BA4 /* OrdersListViewController.swift */,
@@ -265,6 +268,14 @@
 				72148C48202DCBBE00D09BA4 /* Wireframe */,
 			);
 			path = OrdersListModule;
+			sourceTree = "<group>";
+		};
+		72285E152065269300E45CFC /* MapStyleFiles */ = {
+			isa = PBXGroup;
+			children = (
+				72285E1320651CD700E45CFC /* style.json */,
+			);
+			path = MapStyleFiles;
 			sourceTree = "<group>";
 		};
 		722C8BB1201727DE002E474F = {
@@ -774,6 +785,7 @@
 				725F19E82021D20900D50200 /* NewOrder.storyboard in Resources */,
 				72FC5F3D201A0C5C003831D8 /* NewItemAdd.storyboard in Resources */,
 				72148C38202DCB3D00D09BA4 /* OrdersList.storyboard in Resources */,
+				72285E1420651CD700E45CFC /* style.json in Resources */,
 				722F638D201B5A0100B63D40 /* BasesList.storyboard in Resources */,
 				722C8BC8201727DE002E474F /* LaunchScreen.storyboard in Resources */,
 				729541522018802D00D41626 /* NewClientAdd.storyboard in Resources */,

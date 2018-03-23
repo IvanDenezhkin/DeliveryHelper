@@ -10,6 +10,7 @@ import UIKit
 
 class OrderCell: UICollectionViewCell {
     @IBOutlet weak var textLabel: UILabel!
+    @IBOutlet weak var addOrderButton: UIButton!
     
     var order: OrderModel? {
         didSet {

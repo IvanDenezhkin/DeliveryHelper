@@ -16,7 +16,7 @@ protocol OrdersListPresenterProtocol: class {
     
     func fetchData(forDate: Date)
     func addOrders(orders: [Order])
-    func getPlaces(for orders: [OrderModel])
+    func getRoute(for orders: [OrderModel])
     func showMap(bounds: GMSCoordinateBounds?, path: GMSPath?, markers: [GMSMarker]?)
     func showAddNewOrderModule()
 }

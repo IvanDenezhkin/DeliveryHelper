@@ -39,7 +39,7 @@ class OrdersListWireframe: OrdersListWireframeProtocol {
             mapVC.bounds = bounds
             mapVC.path = path
             mapVC.markers = markers
-            controller.navigationController?.pushViewController(mapVC, animated: true)
+            controller.present(mapVC, animated: true, completion: nil)
     }
     
     

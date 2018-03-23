@@ -15,17 +15,18 @@ class OrdersListViewController: UIViewController, OrdersListViewProtocol {
     @IBOutlet weak var calendarView: FSCalendar!
     @IBOutlet weak var collectionView: UICollectionView!
     @IBOutlet weak var ordersCountLabel: UILabel!
-    @IBOutlet weak var addNewOrderButton: UIButton!
-    
+    @IBOutlet weak var rightPanelView: UIView!
+    @IBOutlet weak var routeButton: UIButton!
     
     
     var presenter: OrdersListPresenterProtocol?
-    var selectedDate = Date().startOfDay {
+    var selectedDate: Date! {
         didSet {
             presenter?.fetchData(forDate: selectedDate)
         }
     }
-    let collectiveView = UIView()
+    
+    var isRightPanelHiden = false
     var orders: [OrderModel] = []
     let gradientColors = [UIColor.lowBlack.cgColor , UIColor.highBlack.cgColor]
     
@@ -41,6 +42,17 @@ class OrdersListViewController: UIViewController, OrdersListViewProtocol {
         calendarView.clipsToBounds = true
         ordersCountLabel.layer.cornerRadius = ordersCountLabel.layer.frame.height / 2
         ordersCountLabel.layer.masksToBounds = true
+        rightPanelView.layer.cornerRadius = 10
+        rightPanelView.layer.masksToBounds = true
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        selectedDate = Date().startOfDay
+    }
+    
+    override var preferredStatusBarStyle: UIStatusBarStyle {
+        return .lightContent
     }
     
     private func addTopTriangleShape() {
@@ -68,7 +80,8 @@ class OrdersListViewController: UIViewController, OrdersListViewProtocol {
         topTriangleView.layer.mask = mask
         topTriangleView.layer.addSublayer(gradientLayer)
         topTriangleView.bringSubview(toFront: self.calendarView)
-        topTriangleView.bringSubview(toFront: self.addNewOrderButton)
+        topTriangleView.bringSubview(toFront: self.ordersCountLabel)
+        
         // add a shadow below triangle layer
         let shadowLayer = CALayer()
         shadowLayer.frame = topTriangleView.bounds
@@ -116,33 +129,68 @@ class OrdersListViewController: UIViewController, OrdersListViewProtocol {
         view.layer.insertSublayer(shadowLayer, below: bottomTriangleView.layer)
     }
     
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-        presenter?.fetchData(forDate: self.selectedDate)
-    }
-    
     func addNewOrders(orders: [OrderModel]) {
         self.orders = orders
-        self.ordersCountLabel.text = "\(orders.count)"
+        if orders.count != 0 {
+            self.ordersCountLabel.text = "\(orders.count)"
+            ordersCountLabel.isHidden = false
+            showRightPanelAndRouteButton()
+        } else {
+            ordersCountLabel.isHidden = true
+            hideRightPanelAndRouteButton()
+        }
         collectionView.reloadData()
     }
     
-    @IBAction func AddNewOrderButtonPressed(_ sender: UIButton) {
+    @objc @IBAction func addNewOrderButtonPressed(_ sender: UIButton) {
         presenter?.showAddNewOrderModule()
     }
     
+    @IBAction func routeButtonPressed(_ sender: UIButton) {
+        presenter?.getRoute(for: orders)
+    }
+    
+    
+    func hideRightPanelAndRouteButton() {
+        if isRightPanelHiden { return }
+        isRightPanelHiden = true
+        UIView.animate(withDuration: 0.5) {
+            self.rightPanelView.frame.origin.x += self.rightPanelView.frame.width
+            self.routeButton.alpha = 0
+        }
+    }
+    
+    func showRightPanelAndRouteButton() {
+        if !isRightPanelHiden { return }
+        isRightPanelHiden = false
+        UIView.animate(withDuration: 0.5) {
+            self.rightPanelView.frame.origin.x -= self.rightPanelView.frame.width
+            self.routeButton.alpha = 1
+        }
+    }
 }
 
 extension OrdersListViewController: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return orders.count
+        return orders.count == 0 ? 1 : orders.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "OrderCell", for: indexPath) as! OrderCell
-        cell.order = orders[indexPath.row]
-        cell.textLabel.transform = CGAffineTransform(rotationAngle: CGFloat(-16.5 * M_PI/180))
-        return cell
+        if orders.count != 0 {
+            cell.order = orders[indexPath.row]
+            cell.addOrderButton.isHidden = true
+            cell.textLabel.isHidden = false
+            ordersCountLabel.isHidden = false
+            cell.textLabel.transform = CGAffineTransform(rotationAngle: CGFloat(-16.5 * .pi/180))
+            return cell
+        } else {
+            cell.textLabel.isHidden = true
+            cell.addOrderButton.isHidden = false
+            cell.addOrderButton.addTarget(self, action: #selector(addNewOrderButtonPressed), for: .touchUpInside)
+            ordersCountLabel.isHidden = true
+            return cell
+        }
     }
 }
 
@@ -154,6 +202,7 @@ extension OrdersListViewController: UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
         return 0
     }
+    
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
         return 0
     }

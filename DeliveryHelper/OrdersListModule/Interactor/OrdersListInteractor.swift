@@ -18,7 +18,7 @@ class OrdersListInteractor: OrdersListInteractorProtocol {
         presenter?.addOrders(orders: orders!)
     }
     
-    func getPlaces(for orders: [OrderModel]) {
+    func getRoute(for orders: [OrderModel]) {
         var places = orders.map { order -> CLLocationCoordinate2D in
             let place = dataBase?.context.object(with: order.place) as! Place
             return CLLocationCoordinate2D(latitude: place.latitude, longitude: place.longitude)

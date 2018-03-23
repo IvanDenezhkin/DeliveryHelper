@@ -18,8 +18,8 @@ class OrdersListPresenter: OrdersListPresenterProtocol {
         interactor?.fetchData(forDate: forDate)
     }
     
-    func getPlaces(for orders: [OrderModel]) {
-        interactor?.getPlaces(for: orders)
+    func getRoute(for orders: [OrderModel]) {
+        interactor?.getRoute(for: orders)
     }
     
     func addOrders(orders: [Order]) {
