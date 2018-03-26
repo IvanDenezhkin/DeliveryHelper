@@ -23,7 +23,8 @@ class DataStoragesListWireframe: DataStoragesListWireframeProtocol {
         interactor.dataBase = CoreDataManager.shared
         interactor.presenter = presenter
         
-        return dataStoragesListVC
+        let navigationController = UINavigationController(rootViewController: dataStoragesListVC)
+        return navigationController
     }
     
     func presentAddNewEntityViewController(forMode: DataStoragesListTableViewDisplayMode, on: DataStoragesListViewProtocol?) {

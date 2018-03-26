@@ -5,6 +5,7 @@ target 'DeliveryHelper' do
 
   pod 'FSCalendar'
   pod 'SwiftyJSON'
+  pod 'SideMenu'
   pod 'GooglePlaces'
   pod 'GooglePlacePicker'
   pod 'GoogleMaps'

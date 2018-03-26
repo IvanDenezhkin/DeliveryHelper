@@ -6,7 +6,7 @@
 //  Copyright © 2018 Ivan Denezhkin. All rights reserved.
 //
 
-import Foundation
+import UIKit
 import GoogleMaps
 
 class OrdersListPresenter: OrdersListPresenterProtocol {
@@ -35,5 +35,11 @@ class OrdersListPresenter: OrdersListPresenterProtocol {
     
     func showAddNewOrderModule() {
         wireframe?.showAddNewOrderModule(on: view as! UIViewController)
+    }
+    
+    func showSideMenu() {
+        guard let viewController = view as? UIViewController else { return }
+        let menuVC = SideMenuWireframe.createSideMenuModule(onView: viewController)
+        viewController.present(menuVC, animated: true, completion: nil)
     }
 }

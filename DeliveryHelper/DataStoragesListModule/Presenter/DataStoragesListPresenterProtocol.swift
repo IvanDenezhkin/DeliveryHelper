@@ -22,4 +22,5 @@ protocol DataStoragesListPresenterProtocol: class {
     func addItems(withItems: [Item])
     func addClients(withClients: [Client])
     func addPlaces(withPlaces: [Place])
+    func dismissVC()
 }

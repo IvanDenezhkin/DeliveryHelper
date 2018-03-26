@@ -6,7 +6,7 @@
 //  Copyright © 2018 Ivan Denezhkin. All rights reserved.
 //
 
-import Foundation
+import UIKit
 import CoreLocation
 import CoreData
 
@@ -74,5 +74,9 @@ extension DataStoragesListPresenter: DataStoragesListDelegateProtocol {
         if delegate != nil { wireFrame?.dismissVC(vc: view) }
     }
     
+    func dismissVC() {
+        guard let controller = view as? UIViewController else { return }
+        controller.dismiss(animated: true, completion: nil)
+    }
     
 }

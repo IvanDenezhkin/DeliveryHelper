@@ -12,4 +12,5 @@ protocol DataStoragesListDelegateProtocol: class {
     func passItem(item: ItemModel)
     func passClient(client: ClientModel)
     func passPlace(place: PlaceModel)
+    
 }

@@ -42,8 +42,6 @@ class OrdersListViewController: UIViewController, OrdersListViewProtocol {
         calendarView.clipsToBounds = true
         ordersCountLabel.layer.cornerRadius = ordersCountLabel.layer.frame.height / 2
         ordersCountLabel.layer.masksToBounds = true
-        rightPanelView.layer.cornerRadius = 10
-        rightPanelView.layer.masksToBounds = true
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -129,15 +127,14 @@ class OrdersListViewController: UIViewController, OrdersListViewProtocol {
         view.layer.insertSublayer(shadowLayer, below: bottomTriangleView.layer)
     }
     
+    //MARK: Actions
     func addNewOrders(orders: [OrderModel]) {
         self.orders = orders
         if orders.count != 0 {
             self.ordersCountLabel.text = "\(orders.count)"
-            ordersCountLabel.isHidden = false
-            showRightPanelAndRouteButton()
+            showElements()
         } else {
-            ordersCountLabel.isHidden = true
-            hideRightPanelAndRouteButton()
+            hideElements()
         }
         collectionView.reloadData()
     }
@@ -150,22 +147,28 @@ class OrdersListViewController: UIViewController, OrdersListViewProtocol {
         presenter?.getRoute(for: orders)
     }
     
+    @IBAction func menuButtonPressed(_ sender: UIButton) {
+        presenter?.showSideMenu()
+    }
     
-    func hideRightPanelAndRouteButton() {
+    //MARK: Animations
+    func hideElements() {
         if isRightPanelHiden { return }
         isRightPanelHiden = true
         UIView.animate(withDuration: 0.5) {
             self.rightPanelView.frame.origin.x += self.rightPanelView.frame.width
             self.routeButton.alpha = 0
+            self.ordersCountLabel.alpha = 0
         }
     }
     
-    func showRightPanelAndRouteButton() {
+    func showElements() {
         if !isRightPanelHiden { return }
         isRightPanelHiden = false
         UIView.animate(withDuration: 0.5) {
             self.rightPanelView.frame.origin.x -= self.rightPanelView.frame.width
             self.routeButton.alpha = 1
+            self.ordersCountLabel.alpha = 1
         }
     }
 }

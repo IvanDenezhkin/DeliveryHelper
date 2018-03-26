@@ -17,17 +17,17 @@
 		72148C40202DCB8600D09BA4 /* OrdersListInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72148C3F202DCB8600D09BA4 /* OrdersListInteractor.swift */; };
 		72148C42202DCB8F00D09BA4 /* OrdersListWireframe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72148C41202DCB8F00D09BA4 /* OrdersListWireframe.swift */; };
 		72148C44202DCB9E00D09BA4 /* OrdersListWireframeProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72148C43202DCB9E00D09BA4 /* OrdersListWireframeProtocol.swift */; };
+		721E27EB2068FD2100EF2508 /* SideMenuWireframeProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 721E27EA2068FD2100EF2508 /* SideMenuWireframeProtocol.swift */; };
+		721E27ED2068FD2A00EF2508 /* SideMenuWireframe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 721E27EC2068FD2A00EF2508 /* SideMenuWireframe.swift */; };
+		721E27EF2068FD4400EF2508 /* SideMenuPresenterProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 721E27EE2068FD4400EF2508 /* SideMenuPresenterProtocol.swift */; };
+		721E27F12068FD4A00EF2508 /* SideMenuPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 721E27F02068FD4A00EF2508 /* SideMenuPresenter.swift */; };
+		721E27F52068FD7800EF2508 /* SideMenu.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 721E27F42068FD7800EF2508 /* SideMenu.storyboard */; };
+		721E27F72068FDBE00EF2508 /* SideMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 721E27F62068FDBE00EF2508 /* SideMenuViewController.swift */; };
 		72285E1420651CD700E45CFC /* style.json in Resources */ = {isa = PBXBuildFile; fileRef = 72285E1320651CD700E45CFC /* style.json */; };
 		722C8BBE201727DE002E474F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 722C8BBD201727DE002E474F /* AppDelegate.swift */; };
 		722C8BC5201727DE002E474F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 722C8BC4201727DE002E474F /* Assets.xcassets */; };
 		722C8BC8201727DE002E474F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 722C8BC6201727DE002E474F /* LaunchScreen.storyboard */; };
-		722F6389201B59DE00B63D40 /* BasesListViewProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 722F6388201B59DE00B63D40 /* BasesListViewProtocol.swift */; };
-		722F638B201B59F100B63D40 /* BasesListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 722F638A201B59F100B63D40 /* BasesListViewController.swift */; };
-		722F638D201B5A0100B63D40 /* BasesList.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 722F638C201B5A0100B63D40 /* BasesList.storyboard */; };
-		722F6390201B5A3200B63D40 /* BasesListPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 722F638F201B5A3200B63D40 /* BasesListPresenter.swift */; };
-		722F6392201B5A4100B63D40 /* BasesListPresenterProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 722F6391201B5A4100B63D40 /* BasesListPresenterProtocol.swift */; };
-		722F6395201B5A6900B63D40 /* BasesListWireframe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 722F6394201B5A6900B63D40 /* BasesListWireframe.swift */; };
-		722F6397201B5A7A00B63D40 /* BasesListWireframeProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 722F6396201B5A7A00B63D40 /* BasesListWireframeProtocol.swift */; };
+		72534C7C20690B9900609392 /* MenuCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72534C7B20690B9900609392 /* MenuCell.swift */; };
 		7257D8882059400500B74D80 /* OrderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7257D8872059400500B74D80 /* OrderCell.swift */; };
 		725A5125202346B800EB0AEA /* TitleCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 725A5124202346B800EB0AEA /* TitleCell.swift */; };
 		725A5127202346C700EB0AEA /* ItemsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 725A5126202346C700EB0AEA /* ItemsCell.swift */; };
@@ -112,19 +112,19 @@
 		72148C3F202DCB8600D09BA4 /* OrdersListInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrdersListInteractor.swift; sourceTree = "<group>"; };
 		72148C41202DCB8F00D09BA4 /* OrdersListWireframe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrdersListWireframe.swift; sourceTree = "<group>"; };
 		72148C43202DCB9E00D09BA4 /* OrdersListWireframeProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrdersListWireframeProtocol.swift; sourceTree = "<group>"; };
+		721E27EA2068FD2100EF2508 /* SideMenuWireframeProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideMenuWireframeProtocol.swift; sourceTree = "<group>"; };
+		721E27EC2068FD2A00EF2508 /* SideMenuWireframe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideMenuWireframe.swift; sourceTree = "<group>"; };
+		721E27EE2068FD4400EF2508 /* SideMenuPresenterProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideMenuPresenterProtocol.swift; sourceTree = "<group>"; };
+		721E27F02068FD4A00EF2508 /* SideMenuPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideMenuPresenter.swift; sourceTree = "<group>"; };
+		721E27F42068FD7800EF2508 /* SideMenu.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SideMenu.storyboard; sourceTree = "<group>"; };
+		721E27F62068FDBE00EF2508 /* SideMenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideMenuViewController.swift; sourceTree = "<group>"; };
 		72285E1320651CD700E45CFC /* style.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = style.json; sourceTree = "<group>"; };
 		722C8BBA201727DE002E474F /* DeliveryHelper.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DeliveryHelper.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		722C8BBD201727DE002E474F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		722C8BC4201727DE002E474F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		722C8BC7201727DE002E474F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		722C8BC9201727DE002E474F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		722F6388201B59DE00B63D40 /* BasesListViewProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasesListViewProtocol.swift; sourceTree = "<group>"; };
-		722F638A201B59F100B63D40 /* BasesListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasesListViewController.swift; sourceTree = "<group>"; };
-		722F638C201B5A0100B63D40 /* BasesList.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = BasesList.storyboard; sourceTree = "<group>"; };
-		722F638F201B5A3200B63D40 /* BasesListPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasesListPresenter.swift; sourceTree = "<group>"; };
-		722F6391201B5A4100B63D40 /* BasesListPresenterProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasesListPresenterProtocol.swift; sourceTree = "<group>"; };
-		722F6394201B5A6900B63D40 /* BasesListWireframe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasesListWireframe.swift; sourceTree = "<group>"; };
-		722F6396201B5A7A00B63D40 /* BasesListWireframeProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasesListWireframeProtocol.swift; sourceTree = "<group>"; };
+		72534C7B20690B9900609392 /* MenuCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuCell.swift; sourceTree = "<group>"; };
 		7257D8872059400500B74D80 /* OrderCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderCell.swift; sourceTree = "<group>"; };
 		725A5124202346B800EB0AEA /* TitleCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleCell.swift; sourceTree = "<group>"; };
 		725A5126202346C700EB0AEA /* ItemsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemsCell.swift; sourceTree = "<group>"; };
@@ -270,6 +270,44 @@
 			path = OrdersListModule;
 			sourceTree = "<group>";
 		};
+		721E27F22068FD5200EF2508 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				721E27EE2068FD4400EF2508 /* SideMenuPresenterProtocol.swift */,
+				721E27F02068FD4A00EF2508 /* SideMenuPresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		721E27F32068FD5B00EF2508 /* Wireframe */ = {
+			isa = PBXGroup;
+			children = (
+				721E27EA2068FD2100EF2508 /* SideMenuWireframeProtocol.swift */,
+				721E27EC2068FD2A00EF2508 /* SideMenuWireframe.swift */,
+			);
+			path = Wireframe;
+			sourceTree = "<group>";
+		};
+		721E27F82068FDC300EF2508 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				72534C7D20690BA200609392 /* Cell */,
+				721E27F62068FDBE00EF2508 /* SideMenuViewController.swift */,
+				721E27F42068FD7800EF2508 /* SideMenu.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		721E27F92068FDCA00EF2508 /* SideMenuModule */ = {
+			isa = PBXGroup;
+			children = (
+				721E27F82068FDC300EF2508 /* View */,
+				721E27F22068FD5200EF2508 /* Presenter */,
+				721E27F32068FD5B00EF2508 /* Wireframe */,
+			);
+			path = SideMenuModule;
+			sourceTree = "<group>";
+		};
 		72285E152065269300E45CFC /* MapStyleFiles */ = {
 			isa = PBXGroup;
 			children = (
@@ -303,9 +341,9 @@
 				725A512F20235D5800EB0AEA /* Helpers */,
 				7295414920187D1200D41626 /* Common */,
 				72F2A56820175539004DA13B /* RootModule */,
+				721E27F92068FDCA00EF2508 /* SideMenuModule */,
 				72148C49202DCBC700D09BA4 /* OrdersListModule */,
 				725F19ED2021D2D200D50200 /* NewOrderModule */,
-				722F6399201B5A8800B63D40 /* BasesListModule */,
 				72F2A57620176CBB004DA13B /* DataStoragesListModule */,
 				72FC5F56201A17AA003831D8 /* NewPlaceAddModule */,
 				72FC5F3F201A0C79003831D8 /* NewItemAddModule */,
@@ -317,42 +355,12 @@
 			path = DeliveryHelper;
 			sourceTree = "<group>";
 		};
-		722F638E201B5A0700B63D40 /* View */ = {
+		72534C7D20690BA200609392 /* Cell */ = {
 			isa = PBXGroup;
 			children = (
-				722F6388201B59DE00B63D40 /* BasesListViewProtocol.swift */,
-				722F638A201B59F100B63D40 /* BasesListViewController.swift */,
-				722F638C201B5A0100B63D40 /* BasesList.storyboard */,
+				72534C7B20690B9900609392 /* MenuCell.swift */,
 			);
-			path = View;
-			sourceTree = "<group>";
-		};
-		722F6393201B5A5300B63D40 /* Presenter */ = {
-			isa = PBXGroup;
-			children = (
-				722F638F201B5A3200B63D40 /* BasesListPresenter.swift */,
-				722F6391201B5A4100B63D40 /* BasesListPresenterProtocol.swift */,
-			);
-			path = Presenter;
-			sourceTree = "<group>";
-		};
-		722F6398201B5A7E00B63D40 /* Wireframe */ = {
-			isa = PBXGroup;
-			children = (
-				722F6394201B5A6900B63D40 /* BasesListWireframe.swift */,
-				722F6396201B5A7A00B63D40 /* BasesListWireframeProtocol.swift */,
-			);
-			path = Wireframe;
-			sourceTree = "<group>";
-		};
-		722F6399201B5A8800B63D40 /* BasesListModule */ = {
-			isa = PBXGroup;
-			children = (
-				722F638E201B5A0700B63D40 /* View */,
-				722F6393201B5A5300B63D40 /* Presenter */,
-				722F6398201B5A7E00B63D40 /* Wireframe */,
-			);
-			path = BasesListModule;
+			path = Cell;
 			sourceTree = "<group>";
 		};
 		7257D8892059400D00B74D80 /* Cells */ = {
@@ -786,8 +794,8 @@
 				72FC5F3D201A0C5C003831D8 /* NewItemAdd.storyboard in Resources */,
 				72148C38202DCB3D00D09BA4 /* OrdersList.storyboard in Resources */,
 				72285E1420651CD700E45CFC /* style.json in Resources */,
-				722F638D201B5A0100B63D40 /* BasesList.storyboard in Resources */,
 				722C8BC8201727DE002E474F /* LaunchScreen.storyboard in Resources */,
+				721E27F52068FD7800EF2508 /* SideMenu.storyboard in Resources */,
 				729541522018802D00D41626 /* NewClientAdd.storyboard in Resources */,
 				722C8BC5201727DE002E474F /* Assets.xcassets in Resources */,
 				72FC5F102019BECF003831D8 /* DataStoragesListView.storyboard in Resources */,
@@ -843,11 +851,13 @@
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-DeliveryHelper/Pods-DeliveryHelper-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/FSCalendar/FSCalendar.framework",
+				"${BUILT_PRODUCTS_DIR}/SideMenu/SideMenu.framework",
 				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FSCalendar.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SideMenu.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -864,6 +874,7 @@
 			files = (
 				72F2A56E2017564F004DA13B /* RootInteractor.swift in Sources */,
 				726AB62C202B1553005C45CB /* DateExtension.swift in Sources */,
+				721E27EB2068FD2100EF2508 /* SideMenuWireframeProtocol.swift in Sources */,
 				72F2A57120176C39004DA13B /* DataStoragesListTableViewController.swift in Sources */,
 				722C8BBE201727DE002E474F /* AppDelegate.swift in Sources */,
 				725F19DA2021D1A600D50200 /* NewOrderPresenterProtocol.swift in Sources */,
@@ -875,31 +886,29 @@
 				725A5129202346DD00EB0AEA /* ClientPlaceCell.swift in Sources */,
 				72F2A56A201755FB004DA13B /* RootWireframeProtocol.swift in Sources */,
 				725A5125202346B800EB0AEA /* TitleCell.swift in Sources */,
-				722F6397201B5A7A00B63D40 /* BasesListWireframeProtocol.swift in Sources */,
 				72FC5F41201A1710003831D8 /* NewPlaceAddViewController.swift in Sources */,
 				725F19E02021D1CB00D50200 /* NewOrderWireframe.swift in Sources */,
+				721E27ED2068FD2A00EF2508 /* SideMenuWireframe.swift in Sources */,
 				72148C42202DCB8F00D09BA4 /* OrdersListWireframe.swift in Sources */,
 				72F2A57520176C94004DA13B /* DataStoragesListInteractor.swift in Sources */,
 				72FC5F232019D3E7003831D8 /* DataStoragesListInteractorProtocol.swift in Sources */,
 				725F19DE2021D1C200D50200 /* NewOrderInteractorProtocol.swift in Sources */,
 				72148C40202DCB8600D09BA4 /* OrdersListInteractor.swift in Sources */,
-				722F6390201B5A3200B63D40 /* BasesListPresenter.swift in Sources */,
 				725F19DC2021D1B600D50200 /* NewOrderInteractor.swift in Sources */,
 				72FC5F36201A0C23003831D8 /* NewItemAddInteractorProtocol.swift in Sources */,
-				722F6389201B59DE00B63D40 /* BasesListViewProtocol.swift in Sources */,
 				7295415A2018A25C00D41626 /* NewClientAddPresenter.swift in Sources */,
 				72148C36202DCB3700D09BA4 /* OrdersListViewController.swift in Sources */,
 				72C303B02059126F004F1E17 /* UIColorExtension.swift in Sources */,
 				72A4893420568426008C129F /* NetworkError.swift in Sources */,
 				72148C3E202DCB7800D09BA4 /* OrdersListInteractorProtocol.swift in Sources */,
 				72E5FEA02028906E00CB5A9B /* OrderModel.swift in Sources */,
+				721E27F12068FD4A00EF2508 /* SideMenuPresenter.swift in Sources */,
 				72148C44202DCB9E00D09BA4 /* OrdersListWireframeProtocol.swift in Sources */,
 				729541622018A39A00D41626 /* NewClientAddInteractorProtocol.swift in Sources */,
 				7295414D20187D4F00D41626 /* DataBase.xcdatamodeld in Sources */,
 				72FC5F172019BF7C003831D8 /* PlaceCell.swift in Sources */,
 				72FC5F2F201A0BF4003831D8 /* NewItemAddPresenter.swift in Sources */,
 				725A5127202346C700EB0AEA /* ItemsCell.swift in Sources */,
-				722F638B201B59F100B63D40 /* BasesListViewController.swift in Sources */,
 				725F19E62021D20000D50200 /* NewOrderViewController.swift in Sources */,
 				7295414820187CF700D41626 /* CoreDataManager.swift in Sources */,
 				7257D8882059400500B74D80 /* OrderCell.swift in Sources */,
@@ -909,14 +918,15 @@
 				729541642018A45500D41626 /* NewClientAddWireframeProtocol.swift in Sources */,
 				72F2A5672017552D004DA13B /* RootWireframe.swift in Sources */,
 				7295415F2018A33C00D41626 /* NewClientAddWireframe.swift in Sources */,
-				722F6395201B5A6900B63D40 /* BasesListWireframe.swift in Sources */,
 				729541552018839400D41626 /* NewClientAddPresenterProtocol.swift in Sources */,
 				72FC5F43201A172A003831D8 /* NewPlaceAddViewProtocol.swift in Sources */,
 				72B418E920371D0B00E9ED11 /* MapViewController.swift in Sources */,
 				72148C3C202DCB6900D09BA4 /* OrdersListPresenterProtocol.swift in Sources */,
 				72148C34202DCB2D00D09BA4 /* OrdersListViewProtocol.swift in Sources */,
+				721E27EF2068FD4400EF2508 /* SideMenuPresenterProtocol.swift in Sources */,
 				72FC5F54201A179C003831D8 /* NewPlaceAddWireframeProtocol.swift in Sources */,
 				7275CF022035E45300D5EFE3 /* NetworkManager.swift in Sources */,
+				72534C7C20690B9900609392 /* MenuCell.swift in Sources */,
 				725A512B2023474D00EB0AEA /* ButtonCell.swift in Sources */,
 				72FC5F3B201A0C52003831D8 /* NewItemAddViewProtocol.swift in Sources */,
 				72FC5F39201A0C48003831D8 /* NewItemAddViewController.swift in Sources */,
@@ -937,9 +947,9 @@
 				7295414F20187F8500D41626 /* NewClientAddViewController.swift in Sources */,
 				72FC5F0D2019BE7E003831D8 /* DataStoragesListPresenter.swift in Sources */,
 				7295415720189DCB00D41626 /* ClientModel.swift in Sources */,
-				722F6392201B5A4100B63D40 /* BasesListPresenterProtocol.swift in Sources */,
 				72F2A57320176C73004DA13B /* DataStoragesListWireframe.swift in Sources */,
 				72FC5F252019DB7C003831D8 /* DataStoragesListWireframeProtocol.swift in Sources */,
+				721E27F72068FDBE00EF2508 /* SideMenuViewController.swift in Sources */,
 				729541682018AE2E00D41626 /* RootPresenter.swift in Sources */,
 				72FC5F52201A1791003831D8 /* NewPlaceAddWireframe.swift in Sources */,
 				72FC5F1D2019CB80003831D8 /* DataStoragesListPresenterProtocol.swift in Sources */,
@@ -1073,7 +1083,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 7B3BBT653A;
+				DEVELOPMENT_TEAM = C8NAERUMNS;
 				INFOPLIST_FILE = DeliveryHelper/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -1090,7 +1100,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 7B3BBT653A;
+				DEVELOPMENT_TEAM = C8NAERUMNS;
 				INFOPLIST_FILE = DeliveryHelper/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";

@@ -80,6 +80,9 @@ class DataStoragesListTableViewController: UITableViewController {
         return [deleteAction]
     }
     
+    @IBAction func doneButtonPressed(_ sender: UIBarButtonItem) {
+        presenter?.dismissVC()
+    }
     
     @IBAction func addButtonPressed(_ sender: UIBarButtonItem) {
         presenter?.addNewEntity(forMode: self.state)

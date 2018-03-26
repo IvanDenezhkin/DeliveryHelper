@@ -143,6 +143,11 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" id="AfN-rI-taN">
+                        <barButtonItem key="leftBarButtonItem" systemItem="done" id="ZPh-ha-v0Q">
+                            <connections>
+                                <action selector="doneButtonPressed:" destination="G9g-MT-VDJ" id="TUR-zZ-Isy"/>
+                            </connections>
+                        </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="tFZ-Ou-eKR">
                             <connections>
                                 <action selector="addButtonPressed:" destination="G9g-MT-VDJ" id="Ent-OP-X6e"/>

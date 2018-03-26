@@ -19,4 +19,5 @@ protocol OrdersListPresenterProtocol: class {
     func getRoute(for orders: [OrderModel])
     func showMap(bounds: GMSCoordinateBounds?, path: GMSPath?, markers: [GMSMarker]?)
     func showAddNewOrderModule()
+    func showSideMenu()
 }
